@@ -48,15 +48,19 @@ To find your public IP address, simply Google “What is my IP address?”. The 
 
 Open the Command Prompt and run “ipconfig”. You will see similar to the following: 
 
-
+![CMD image of ipconfig command](/assets/images/ipconfig_win.png "Windows 10 CMD Screenshot")
 
 ### MacOSX
 
 Open Terminal and run “ifconfig”. You will see similar to the following:
+
+![Terminal image of ifconfig command](/assets/images/ifconfig_mac.png "MacOS Terminal Screenshot")
  
 ### Linux (Ubuntu/Debian)
 
 Open Terminal and run “ifconfig”. You will see similar to the following:
+
+![Terminal image of ifconfig command](/assets/images/ifconfig_linux.png "Linux Terminal Screenshot")
  
 ## Gateways and Broadcast
 

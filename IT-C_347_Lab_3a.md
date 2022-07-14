@@ -13,6 +13,7 @@ Private IPs are locally accessible and are defined by RFC 1918. Since they are l
 ## IP Routing
 
 But you can see a problem. How do you know how to get from Heritage Halls to Helaman Halls? In real life we can use Google Maps, which will direct us what turns we need to take to get to our given destination. But how does that work in the world of the networking? This is where routing comes into play. We’ll dive more into routers in later labs, but for now note that routers are responsible for routing internet traffic across the globe. In our scenario, they are that Google Maps that tells the packets what turns they need to take, so to speak, to eventually arrive at their desired destination.
+
 Building off the same analogy, routers can get us from one apartment building to another, but how do we get to an individual apartment within that apartment building? This is where Networking Address Translation (NAT) comes into effect. NAT is a process developed to translation Private IPs to Public IPs by modifying the IP address header of the packet while it is in transit. We’ll dive more into the specifics of this process in a later lab. 
 
 ## IP Classes
@@ -73,6 +74,7 @@ On the technical side, gateways are responsible for translating frames and proto
 Finally, we have arrived at subnetting. First thing we need to understand is what is a subnet. A subnet is short for sub-network. Within a larger private network, you can have hundreds and thousands of little or large sub-networks, or subnets. But how do we define the size of an individual sub-network? And how do we differentiate between one sub-network and another? This is where subnet ids and Classless Inter-Domain Routing (CIDR) come in. Below is an illustration of how a subnet id is defined.
  
 The network prefix is what defines the network address. The subnet id defines what subnet the given network resides in, and the host id defines which host it is. For example, take a 10.0.x.x network and say we want to have a subnet with the subnet id of 3, our network would be 10.0.3.x. If we put a host on the that subnet with a host id of 2 it would have the IP address of 10.0.3.2 on the 10.0.3.0 subnet. 
+
 Now you have a basic understanding of how to define a subnet and the IP addressing of an individual device within that subnet. You also have a basic understanding of how private IP networks are defined with regards to their subnet id. But before we dive into how we separate a larger private network, into smaller sub-networks using the CIDR, we need to brief touch on how public networks are defined with regards to their network id.
 
 ## CIDR Notation
@@ -120,7 +122,8 @@ Now here is that tool I mentioned, it is extremely simple, but so powerful as yo
 
 ## Point-to-Point Links
 
-For most networks, at least two addresses are reserved: the gateway and the broadcast. Now there are cases where you can get away with only having two hosts, such as a /31. The main case for that is point-to-point links, such as is common for uplinks/downlinks between routers and switches. (Hint: you’ll want to remember that. It’ll come in handy in a few labs down the road)
+For most networks, at least two addresses are reserved: the gateway and the broadcast. Now there are cases where you can get away with only having two hosts, such as a /31. The main case for that is point-to-point links, such as is common for uplinks/downlinks between routers and switches. (Hint: you’ll want to remember that. It’ll come in handy in a few labs down the road).
+
 A /31 and /32 were added as part of RFC 3021. Specifically, to reduce the number of needed addresses for point-to-point links. Now, word of caution. If you are not setting up a point-to-point link, I would highly advise against using a /31. In cases where you are not doing so, I would recommend a /30 or a /29 depending on your use case.
 
 ## Localhost
@@ -142,23 +145,23 @@ Note: The following questions are all for a 10.0.0.0/16 network
 
 ## Write-up Questions
 -	What does RFC stand for?
-o	Request for Comments, lol
+
 -	What does IANA stand for? What is its purpose?
-o	Internet Assigned Numbers Authority. Its purpose is to manage global DNS and IP addressing as well as the assignment of AS #’s.
+
 -	What does CIDR stand for?
-o	Classless Inter-Domain Routing
+
 -	To which Classes does CIDR apply?
-o	Class A, Class B and Class C
+
 -	What class level is your home network?
-o	Class C
+
 -	What class level is BYU’s network?
-o	Class A
+
 -	How many hosts are in a /25 network?
-o	128
+
 -	How many hosts are in a /30 network?
-o	4
+
 -	Can you think of a good case for using a /31 network? 
-o	Uplinks/Downlinks between routers and switches or other routers
+
 
 ## Resources
 

@@ -58,7 +58,7 @@ Those three parts are as follows:
 -	Varying size CRC field: Error Correction Information
 -	4 byte FCS field: Frame Check
  
-[Ethernet Frame](/assets/images/lab5a/ethernet_frame.png "Ethernet Frame")
+[Detailed Ethernet Frame](/assets/images/lab5a/detailed_ethernet_frame.png "Detailed Ethernet Frame")
  
 802.1Q also defines that in a given domain you can have 4096 VLANs. As you can imagine, many large enterprises, like Google, Microsoft or Amazon, have the need for way more than 4096 VLANS, which is where 802.1AD comes in (this is covered more in depth in the Advanced Networking class, and will not be covered in this class). Suffice to say it allows for 4096 * 4096 VLANs in a given domain.
 

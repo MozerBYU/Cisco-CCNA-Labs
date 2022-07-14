@@ -31,10 +31,11 @@ IP addressing is divided into different classes: classful and classless. For pub
 
 ## Classless Addressing (Private Classes)
 
-Class	IPv4 Range	# of Hosts
-A	10.0.0.0 – 10.255.255.255	17 Million
-B	172.16.0.0 – 172.31.255.255	65,536
-C	192.168.0.0 – 192.168.255.255	254
+| Class	IPv4 | IP Range	| # of Hosts |
+| :------: | :------: | :------: |
+| A	| 10.0.0.0 – 10.255.255.255	| 17 Million |
+| B	| 172.16.0.0 – 172.31.255.255	| 65,536 |
+| C |	192.168.0.0 – 192.168.255.255	| 254 |
 
 ## Exercise
 
@@ -45,6 +46,8 @@ To find your public IP address, simply Google “What is my IP address?”. The 
 ### Windows 10
 
 Open the Command Prompt and run “ipconfig”. You will see similar to the following: 
+
+
 
 ### MacOSX
 

@@ -58,6 +58,8 @@ Those three parts are as follows:
 -	Varying size CRC field: Error Correction Information
 -	4 byte FCS field: Frame Check
  
+[Ethernet Frame](/assets/images/lab5a/ethernet_frame.png "Ethernet Frame")
+ 
 802.1Q also defines that in a given domain you can have 4096 VLANs. As you can imagine, many large enterprises, like Google, Microsoft or Amazon, have the need for way more than 4096 VLANS, which is where 802.1AD comes in (this is covered more in depth in the Advanced Networking class, and will not be covered in this class). Suffice to say it allows for 4096 * 4096 VLANs in a given domain.
 
 ## Types of VLANs
@@ -75,11 +77,11 @@ Say we have a given network, with a few devices connected to a Layer 2 switch. W
 For devices within the same VLAN, they are permitted to talk amongst each other freely without the switch needing Layer 3 (routing) capabilities or having to be connected to a router (you will see this first-hand in Lab 6.
 Therefore, if one of those devices in VLAN 10 wants to talk to one of the devices in VLAN 20, we will run into a problem in our current network configuration. Cross-VLAN talk requires a switch to be either: a) Layer 3 capable, or b) connected to a router (which is Layer 3 capable). 
 
-## Default VLAN
+## D*efault* VLAN
 Now, what about our 2 devices that are not in any VLAN, what happens when they try to talk to any other device (either in VLAN 10 or VLAN 20)? By default, every switch automatically tags every packet received on a switch port that is not defined by a VLAN with the tag of the designated default VLAN. The default VLAN on every switch, unless changed, is VLAN 1. 
 Now, why is this a security concern/network administration issue?
 Since the default VLAN is VLAN 1, unless changed. Any traffic that is untagged will be on that VLAN. Say you forgot this and set your management VLAN as VLAN 1, now any untagged packet will be able traverse your management VLAN.
-## Native VLAN
+## *Native* VLAN
 
 Now brief hardware thing related to switches and routers. In networking the link connecting a router to a switch is often referred to as either an uplink (going from the switch up to the router) or downlink (going from the router down to the switch). This is where native VLAN comes in. That link is known as a trunk link and as such it will have all VLANs traverse it. We’ll dive more into this feature when we get to Lab 6.
 
@@ -91,9 +93,9 @@ This is where all that subnetting practice ties it. As subnetting is what allows
 
 Note: The following questions are all for a 10.0.0.0/16 network
 
-## Firewall Rules + Zones (DMZ, etc)
+*Firewall Rules + Zones (DMZ, etc)*
 
-## Write-up Questions?
+## Write-up Questions
 -	What networking problem are VLANs designed to solve?
 
 -	Give some example VLANs you would create (name and function)?

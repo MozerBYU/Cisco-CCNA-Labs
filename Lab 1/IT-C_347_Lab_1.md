@@ -37,3 +37,11 @@ Here is the license key that you will need:
 ## GNS3 VM Import
 
 Once that is all installed you will want to do as follows to import the VM.
+
+## GNS3 VM Settings
+
+After you have imported the VM you’ll want to tweak some of the settings for the VM (we’ll also tweak these within GNS3). Basically, we’re giving the VM some more resources to work with. You can adjust these to your liking and to the extent your system can handle. The following settings are a minimum recommendation for the labs:
+
+-	vCPU Cores: 4
+-	RAM: 1 GB
+

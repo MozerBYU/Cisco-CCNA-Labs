@@ -44,8 +44,6 @@ From here you'll select "Open a Virtual Machine", then browse until you find the
 
 **Make sure to title the VM as: "GNS3 VM", as this is what the GNS3 software will be looking for when it connects to the VM.**
 
-![VMWare Workstation Settings Screen](/assets/images/lab1/vmware-settings-screen.PNG "VMWare Workstation Settings Screen")
-
 ## GNS3 VM Settings
 
 After you have imported the VM you’ll want to tweak some of the settings for the VM (we’ll also tweak these within GNS3). Basically, we’re giving the VM some more resources to work with. You can adjust these to your liking and to the extent your system can handle. The following settings are a minimum recommendation for the labs:
@@ -53,3 +51,14 @@ After you have imported the VM you’ll want to tweak some of the settings for t
 -	vCPU Cores: 4
 -	RAM: 1 GB
 
+Below is an example of what you could set your VM settings to:
+
+![VMWare Workstation Settings Screen](/assets/images/lab1/vmware-settings-screen.PNG "VMWare Workstation Settings Screen")
+
+If everything is working correctly you should see a screen within VMWare Workstation that is similar to the following:
+
+![VMWare Workstation GNS3 VM Working](/assets/images/lab1/gns3-vm.PNG "GNS3 VM Working")
+
+## GNS3 Install
+
+Now that we have the VM setup properly, it is time to get GNS3 installed and connected to our VM. We'll begin by running the install of that GNS3.exe file that you downloaded earlier. You will then be presented with a few options.

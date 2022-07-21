@@ -36,9 +36,13 @@ Here is the license key that you will need:
 
 ## GNS3 VM Import
 
-Once that is all installed you will want to do as follows to import the VM.
+Once that is all installed you'll be brought to the following screen.
 
 ![VMWare Workstation Main Screen](/assets/images/lab1/vmware-main-screen.PNG "VMWare Workstation Main Screen")
+
+From here you'll select "Open a Virtual Machine", then browse until you find the GNS3.ova file that has the VM. It will take a few minutes for VMWare to import the VM. 
+
+**Make sure to title the VM as: "GNS3 VM", as this is what the GNS3 software will be looking for when it connects to the VM.**
 
 ![VMWare Workstation Settings Screen](/assets/images/lab1/vmware-settings-screen.PNG "VMWare Workstation Settings Screen")
 

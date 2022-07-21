@@ -38,9 +38,9 @@ Here is the license key that you will need:
 
 Once that is all installed you will want to do as follows to import the VM.
 
-![VMWare Workstation Main Screen](/assets/images/lab1/vmware-main-screen.png "VMWare Workstation Main Screen")
+![VMWare Workstation Main Screen](/assets/images/lab1/vmware-main-screen.PNG "VMWare Workstation Main Screen")
 
-![VMWare Workstation Settings Screen](/assets/images/lab1/vmware-settings-screen.png "VMWare Workstation Settings Screen")
+![VMWare Workstation Settings Screen](/assets/images/lab1/vmware-settings-screen.PNG "VMWare Workstation Settings Screen")
 
 ## GNS3 VM Settings
 

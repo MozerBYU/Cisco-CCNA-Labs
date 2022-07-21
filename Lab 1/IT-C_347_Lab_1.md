@@ -38,6 +38,10 @@ Here is the license key that you will need:
 
 Once that is all installed you will want to do as follows to import the VM.
 
+![VMWare Workstation Main Screen](/assets/images/lab1/vmware-main-screen.png)
+
+![VMWare Workstation Settings Screen](/assets/images/lab1/vmware-settings-screen.png)
+
 ## GNS3 VM Settings
 
 After you have imported the VM you’ll want to tweak some of the settings for the VM (we’ll also tweak these within GNS3). Basically, we’re giving the VM some more resources to work with. You can adjust these to your liking and to the extent your system can handle. The following settings are a minimum recommendation for the labs:

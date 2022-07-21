@@ -26,6 +26,8 @@ To get the GNS3 software head to the following website, make an account and then
 I recommend also downloading the GNS3 VM file that is specific to VMWare Workstation Pro. You can use Virtual Box if you wish. But like I said, it will not be an enjoyable experience for you.
 Now before you actually install GNS3, I recommend installing the VMWare and the GNS3 first, as it makes it easier for the initial setup of the GNS3 software.
 
+*Note: Something that is very important. The version of GNS3 you have and the version of the GNS3 VM **MUST MATCH**. If they don't GNS3 won't work. Later on we'll show you how to tell GNS3 to not allow automatic updates.*
+
 ## VMWare Workstation Pro Install
 
 VMWare Workstation is an extremely powerful software with great features. BYU has been gracious enough to give us a license as students so that we don’t have to purchase it (hint it’s expensive). This info is all found at [BYU Software](https://software.byu.edu/workstation). You can download VMWare Workstation from the following website:

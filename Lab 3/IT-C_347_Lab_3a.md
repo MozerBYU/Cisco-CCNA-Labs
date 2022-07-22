@@ -22,7 +22,7 @@ IP addressing is divided into different classes: classful and classless. For pub
 
 ## Classful Addressing (Public Classes)
 
-| Class IPv4 | IP Address Range	| # of Hosts |
+| **Class IPv4** | **IP Address Range**	| **# of Hosts** |
 | :------: | :------: | :------: |
 | A |	0.0.0.0 – 127.255.255.255	| 17 Million |
 | B	| 128.0.0.0 – 191.255.255.255	| 65,536 |
@@ -32,7 +32,7 @@ IP addressing is divided into different classes: classful and classless. For pub
 
 ## Classless Addressing (Private Classes)
 
-| Class	IPv4 | IP Range	| # of Hosts |
+| **Class	IPv4** | **IP Range**	| **# of Hosts** |
 | :------: | :------: | :------: |
 | A	| 10.0.0.0 – 10.255.255.255	| 17 Million |
 | B	| 172.16.0.0 – 172.31.255.255	| 65,536 |
@@ -89,7 +89,7 @@ Now you have a basic understanding of how to define a subnet and the IP addressi
 
 Now this is where subnetting starts to get complicated, lucky for you someone made a super helpful tool for figuring this out. You can do it via subnet math in binary, but that will not be covered here. Before I show you the tool, here is a table of all CIDR from a /0 subnet all the way to a /32 subnet. For each subnet, there is the associated subnet mask, how many addresses and what the wildcard is.
 
-| CIDR Notation Prefix | Subnet Mask | # of Hosts |	Wildcard Address |
+| **CIDR Notation Prefix** | **Subnet Mask** | **# of Hosts** |	**Wildcard Address** |
 | :------: | :------: | :------: | :------: |
 |/0	| 0.0.0.0	| 4,294,967,296	| 255.255.255.255 |
 | /1	| 128.0.0.0	| 2,147,483,648	| 127.255.255.255 |

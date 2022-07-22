@@ -67,4 +67,4 @@ To get to the privileged mode, you need to use the “enable” command (think o
 
 ## Credit
 
-Image credits to some people.
+Image credits to PuTTY, CablesandKits.com, Amazon, Cisco, Wikipedia and Snabay Networking.

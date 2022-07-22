@@ -116,13 +116,8 @@ You’ll have to manually get the Ubuntu docker container file (we’ll go over 
 
 ## Resources
 
-Cisco Academy
 - https://www.netacad.com/
-
-GNS3 Vault
 - https://gns3vault.com/
-
-GNS3
 -	https://www.gns3.com/
 
 ## Image Credit

@@ -75,6 +75,23 @@ If everything is working correctly you should see a screen within VMWare Worksta
 
 Now open GNS3 for the first time, and we'll make sure that everything gets connected properly with the GNS3 VM we just setup.
 
+You’ll be welcomed with a window asking you to create your first project. If you wish you can make a new project for each lab (copying the previous lab), or you can build all off of the same lab. 
+
+![GNS3 New Project Screen](/assets/images/lab1/gns3-new-project.png "GNS3 New Project Screen")
+
+Off to the right-pane is where you can see system stats on your GNS3 VM. If it is green, then you are good to go. Most likely it will be red. We’ll need to go into the ‘Preferences’ pane under ‘Edit’ to fix that.
+
+That will bring up a window like the following:
+
+![GNS3 Preferences Screen](/assets/images/lab1/gns3-preferences.png "GNS3 Preferences Screen")
+
+There are many options that you are welcome to adjust. We’re specifically here to adjust the following:
+-	Server: has the settings for connecting to a local or remote GNS3 VM instance
+-	GNS3 VM: this has all the settings for connection to your GNS3 VM itself
+-	Packet Capture: this has all the settings for connecting to WireShark
+-	Dynamips: this is where we will import our router template that we will use for our Cisco switches and routers
+-	Docker containers: this is where we will import a Ubuntu 20.04 or 22.04 docker instance for our hosts
+
 ## GNS3 VM Settings
 
 After you have imported the VM you’ll want to tweak some of the settings for the VM. Basically, we’re giving the VM some more resources to work with. You can adjust these to your liking and to the extent your system can handle. The following settings are a minimum recommendation for the labs:

@@ -50,6 +50,10 @@ Next, you’ll want to configure your PuTTY settings as follows:
 It should look similar to the following:
 
 ![Putty Configuration Screen](/assets/images/lab4a/putty-configuration.png "Putty Configuration Screen")
+
+Lastly, you’ll want to power cycle the switch after it boots. Once it powers back on, you’ll want to immediately press and hold the ‘mode’ button. Hold it down for approximately 12 or so seconds, until the SYST Status LED goes amber. On the console you should now be in the ‘boot loader’.
+
+![Cisco Mode Button](/assets/images/lab4a/cisco-mode-button.png "Cisco Mode Button")
  
 ## iOS Commands
 
@@ -62,7 +66,53 @@ You have essentially 3 modes that you will switch between on the command-line (y
 
 To get to the privileged mode, you need to use the “enable” command (think of it like using sudo). This allows you to view settings on the switch/router. Now in order to make changes you need to be in configuration mode, using the command “conf t” (short for ‘configure terminal’).
 
-Now for the tough part, lol. 
+## Password Recovery Commands
+
+Now for the tough part, lol. All you need to do is copy the following commands in order:
+
+*// Enter into a privileged shell mode*
+<br> `Switch> enable`
+
+*// Tell the switch to ignore the startup config*
+<br> `Switch# SWITCH_IGNORE_STARTUP_CFG=1`
+
+*// Tell the switch to enable password recovery*
+<br> `Switch# SWITCH_DISABLE_PASSWORD_RECOVERY=0`
+
+*// Soft reboot the switch*
+<br> `Switch# boot`
+
+*// Copy the running config into flash memory*
+<br> `Switch# copy start run`
+ 
+*// Then hit ENTER to copy the running-config*
+
+*// Next, enter into a config shell*
+<br> `Switch# configure terminal`
+
+*// From here you can set a password*
+<br> `Switch (config)# enable secret <password>`
+
+*// Tell the switch to re-apply the startup config*
+<br> `Switch (config)# no system ignore startupconfig switch all`
+
+*// Finally, tell the switch to disable password recovery*
+<br> `Switch (config)# system disable password recovery switch all`
+
+## Write-up Questions
+ 
+As part of you write up include a screenshot of the terminal once you have reboot the switch demonstrating that you have reset the password (by disabling it).
+-	What are the three modes in Cisco iOS?
+
+-	What does ‘configure terminal’ or ‘conf t’ do?
+
+-	What does the command ‘copy start run’ tell the switch to do?
+
+-	How is that command different from ‘write memory’?
+
+-	Why does the bit/baud rate on the switch need to be 9600?
+
+-	How does a serial connection work?
 
 ## Resources
 -	https://www.netwrix.com/cisco_commands_cheat_sheet.html

@@ -24,13 +24,13 @@ Now behold why patch panels reign supreme.
 
 ![Crisp Cable Management](/assets/images/lab2b/crisp-cable-management.jpeg "Crisp Cable Management")
 
-See why this is so much better, from both a fire-hazard free standpoint, and from an IT administration standpoint? It’s just so crisp and clean. This is the ideal you should strive for.
+See why this is so much better, from both a fire-hazard free standpoint, and from an IT administration standpoint? It’s just so crisp and clean. This is the ideal you should strive for in your cable management in networking.
 
 Here’s another from a data center. Isn’t it just so aesthetically pleasing?
 
 ![Gorgeous Data Center Cable Management](/assets/images/lab2b/its-gorgeous.jpg "Gorgeous Data Center Cable Management")
 
-In networking, zip ties are your friend. Use them to keep everything a nice, neat and clean. The patch panel serves as an easy termination point for the ethernet runs, so that you can connect, disconnect runs to your switches with ease. Plus, if anyone replaces you in your position, they won’t hate your guts and burn everything and start all over.
+In networking, zip ties and velcro are your friend. Use them to keep everything a nice, neat and clean. The patch panel serves as an easy termination point for the ethernet runs, so that you can connect, disconnect runs to your switches with ease. Plus, if anyone replaces you in your position, they won’t hate your guts and burn everything and start all over.
 
 Now you can still use patch panels and create an impending IT disaster. See the following:
 

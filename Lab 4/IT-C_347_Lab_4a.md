@@ -53,14 +53,16 @@ It should look similar to the following:
  
 ## iOS Commands
 
-Now for the tough part, lol. Before we get into the actual commands, you need to know a bit about how Cisco iOS works. 
+Before we get into the actual commands, you need to know a bit about how Cisco iOS works. 
 
-You have essential 3 modes: 
+You have essentially 3 modes that you will switch between on the command-line (you'll notice similaries to the Unix command-line):  
 - Unprivileged
 - Privileged
 - Configuration
 
 To get to the privileged mode, you need to use the “enable” command (think of it like using sudo). This allows you to view settings on the switch/router. Now in order to make changes you need to be in configuration mode, using the command “conf t” (short for ‘configure terminal’).
+
+Now for the tough part, lol. 
 
 ## Resources
 -	https://www.netwrix.com/cisco_commands_cheat_sheet.html

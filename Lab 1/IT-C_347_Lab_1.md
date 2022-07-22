@@ -120,8 +120,8 @@ You’ll have to manually get the Ubuntu docker container file (we’ll go over 
 - https://gns3vault.com/
 -	https://www.gns3.com/
 
-## Image Credit
+## Credit
 
-Credits to myself, compliments of VMWare and GNS3 respectively.
+Image credits to myself, compliments of VMWare and GNS3 respectively.
 
 

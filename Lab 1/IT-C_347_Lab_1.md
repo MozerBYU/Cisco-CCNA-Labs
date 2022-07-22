@@ -122,6 +122,6 @@ You’ll have to manually get the Ubuntu docker container file (we’ll go over 
 
 ## Credit
 
-Image credits to VMWare and GNS3 respectively.
+Image credits to VMWare and GNS3.
 
 

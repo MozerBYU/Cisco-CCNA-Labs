@@ -22,7 +22,7 @@ However, before we dive into the actual commands, we need to go over some standa
 
 Those ports will look like the following:
 
-![Serial Port](/assets/images/lab4a/serial-port.png "Serial Port")
+![Serial Port](/assets/images/lab4a/serial-port.jpg "Serial Port")
 
 ![RJ45 Port](/assets/images/lab4a/rj45-console-port.png "RJ45 Port")
  
@@ -32,9 +32,9 @@ In order to connect to these ports you’ll need one or the other of the followi
 
 Those will look like the following:
 
-![USB-to-Serial](/assets/images/lab4a/usb-to-serial.png "USB-to-Serial")
+![USB-to-Serial](/assets/images/lab4a/usb-to-serial.jpg "USB-to-Serial")
 
-![USB-to-RJ45](/assets/images/lab4a/usb-to-rj45.png "USB-to-RJ45")
+![USB-to-RJ45](/assets/images/lab4a/usb-to-rj45.jpg "USB-to-RJ45")
                   
 ## Setup
 

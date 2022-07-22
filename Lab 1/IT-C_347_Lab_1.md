@@ -2,65 +2,87 @@
 ### *Practical Lab - Software Setup*
 ## Introduction
 
-We are going to have a lot of fun. We’re going to use the semi-wonderful program called GNS3. It is a very powerful and capable network virtualization program. With it you will be building one master lab over the course of the whole semester. In this lab you will be dealing with lots of networking areas: IP Addressing, Subnetting, VLANs, Switches, Routers, Packet Capture and, if we have time, some Advanced Networking Technologies (optional lab).
+We are going to have a lot of fun throughout the semester! We’re going to use the semi-wonderful program called GNS3 (you'll understand later why I say that). It is a very powerful and capable network virtualization program. With it you will be building one master lab over the course of the whole semester, divided in 6 sections. In this lab you will be dealing with lots of networking areas: IP Addressing, Subnetting, VLANs, Switches, Routers, and Packet Capture.
+
+Optionally, we will also have a lab to prepare you for the Advanced Networking class focusing on some advanced routing technologies.
 
 ## Cisco Academy
 
 Cisco Academy is a wonderful resource for anyone who wants to grow, deepen or sharpen their networking skills, as Cisco is very dominate in the networking field. In this class we will be focusing a lot on Cisco and Cisco iOS in relation to setting up switches and routers.
+
 To begin, go to the following and create your account:
 
-[Cisco Academy](https://www.netacad.com/)
+[Cisco Academy Website](https://www.netacad.com/)
 
-You are welcome to work on any of these labs to further your skills in addition to what we do in this class.
+You are welcome to work on any of these labs to further your skills in addition to what we do in this class. Trust me, they will prove a very valuable resource throughout your career, regardless of the field.
+
 There is also a wonderful resource called GNS3 Vault that also has labs that you can work on if you wish.
 
-[GNS3 Vault](https://gns3vault.com/)
+[GNS3 Vault Website](https://gns3vault.com/)
 
 ## GNS3 Install
 
-Now for the fun part, installing GNS3. This comes in 3 parts: installing GNS3, installing VMWare Workstation Pro (or Virtual Box if you really want to hate your life), and importing the GNS3 VM. 
-To get the GNS3 software head to the following website, make an account and then download the software:
+Now for the fun part, installing GNS3. This comes in 3 parts: installing GNS3, installing VMWare Workstation Pro (or Virtual Box if you really want to hate your life), and importing the GNS3 VM. To get the GNS3 software head to the following website, make an account and then download the software:
 
-[GNS3](https://www.gns3.com/)
+[GNS3 Website](https://www.gns3.com/)
 
-I recommend also downloading the GNS3 VM file that is specific to VMWare Workstation Pro. You can use Virtual Box if you wish. But like I said, it will not be an enjoyable experience for you.
-Now before you actually install GNS3, I recommend installing the VMWare and the GNS3 first, as it makes it easier for the initial setup of the GNS3 software.
+Now you can download the GNS3 VM file now if you wish, or it will be downloaded later during the GNS3 install. If you do, make sure you get the one specific to VMWare Workstation Pro. 
 
-*Note: Something that is very important. The version of GNS3 you have and the version of the GNS3 VM **MUST MATCH**. If they don't GNS3 won't work. Later on we'll show you how to tell GNS3 to not allow automatic updates.*
+*Note: You are welcome to use whatever hypervisor of VM software of your choosing. But for this class we are specifically supporting VMWare Workstation Pro as the VM software of choice.*
+
+For ease of installation and simplicity, we are going to have GNS3 download the VM for us. We'll skip right to installing GNS3. During which you will be presented with a few options. Most of the windows it walks you through are nothing particularly special minus a few:
+
+![GNS3 Components Screen](/assets/images/lab1/gns3-components.png "GNS3 Components Screen")
+
+Make sure to select both ‘GNS3 Desktop’ and ‘GNS3 VM’. If you don’t, you’ll have some fun problems, and you will have to reinstall GNS3. You have been warned.
+
+Next, you’ll want to make sure that the VM type is set to “VMWare Workstation Pro” or to whatever you are using.
+
+*Note: If for whatever reason, you choose to use VirtualBox, you have both my pity and my condolences. This is your last chance to redeem yourself. Any future problems you have from here on out are you own fault.*
+
+![GNS3 VM Type Screen](/assets/images/lab1/gns3-vm-type.png "GNS3 VM Type Screen")
+
+After that screen you should be done. It will take a while to complete the install (roughly 15 - 30 mins, depending on your internet connection and computer).
+
+*Note: Something that is **very important**. The version of GNS3 you have and the version of the GNS3 VM **MUST MATCH**. If they don't GNS3 won't work. Later on, we'll show you how to turn off automatic updates for GNS3.*
 
 ## VMWare Workstation Pro Install
 
-VMWare Workstation is an extremely powerful software with great features. BYU has been gracious enough to give us a license as students so that we don’t have to purchase it (hint it’s expensive). This info is all found at [BYU Software](https://software.byu.edu/workstation). You can download VMWare Workstation from the following website:
-[VMWare Workstation](https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html)
+VMWare Workstation is an extremely powerful software with great features. BYU has been gracious enough to give us a license as students so that we don’t have to purchase it (hint it’s expensive). This info is all found at [BYU Software Website](https://software.byu.edu/workstation). You can download VMWare Workstation from the following website:
+
+[VMWare Workstation Website](https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html)
 
 Here is the license key that you will need:
 > 5423P-QG20L-J8TJ2-0R3U4-147QH
 
 ## GNS3 VM Import
 
-Once that is all installed you'll be brought to the following screen.
+Once that is all installed, you'll be brought to the following screen:
 
-![VMWare Workstation Main Screen](/assets/images/lab1/vmware-main-screen.PNG "VMWare Workstation Main Screen")
+![VMWare Workstation Main Screen](/assets/images/lab1/vmware-main.png "VMWare Workstation Main Screen")
 
-From here you'll select "Open a Virtual Machine", then browse until you find the GNS3.ova file that has the VM. It will take a few minutes for VMWare to import the VM. 
+From which you'll select "Open a Virtual Machine", then browse until you find the file that was downloaded by GNS3 (GNS3.VM.VMware.Workstation.2.2.33.1.zip). You'll want to extract that zip, as within it is the GNS3.ova file. It will take a few minutes for VMWare to import the VM. 
 
-**Make sure to title the VM as: "GNS3 VM", as this is what the GNS3 software will be looking for when it connects to the VM.**
+From here you'll select "Open a Virtual Machine", then browse until you find the GNS3.ova file that has the VM. It will take a few minutes for VMWare to import the VM.
+
+*Note: Make sure to title the VM: “GNS3 VM”, as this is what GNS3 is looking for when it tries to connect to the VM.*
+
+If everything is working correctly you should see a screen within VMWare Workstation that is similar to the following:
+
+![VMWare Workstation GNS3 VM Screen](/assets/images/lab1/gns3-vm-working.png "VMWare Workstation GNS3 VM Screen")
+
+## Start-up GNS3
+
+Now open GNS3 for the first time, and we'll make sure that everything gets connected properly with the GNS3 VM we just setup.
 
 ## GNS3 VM Settings
 
-After you have imported the VM you’ll want to tweak some of the settings for the VM (we’ll also tweak these within GNS3). Basically, we’re giving the VM some more resources to work with. You can adjust these to your liking and to the extent your system can handle. The following settings are a minimum recommendation for the labs:
+After you have imported the VM you’ll want to tweak some of the settings for the VM. Basically, we’re giving the VM some more resources to work with. You can adjust these to your liking and to the extent your system can handle. The following settings are a minimum recommendation for the labs:
 
 -	vCPU Cores: 4
 -	RAM: 1 GB
 
-Below is an example of what you could set your VM settings to:
 
-![VMWare Workstation Settings Screen](/assets/images/lab1/vmware-settings-screen.PNG "VMWare Workstation Settings Screen")
 
-If everything is working correctly you should see a screen within VMWare Workstation that is similar to the following:
 
-![VMWare Workstation GNS3 VM Working](/assets/images/lab1/gns3-vm.PNG "GNS3 VM Working")
 
-## GNS3 Install
-
-Now that we have the VM setup properly, it is time to get GNS3 installed and connected to our VM. We'll begin by running the install of that GNS3.exe file that you downloaded earlier. You will then be presented with a few options.

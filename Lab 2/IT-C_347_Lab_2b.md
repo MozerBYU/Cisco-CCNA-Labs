@@ -36,7 +36,7 @@ Now you can still use patch panels and create an impending IT disaster. See the 
 
 ![An attempt, but still a failure](/assets/images/lab2b/an-attempt.webp "An attempt, but still a failure")
 
-Don’t do that. One, your career in networking will be very short. And two, no one will like you, nor promote you, and rightfully so, you psychopath.
+Don’t do the first method. One, your career in networking will be very short. And two, no one will like you, nor promote you, and rightfully so, you psychopath.
 
 ## Connecting to a Patch Panel
 

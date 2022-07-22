@@ -90,7 +90,7 @@ There are many options that you are welcome to adjust. We’re specifically here
 -	GNS3 VM: this has all the settings for connection to your GNS3 VM itself
 -	Packet Capture: this has all the settings for connecting to WireShark
 -	Dynamips: this is where we will import our router template that we will use for our Cisco switches and routers
--	Docker containers: this is where we will import a Ubuntu 20.04 or 22.04 docker instance for our hosts
+-	Docker containers: this is where we will import a Ubuntu 20.04/22.04 docker instance for our hosts
 
 ## GNS3 VM Settings
 
@@ -106,7 +106,24 @@ If you’re system can handle it, these are the recommended settings for the lab
 
 Note: The settings changed within GNS3 will automatically apply to the VM. You do not need to change these settings within VMWare Workstation.
 
+## Additional Software
 
+Like was mentioned earlier we’ll need to import our Cisco switch/router file and a docker container for Ubuntu 20.04/22.04.
+
+The file for the Cisco switch/router can be found on LearningSuite under ‘Content’ and then ‘Labs’, tiled 'cisco_3275_router.bin'.
+
+You’ll have to manually get the Ubuntu docker container file (we’ll go over this in class if you get stuck).
+
+## Resources
+
+Cisco Academy
+- https://www.netacad.com/
+
+GNS3 Vault
+- https://gns3vault.com/
+
+GNS3
+-	https://www.gns3.com/
 
 
 

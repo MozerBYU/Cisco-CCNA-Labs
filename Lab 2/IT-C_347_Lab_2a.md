@@ -68,6 +68,6 @@ Now making one of these is required for the mid-term. So keep trying until you g
 -	https://www.warehousecables.com/how-to-make-a-cat5-patch-cable
 -	https://www.youtube.com/watch?v=zpNpfO4Z628
 
-## Image Credit
+## Credit
 
-Credit to FiberOpticTutorial.com, Firewall.cx, and BlogSpot.com.
+Image credit to FiberOpticTutorial.com, Firewall.cx, and BlogSpot.com.

@@ -106,6 +106,10 @@ If you’re system can handle it, these are the recommended settings for the lab
 
 Note: The settings changed within GNS3 will automatically apply to the VM. You do not need to change these settings within VMWare Workstation.
 
+Last thing, you’ll want to go in and change GNS3 to not auto-update. Because if it does, either you’ll have to reinstall GNS3 or reimport the latest version of the GNS3 VM, both of which will be total headaches.
+
+![No Auto-Update GNS3](/assets/images/lab1/gns3-no-update.png "No Auto-Update GNS3")
+
 ## Additional Software
 
 Like was mentioned earlier we’ll need to import our Cisco switch/router file and a docker container for Ubuntu 20.04/22.04.

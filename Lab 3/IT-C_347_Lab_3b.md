@@ -6,12 +6,12 @@ If all went well in Lab 1, you should have the GNS3 software and VM setup correc
 
 To start off this lab, let me give you an overview of what we’re trying to achieve throughout all the labs at the end of Lab 6:
 
-![Completed Lab 6](/assets/images/labs/lab3b/completed-lab.png "Completed Lab 6")
+![Completed Lab 6](/assets/images/lab3b/completed-lab.png "Completed Lab 6")
  
 However, like I mentioned in Lab 1, we will be doing this in chunks so that it is consistent with what you’re learning in the conceptual labs and in class, and so that you don’t get overwhelmed. 
 For now, we’re going to focus on setting up our lab so that it looks like the following:
 
-![Starter Lab 3](/assets/images/labs/lab3b/starter-lab.png "Starter Lab 3")
+![Starter Lab 3](/assets/images/lab3b/starter-lab.png "Starter Lab 3")
  
 Now you are welcome to set your lab however you want. What we’re looking for are 4 different VLANs, you can number these however you want as long as you don’t use VLAN 1. One stipulation though, is that one of those VLANs needs to be completely unroutable (no other VLANs can talk to it, and it can’t talk to any other VLANs. However, the hosts within that VLAN can talk to each other). You can determine how many switches you want, but the minimum is 4. At the end there should be a minimum of two distribution routers and two core routers. 
 
@@ -54,5 +54,3 @@ Now for pass-off I’m only looking for a few things:
 ## Credit
 
 All image credit goes to myself.
-
-

@@ -151,7 +151,7 @@ As part of you write up include a screenshot of the terminal once you have reboo
 
 ## Pass-off
 
-For pass-off, we just need a screenshot of the PuTTY terminal that you have completed each portion (password reset, and firmware upgrade).
+For pass-off, we just need a screenshot of the PuTTY terminal that you have completed each portion (password reset, and firmware upgrade). You’ll turn these in as part of your write-up submission.
 
 ## Resources
 -	https://www.netwrix.com/cisco_commands_cheat_sheet.html

@@ -23,6 +23,8 @@ In the practical lab, at this stage the students will setup is the individual ho
 
 The completed lab, to this point, should look like the following:
 
+![Completed Lab 3](/assets/images/gns3/Lab-3.png "Completed Lab 3")
+
 ### Lab 4: Switches
 
 In this lab, students will get hands-on practice will a live Cisco switch. In the lab they will learn how to reset a password on a switch, and upgrade the firmware for said device. Additionally, they will learn about how switches operate and how switching tables function.
@@ -30,6 +32,8 @@ In this lab, students will get hands-on practice will a live Cisco switch. In th
 In the practical lab, at this stage the students will then take those hosts from the last lab, and connect them to switches. All hosts should be able to talk within their respective subnets.
 
 The completed lab, to this point, should look like the following:
+
+![Completed Lab 4](/assets/images/gns3/Lab-4.png "Completed Lab 4")
  
 ### Lab 5: VLANs
 
@@ -39,6 +43,8 @@ In the practical lab, at this stage the students will then put those hosts into 
 
 The completed lab, to this point, should look like the following:
 
+![Completed Lab 5](/assets/images/gns3/Lab-5.png "Completed Lab 5")
+
 ### Lab 6: Routers
 
 In this lab, students will learn about how routing works, how routing tables function, how to create and setup static routes, and how to implement point-to-point links.
@@ -46,6 +52,8 @@ In this lab, students will learn about how routing works, how routing tables fun
 In the practical lab, at this stage the students will then connect all switches to two respective distribution routers. Using static routes, they will make it so that hosts can talk from one router to another. ALl hosts should be able to talk within their respective subnets, vlans and talk across vlans. The lab will be tested for completion and then passed-off.
 
 The completed lab should look like the following:
+
+![Completed Lab 6](/assets/images/gns3/Lab-6.png "Completed Lab 6")
 
 ### Lab 7: Advanced Networking Technologies (optional)
 

@@ -1,5 +1,5 @@
 # IT-C 347 Lab 4a
-### *Practical Lab - Cisco Switch Password Reset*
+### *Practical Lab - Cisco Switch Password Reset and Firmware Upgrade*
 ## Introduction
 
 Something that you are most certainly going to come across in your days as an IT administrator, technician, network engineer, etc, is discovering that the previous employee in X position forgot to leave you with the password to a device. Hopefully, in the Operating Systems class that will cover how to change a server password that you don’t know, as we won’t cover that here. However, we will cover the basic general concept for switches/routers. Now, we are going to specifically focus on Cisco hardware, but the general concept applies to most switches/routers.
@@ -83,12 +83,12 @@ Now for the tough part, lol. All you need to do is copy the following commands i
 <br> `Switch# boot`
 
 *// Copy the running config into flash memory*
-<br> `Switch# copy start run`
+<br> `Switch# write memory` or `Switch# copy start run`
  
 *// Then hit ENTER to copy the running-config*
 
 *// Next, enter into a config shell*
-<br> `Switch# configure terminal`
+<br> `Switch# conf t`
 
 *// From here you can set a password*
 <br> `Switch (config)# enable secret <password>`
@@ -98,6 +98,41 @@ Now for the tough part, lol. All you need to do is copy the following commands i
 
 *// Finally, tell the switch to disable password recovery*
 <br> `Switch (config)# system disable password recovery switch all`
+
+*// Copy the running config into flash memory*
+<br> `Switch# write memory` or `Switch# copy start run`
+ 
+*// Then hit ENTER to copy the running-config*
+
+## Firmware Upgrade Commands
+
+Before you begin this part, you will need to download the firmware upgrade .bin file from LearninSuite under 'Content' and then 'Labs', titled 'cat3k_caa-universalk9.16.12.05b.SPA.bin'.
+
+*// Find the switch firmware version number*
+<br> `Switch# show version`
+`-	16.09.04`
+
+*// Enter config terminal to set DHCP and Network settings*
+`Switch# conf t`
+
+*//Copy the config file from Cisco’s website to flash memory*
+`Switch# copy usbflash0:<file_name> flash:`
+
+*// Then apply the firmware update*
+`Switch# (config) boot syst switch all flash:<firmware_update_file_name.bin>`
+
+*// Then apply the config*
+`Switch# write memory`
+
+*// Verify new boot variable is set to new config file*
+`Switch# show boot`
+
+*// Then reboot*
+`Switch# boot`
+
+*// Finally check the version to make sure it updated correctly*
+`Switch# show version`
+`-	16.12.05`
 
 ## Write-up Questions
  
@@ -113,6 +148,10 @@ As part of you write up include a screenshot of the terminal once you have reboo
 -	Why does the bit/baud rate on the switch need to be 9600?
 
 -	How does a serial connection work?
+
+## Pass-off
+
+For pass-off, we just need a screenshot of the PuTTY terminal that you have completed each portion (password reset, and firmware upgrade).
 
 ## Resources
 -	https://www.netwrix.com/cisco_commands_cheat_sheet.html

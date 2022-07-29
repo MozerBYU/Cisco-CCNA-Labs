@@ -1,4 +1,4 @@
-# IT-C 347 Lab 4a
+# IT-C 347 Lab 4b
 ### *Practical Lab - Cisco Switch Password Reset and Firmware Upgrade*
 ## Introduction
 

@@ -39,7 +39,7 @@ The completed lab, to this point, should look like the following:
 
 In this lab, students will learn about the OSI Model, what VLANs are, why they are so useful, how they work, how ethernet frames are setup, and how VLANs relate with subnetting.
 
-In the practical lab, at this stage the students will then put those hosts into their respective VLANs. All hosts should be able to talk within their respective subnets and within their respective VLAN (including across subnets).
+In the practical lab, at this stage the students will then put those hosts into their respective VLANs. All hosts should be able to talk within their respective subnets and within their respective VLAN (including across subnets). Additional, they we setup 2 distribution routers and connect all switches to said routers. They will then setup the respective SVIs for each VLAN on said router. This is intended as a introduction to routers, and to split of setting up the distribution routers and core routers between two labs.
 
 The completed lab, to this point, should look like the following:
 
@@ -49,7 +49,7 @@ The completed lab, to this point, should look like the following:
 
 In this lab, students will learn about how routing works, how routing tables function, how to create and setup static routes, and how to implement point-to-point links.
 
-In the practical lab, at this stage the students will then connect all switches to two respective distribution routers. Using static routes, they will make it so that hosts can talk from one router to another. ALl hosts should be able to talk within their respective subnets, vlans and talk across vlans. The lab will be tested for completion and then passed-off.
+In the practical lab, at this stage the students will then connect the two respective distribution routers to each core router. Using static routes, they will make it so that hosts can talk from one core router to the other. All hosts should be able to talk within their respective subnets, vlan, talk across vlans and talk across routers. This lab is intended to prepare students for learning about setting up OSPF in the following lab. The lab will be tested for completion and then passed-off.
 
 The completed lab should look like the following:
 

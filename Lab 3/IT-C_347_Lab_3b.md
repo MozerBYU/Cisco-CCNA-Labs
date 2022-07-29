@@ -19,7 +19,7 @@ Now you are welcome to set your lab however you want. What we’re looking for a
 
 ## Setup Hosts
 
-First, you’ll want to setup all of your hosts. If you don’t have the ubuntu docker container, go to “Preferences” then “Docker Containers” and then select the option to add a new one. You can use whatever you want, I simply grabbed the official ubuntu container.
+First, you’ll want to setup all of your hosts. If you don’t have the ubuntu docker container, go to “Preferences” then “Docker Containers” and then select the option to add a new one. You can use whatever docker image you want, I simply grabbed the official ubuntu image.
 
 Next, you’ll want to setup each of those hosts on their subnets. My advice, figure out what your subnets will be first, before you do this. You can do that with an excel spreadsheet, or a text file. Whatever you choose, you will submit this file as part of your lab pass-off. But please make it look somewhat decent.
 

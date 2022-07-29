@@ -5,7 +5,7 @@ These labs are for the IT-C 347 - Networking class, taught in the Fall 2022 Seme
 
 ## Lab Structure
 
-There are 9 labs in total. Labs 2 - 9 are divided in two parts: part a which is conceptual, and part b which is practical. This allows students the ability to learn the concept and have a few write-up questions to test their understanding, and then put that knowledge into practice to solidify it.
+There are 9 labs in total. Labs 2 - 9 are divided in two parts: part A which is conceptual, and part B which is practical. This allows students the ability to learn the concept and have a few write-up questions to test their understanding, and then put that knowledge into practice to solidify it.
 
 ### Lab 1: Intro: Setup Cisco Academy and GNS3
 

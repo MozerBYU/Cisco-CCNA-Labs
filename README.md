@@ -63,6 +63,8 @@ In the practical lab, students will go back to their completed lab, they will ad
 
 The complete lab should look like the following: 
 
+![Completed Lab 7](/assets/images/gns3/Lab-7.png "Completed Lab 7")
+
 ### Lab 8: Network Troubleshooting
 
 In this lab, students will get hands-on practice with doing network troubleshooting. Students will work in teams for this lab to get them accustomed to working on a IT team in the real-world. They will be given a pre-broken lab, and will need to see if they can figure out what is wrong and get it working again in functionality similar to their completed lab at the end of Lab 6.

@@ -8,7 +8,7 @@ Something that you are most certainly going to come across in your days as an IT
 
 The switch we’ll be dealing with will be the Cisco Catalyst 3850 48 POE+. 
 
-![Cisco 3850 Switch](/assets/images/lab4a/cisco-3850-switch.png "Cisco 3850 Switch")
+![Cisco 3850 Switch](/assets/images/lab4b/cisco-3850-switch.png "Cisco 3850 Switch")
  
 Now, some things to be aware of. Cisco hardware runs on their own proprietary OS called iOS. Surprising they’re not in a legal battle with Apple over that, but that’s beside the point. Learning how to program and troubleshoot Cisco hardware from the terminal is a difficult learning curve. For this lab and the next (5b) I will be showing you the EXACT commands that you need to run. 
 
@@ -22,9 +22,9 @@ However, before we dive into the actual commands, we need to go over some standa
 
 Those ports will look like the following:
 
-![Serial Port](/assets/images/lab4a/serial-port.jpg "Serial Port")
+![Serial Port](/assets/images/lab4b/serial-port.jpg "Serial Port")
 
-![RJ45 Port](/assets/images/lab4a/cisco-switch-rj45-port.png "RJ45 Port")
+![RJ45 Port](/assets/images/lab4b/cisco-switch-rj45-port.jpg "RJ45 Port")
  
 In order to connect to these ports you’ll need one or the other of the following cables
 -	USB-to-Serial (female) cable
@@ -32,9 +32,9 @@ In order to connect to these ports you’ll need one or the other of the followi
 
 Those will look like the following:
 
-![USB-to-Serial](/assets/images/lab4a/usb-to-serial.jpg "USB-to-Serial")
+![USB-to-Serial](/assets/images/lab4b/usb-to-serial.jpg "USB-to-Serial")
 
-![USB-to-RJ45](/assets/images/lab4a/usb-to-rj45.jpg "USB-to-RJ45")
+![USB-to-RJ45](/assets/images/lab4b/usb-to-rj45.jpg "USB-to-RJ45")
                   
 ## Setup
 
@@ -49,11 +49,11 @@ Next, you’ll want to configure your PuTTY settings as follows:
 
 It should look similar to the following:
 
-![Putty Configuration Screen](/assets/images/lab4a/putty-configuration.png "Putty Configuration Screen")
+![Putty Configuration Screen](/assets/images/lab4b/putty-configuration.png "Putty Configuration Screen")
 
 Lastly, you’ll want to power cycle the switch after it boots. Once it powers back on, you’ll want to immediately press and hold the ‘mode’ button. Hold it down for approximately 12 or so seconds, until the SYST Status LED goes amber. On the console you should now be in the ‘boot loader’.
 
-![Cisco Mode Button](/assets/images/lab4a/cisco-mode-button.png "Cisco Mode Button")
+![Cisco Mode Button](/assets/images/lab4b/cisco-mode-button.jpg "Cisco Mode Button")
  
 ## iOS Commands
 
@@ -110,29 +110,29 @@ Before you begin this part, you will need to download the firmware upgrade .bin 
 
 *// Find the switch firmware version number*
 <br> `Switch# show version`
-`-	16.09.04`
+<br> `-	16.09.04`
 
 *// Enter config terminal to set DHCP and Network settings*
-`Switch# conf t`
+<br> `Switch# conf t`
 
 *//Copy the config file from Cisco’s website to flash memory*
-`Switch# copy usbflash0:<file_name> flash:`
+<br> `Switch# copy usbflash0:<file_name> flash:`
 
 *// Then apply the firmware update*
-`Switch# (config) boot syst switch all flash:<firmware_update_file_name.bin>`
+<br> `Switch# (config) boot syst switch all flash:<firmware_update_file_name.bin>`
 
 *// Then apply the config*
-`Switch# copy start run`
+<br> `Switch# copy start run`
 
 *// Verify new boot variable is set to new config file*
-`Switch# show boot`
+<br> `Switch# show boot`
 
 *// Then reboot*
-`Switch# boot`
+<br> `Switch# boot`
 
 *// Finally check the version to make sure it updated correctly*
-`Switch# show version`
-`-	16.12.05`
+<br> `Switch# show version`
+<br> `-	16.12.05`
 
 ## Write-up Questions
  

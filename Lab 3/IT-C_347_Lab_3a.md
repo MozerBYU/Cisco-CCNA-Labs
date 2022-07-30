@@ -126,6 +126,7 @@ Now this is where subnetting starts to get complicated, lucky for you someone ma
 | /32	| 255.255.255.255	| 1	| 0.0.0.0 |
 
 Now here is that tool I mentioned, it is extremely simple, but so powerful as you’ll see in a sec. I would recommend familiarizing yourself with this tool so that you can see a visual representation of how subnetting works for splitting up a network into smaller sub-networks.
+
 [DavidC Subnet Tool](https://www.davidc.net/sites/default/subnets/subnets.html)
 
 ## Point-to-Point Links
@@ -183,3 +184,5 @@ Note: The following questions are all for a 10.0.0.0/16 network
 
 ## Credit
 Image credits to TechTarget.com and Tripod.com.
+
+Lab credits to Nathan Moser as the sole author and editor. Additional credit to Bryan Wood for the structure and concepts of the lab.

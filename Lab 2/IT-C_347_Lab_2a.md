@@ -71,3 +71,5 @@ Now making one of these is required for the mid-term. So keep trying until you g
 ## Credit
 
 Image credit to FiberOpticTutorial.com, Firewall.cx, and BlogSpot.com.
+
+Lab credits to Nathan Moser as the sole author and editor.

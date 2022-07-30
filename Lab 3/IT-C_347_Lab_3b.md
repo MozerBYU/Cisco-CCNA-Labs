@@ -53,4 +53,6 @@ Now for pass-off I’m only looking for a few things:
 
 ## Credit
 
-All image credit goes to myself.
+All image credit goes to myself (Nathan)
+
+Lab credits to Nathan Moser as the sole author and editor. Additional credit to Bryan Wood for the structure and concepts of the lab.

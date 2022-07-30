@@ -128,4 +128,6 @@ You’ll have to manually get the Ubuntu docker container file (we’ll go over 
 
 Image credits to VMWare and GNS3.
 
+Lab credits to Nathan Moser as the sole author and editor. Additional credit to Bryan Wood for the structure and concepts of the lab.
+
 

@@ -24,7 +24,7 @@ Those ports will look like the following:
 
 ![Serial Port](/assets/images/lab4a/serial-port.jpg "Serial Port")
 
-![RJ45 Port](/assets/images/lab4a/rj45-console-port.png "RJ45 Port")
+![RJ45 Port](/assets/images/lab4a/cisco-switch-rj45-port.png "RJ45 Port")
  
 In order to connect to these ports you’ll need one or the other of the following cables
 -	USB-to-Serial (female) cable
@@ -83,7 +83,7 @@ Now for the tough part, lol. All you need to do is copy the following commands i
 <br> `Switch# boot`
 
 *// Copy the running config into flash memory*
-<br> `Switch# write memory` or `Switch# copy start run`
+<br> `Switch# copy start run`
  
 *// Then hit ENTER to copy the running-config*
 
@@ -100,13 +100,13 @@ Now for the tough part, lol. All you need to do is copy the following commands i
 <br> `Switch (config)# system disable password recovery switch all`
 
 *// Copy the running config into flash memory*
-<br> `Switch# write memory` or `Switch# copy start run`
+<br> `Switch# copy start run`
  
 *// Then hit ENTER to copy the running-config*
 
 ## Firmware Upgrade Commands
 
-Before you begin this part, you will need to download the firmware upgrade .bin file from LearninSuite under 'Content' and then 'Labs', titled 'cat3k_caa-universalk9.16.12.05b.SPA.bin'.
+Before you begin this part, you will need to download the firmware upgrade .bin file from LearninSuite under 'Content', 'Labs' and then 'Lab Software', titled "cat3k_caa-universalk9.16.12.05b.SPA.bin".
 
 *// Find the switch firmware version number*
 <br> `Switch# show version`
@@ -122,7 +122,7 @@ Before you begin this part, you will need to download the firmware upgrade .bin 
 `Switch# (config) boot syst switch all flash:<firmware_update_file_name.bin>`
 
 *// Then apply the config*
-`Switch# write memory`
+`Switch# copy start run`
 
 *// Verify new boot variable is set to new config file*
 `Switch# show boot`
@@ -159,3 +159,5 @@ For pass-off, we just need a screenshot of the PuTTY terminal that you have comp
 ## Credit
 
 Image credits to PuTTY, CablesandKits.com, Amazon, Cisco, Wikipedia and Snabay Networking.
+
+Lab credits to Nathan Moser as the sole authors and editor, and Albert Tay for the structure and concepts of the lab.

@@ -117,3 +117,5 @@ Note: The following questions are all for a 10.0.0.0/16 network
 
 ## Credit
 Image credit to NetMgmt.WordPress.com and someone else.
+
+Lab credits to Nathan Moser as the sole author and editor. Additional credit to Bryan Wood for the structure and concepts of the lab.

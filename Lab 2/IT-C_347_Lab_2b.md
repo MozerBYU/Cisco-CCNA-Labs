@@ -62,3 +62,5 @@ https://www.youtube.com/watch?v=TgvmM6R8rQc
 # Credit
 
 Image credit to DotCom-Monitor.com, Medium.com and LinkedIn.com. 
+
+Lab credits to Nathan Moser as the sole author and editor.

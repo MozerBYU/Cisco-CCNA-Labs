@@ -114,7 +114,7 @@ Last thing, you’ll want to go in and change GNS3 to not auto-update. Because i
 
 Like was mentioned earlier we’ll need to import our Cisco switch/router file and a docker container for Ubuntu 20.04/22.04.
 
-The file for the Cisco switch/router can be found on LearningSuite under ‘Content’ and then ‘Labs’, tiled 'cisco_3275_router.bin'.
+The file for the Cisco switch/router can be found on LearningSuite under ‘Content’, ‘Labs’, then under 'Lab Software', tiled "cisco_3275_router.bin".
 
 You’ll have to manually get the Ubuntu docker container file (we’ll go over this in class if you get stuck).
 

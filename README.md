@@ -25,8 +25,6 @@ The completed lab, to this point, should look like the following:
 
 ![Completed Lab 3](/assets/images/gns3/Lab-3.png "Completed Lab 3")
 
-*Note: A starter file can be downloaded from /assets/files/IT-C-347-Lab-3-Starter.7z.
-
 ### Lab 4: Switches
 
 In this lab, students will get hands-on practice will a live Cisco switch, a Cataylst 3850 to be exact. In the lab they will learn the basics of Cisco iOS, how to reset a password on a switch, and upgrade the firmware for said device. Additionally, they will learn about how switches operate and how switching tables function.

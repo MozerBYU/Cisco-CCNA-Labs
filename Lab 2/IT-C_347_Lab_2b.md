@@ -52,6 +52,7 @@ Below is a picture of the back of a standard Cat 5e patch panel:
 More or less, find the color of the wire that matches the color on the little picture, then put the wire in the slot and use the punch down tool to secure the wire. Like with the prior lab, you’ll know you did wrong if you test it with speed test and you only get 100 Mbps, or not connection at all. Which means, yep, you get to redo it. 
 
 Like with the prior lab, here’s a YouTube video demonstrating how to do this:
+
 https://www.youtube.com/watch?v=TgvmM6R8rQc
 
 ## Resources

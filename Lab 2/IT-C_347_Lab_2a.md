@@ -1,5 +1,5 @@
 # IT-C 347 Lab 2a
-### *Practical Lab - Ethernet Patch Cable*
+### *Conceptual & Practical Lab - Ethernet Patch Cable*
 ## Introduction
 
 Regardless if you’re Helpdesk, System Administration, Network Engineer, etc. At some point in your career you’ll have the opportunity to create an ethernet patch cable. It is a vital skill regardless of your IT/Cybersecurity position.

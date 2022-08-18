@@ -30,6 +30,20 @@ For a more visual representation of what I’m talking about, see the video belo
 
 https://www.youtube.com/watch?v=jC6MJTh9fRE
 
+## Types of VLANs
+
+There are generally 3 main types of VLANs:
+
+-	Static or Port-based: which are allocated based on the physical switch port the device is connected to
+-	Dynamic: which are allocated based on physical device characteristics and sometimes an associated user profile (such as 802.1X)
+-	Protocol: which are allocated based on what protocol is being used
+
+The most common amongst each of these are port-based VLANs. That is because often you will have a dedicated ethernet line from a switch to a given device on the network, and it only needs that one VLAN.
+
+Dynamic-based VLANs are commonly used in newer enterprise networks and especially in wireless networks, as VLANs can be assigned based on a user-level rather than a device-level.
+
+Protocol-based are extremely uncommon as they were based on IP addresses (but those can be easily spoofed, presenting a security risk). Additionally, with the high usage of DHCP in large and small networks, it negates the purpose of doing IP-based VLANs as they will change all the time.
+
 ## Technical Details of VLANs
 
 Any traffic traversing a given network is either untagged or tagged. For traffic in a given VLAN, we referred to that traffic as VLAN tagged. VLANs tagging is part of the IEEE 802.1Q specification, which defines VLAN tagging on ethernet frames as well as procedures on bridges, switches and routers for dealing with said frames. 
@@ -38,11 +52,13 @@ Within that 802.1Q specification, is the designation that there is 4096 VLANs in
 
 802.1AD is an amendment added to 801.1Q to address the need of more VLANs. We aren’t going to cover much about 801.1AD in this class as it will be covered more in depth in the Advanced Networking class. Suffice to say it allows for 4096 * 4096 VLANs in a given domain, which equates to 16,777,216 VLANs in a given domain. Don’t ask me why you’d need 16 Million VLANs, but then again I’m not Google, Azure or AWS.
 
-To better visual how VLAN tagging works, we’ll recall our previous understanding of Ethernet Frames from the Lab 4.
-
 ## Ethernet Frames and VLANs
 
-The following is a very detailed explanation of the differences between a traditional ethernet frame and one with VLAN Tags:
+To better explain VLAN tagging we’re going to recall some information about Ethernet frames.
+
+When a switch receives a frame from a device, in a port-based implementation, the switch will go in and modify the received frame’s header and insert the VLAN tag for that given VLAN.
+
+The following is a very detailed visual explanation of the differences between a traditional ethernet frame and one with VLAN Tags:
  
 ![Detailed Ethernet Frame with VLAN Tags](/assets/images/lab5a/detailed-frame-with-vlans.jpg "Detailed Ethernet Frame with VLAN Tags")
  
@@ -54,15 +70,7 @@ Recall from Lab 4a, that ethernet frames range in size from 64 bytes to 1518 byt
 
 *Note: with regards to when a switch receives a frame, it will also add the VLAN information to the CAM table for the device it originated from.*
 
-## Types of VLANs
-
-There are generally 3 main types of VLANs:
-
--	Static or Port-based: which are allocated based on the physical switch port the device is connected to
--	Dynamic: which are allocated based on physical device characteristics and sometimes an associated user profile (such as 802.1x)
--	Protocol: which are allocated based on what protocol is being used
-
-## How a VLAN works
+## How a VLAN Works
 
 Say we have a given network, with a few devices connected to a Layer 2 switch. Where we have 2 devices in VLAN 10, 2 devices in VLAN 20 and 2 devices that are not in any VLAN. What happens when each of these devices sends out a broadcast message?
 
@@ -70,7 +78,7 @@ For devices within the same VLAN, they are permitted to talk amongst each other 
 
 Therefore, if one of those devices in VLAN 10 wants to talk to one of the devices in VLAN 20, we will run into a problem in our current network configuration. Cross-VLAN talk requires a switch to be either: a) Layer 3 capable, or b) connected to a router (which is Layer 3 capable). 
 
-## Default VLAN
+## *Default VLAN*
 
 Now, what about our 2 devices that are not in any VLAN, what happens when they try to talk to any other device (either in VLAN 10 or VLAN 20)? By default, every switch automatically tags every packet received on a switch port that is not defined by a VLAN with the tag of the designated default VLAN. The default VLAN on every switch, unless changed, is VLAN 1. 
 
@@ -78,7 +86,7 @@ Now, why is this a security concern/network administration issue?
 
 Since the default VLAN is VLAN 1, unless changed. Any traffic that is untagged will be on that VLAN. Say you forgot this and set your management VLAN as VLAN 1, now any untagged packet will be able traverse your management VLAN.
 
-## Native VLAN
+## *Native VLAN*
 
 Now brief hardware thing related to switches and routers. In networking the link connecting a router to a switch is often referred to as either an uplink (going from the switch up to the router) or downlink (going from the router down to the switch). This is where native VLAN comes in. That link is known as a trunk link and as such it will have all VLANs traverse it. We’ll dive more into this feature when we get to Lab 6.
 

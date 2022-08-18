@@ -71,6 +71,8 @@ Those three parts are further detailed as follows:
 -	2-byte Type field
 -	Up to 1500-bytes Data field: Payload information
 -	4 byte FCS field: Frame Check using CRC (though not shown in the picture below)
+
+![Ethernet Frame](/assets/images/lab4a/ethernet-frame.jpg "Ethernet Frame")
  
 ## Media Access Control (MAC) Address
 

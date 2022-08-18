@@ -141,5 +141,6 @@ If you want more rants, just wait for Lab 6 when we go over Network Topologies.
 ## Credit
 
 Image credit to Windows Club, Thomas the Train, CompTia, and ComputerNetworkingNotes.
+
 Lab credits to Nathan Moser as the sole author and editor, and to Bryan Wood for the structure and concepts of the lab.
 

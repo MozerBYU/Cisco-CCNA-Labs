@@ -27,7 +27,7 @@ The completed lab, to this point, should look like the following:
 
 ### Lab 4: Switches
 
-In this lab, students will get hands-on practice will a live Cisco switch, a Cataylst 3850 to be exact. In the lab they will learn the basics of Cisco iOS, how to reset a password on a switch, and upgrade the firmware for said device. Additionally, they will learn about how switches operate and how switching tables function.
+In this lab, students will get hands-on practice will a live Cisco switch, a Cataylst 3850 to be exact. In the lab they will learn the basics of Cisco iOS, how to reset a password on a switch, and upgrade the firmware for said device. Additionally, they will learn about the OSI Model, the differences betweem Layer 2 and Layer 3, how switches operate and how switching tables function.
 
 In the practical lab, at this stage the students will then take those hosts from the last lab, and connect them to switches. All hosts should be able to talk within their respective subnets.
 

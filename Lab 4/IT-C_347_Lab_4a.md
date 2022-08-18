@@ -18,8 +18,8 @@ There are 2, technically 3, types of networking switches that exist:
 
 -	Unmanaged
 -	Managed
-  o	Layer 2
-  o	Layer 3
+    -	Layer 2
+    -	Layer 3
   
 Unmanaged switches are more commonly referred to as dummy switches. They are literally plug-and-play-and-then-forget devices. You plug it in, and it allows you to connect more devices to that network. It has no administrative functions or any capabilities beyond just sending packets from one device to another. Not particularly useful unless you’re just needing a way to connect more devices to a given network. But they are cheap and used quite a bit in small businesses and home networks. One thing to note is that with an unmanaged switch, it doesn’t matter what device is plugged into what port. 
 
@@ -43,7 +43,7 @@ Remember this fun little picture:
  
 Much like the bridge in the middle, a switch allows for trains, so to speak, to travel from one train shed to another or to other places in either the train yard or across the world. 
 
-Layer 3, on the other hand, is the Network layer. Everything on this layer operates by its logical address, or IP address. This is where the actual routing occurs. Building off our Thomas the Train analogy. Say a given train wants to leave the train shed and go into town, in order for it to get there, it will need to come to several junction points and be routed onto different tracks in order to get where it needs to go. Think of a router like a junction point in a given city. Except, unlike the railroad, with routers there are multiple different tracks to get to a given city. The job of the router is to take the shortest route to get to the next city. 
+Layer 3, on the other hand, is the Network layer. Everything on this layer operates by its logical address, or IP address. This is where the actual routing occurs. Building off our Thomas the Train analogy. Say a given train wants to leave the train shed and go into town, in order for it to get there, it will need to come to several junction points and be routed onto different tracks in order to get where it needs to go. Think of a router like a junction point in a given city. Except, unlike the railroad, with routers there are multiple different tracks to get to a given city. The job of the router is to determine the shortest route to get to the next city. 
 
 If that doesn’t exactly make sense, don’t worry about it. We’ll cover it more in Lab 6. For now, you just need to understand the Layer 2 is for switching and Layer 3 is for routing.
 
@@ -80,7 +80,7 @@ A MAC address is determined by 2 things:
 
 -	1) Its OUI (Organizational Unique Identifier) that is given to its particular vendor
 -	2) Its UAA (Universally Administered Address) this can be considered a serial number of sorts
--	
+
 It is comprised of 6 octets of bits, represented in Hexadecimal. Below is a good visual example:
  
 ![MAC Address Diagram](/assets/images/lab4a/mac-address.jpg "MAC Address Diagram")

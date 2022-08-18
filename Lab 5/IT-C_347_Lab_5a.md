@@ -2,12 +2,8 @@
 ### *Conceptual Lab - VLANs*
 ## Introduction
 
-VLANs, super useful, but dang, can they be confusing at times. As we go through this lab you’ll learn why VLANs are essential for any network and why they will make your life in networking much easier in the long run (no promises in the short run). But first, we need to delve into what is a VLAN, why they were created in the first place and some technical details of VLANs. However, we need to a do a brief review of the OSI Model.
+VLANs, super useful, but dang, can they be confusing at times. As we go through this lab you’ll learn why VLANs are essential for any network and why they will make your life in networking much easier in the long run (no promises in the short run). But first, we need to delve into what is a VLAN, why they were created in the first place and some technical details of VLANs. 
 
-## OSI Model
-
-![OSI Model](/assets/images/lab5a/osi_model.png "OSI Model")
- 
 ## What is a VLAN?
 
 But just what is a VLAN? A VLAN stands for a Virtual Local Area Network. They reside as a network on-top of an existing LAN. Think of it as a subnetwork to a greater network. It operates on Layer 2 at a switch level, and Layer 3 at a router level. The entire purpose of a VLAN is separate/segregate a physical network into smaller, more manageable networks. 
@@ -30,58 +26,57 @@ Let’s change our scenario to a large corporation with 10,000 devices. Devices 
 
 For a more visual representation of what I’m talking about, see the video below:
 
-[VLAN YouTube Video](https://www.youtube.com/watch?v=jC6MJTh9fRE)
+https://www.youtube.com/watch?v=jC6MJTh9fRE
 
 ## Technical Details of VLANs
 
-Any traffic traversing a given network is either untagged or tagged. For traffic in a given VLAN, we referred to that traffic as VLAN tagged. VLANs tagging is part of the IEEE 802.1Q specification, which defines VLAN tagging on ethernet frames as well as procedures on bridges, switches and routers for dealing with said frames. To better understand how VLAN tagging works, we’ll dive into the complex world of Ethernet Frames.
+Any traffic traversing a given network is either untagged or tagged. For traffic in a given VLAN, we referred to that traffic as VLAN tagged. VLANs tagging is part of the IEEE 802.1Q specification, which defines VLAN tagging on ethernet frames as well as procedures on bridges, switches and routers for dealing with said frames. 
 
-## Ethernet Frames
+Within that 802.1Q specification, is the designation that there is 4096 VLANs in a given domain. That number is fixed as is it determined by 12 bits within the VLAN tag. Now, for us or a small business 4096 VLANs seems extremely excessive. However, to a large organization like BYU or Google, they can use up all those VLAN pretty quickly and trust me they do. Now, for extremely large enterprises like Google, Microsoft or Amazon, 4096 VLANs is simply not enough for everything they need. This is where IEEE 802.1AD specification comes in. 
 
-The following is a brief overview of ethernet frames. For every packet that goes over a network, they are encapsulated in frames, known as ethernet frames. These frames range from a minimum of 64 bytes to 1518 bytes. That size was set due to physical constraints at the time of 10Base5 media.
-Note: frames larger than 1518 bytes do exist. They are often referred to as jumbo frames, but they are rare and won’t be covered much, but can go up to 9022 bytes in length.
-An Ethernet frame contains three essential parts:
+802.1AD is an amendment added to 801.1Q to address the need of more VLANs. We aren’t going to cover much about 801.1AD in this class as it will be covered more in depth in the Advanced Networking class. Suffice to say it allows for 4096 * 4096 VLANs in a given domain, which equates to 16,777,216 VLANs in a given domain. Don’t ask me why you’d need 16 Million VLANs, but then again I’m not Google, Azure or AWS.
 
-1)	An Ethernet header (Preamble, SFD, Destination, Source, and Type)
-2)	Encapsulated data (Data and Pad)
-3)	An Ethernet trailer (FCS).
+To better visual how VLAN tagging works, we’ll recall our previous understanding of Ethernet Frames from the Lab 4.
 
-Those three parts are as follows:
+## Ethernet Frames and VLANs
 
--	7-byte Preamble field: Layer 1 information of alternating 1s and 0s to help a device recognize an incoming packet
--	6-byte Destination MAC address field
--	6-byte Source MAC address field
--	4-byte 802.1Q VLAN Tag (if used)
--	4-byte 802.1AD VLAN Tag (if used)
--	2-byte Type field
--	Up to 1500-bytes Data field: Payload information
--	Varying size CRC field: Error Correction Information
--	4 byte FCS field: Frame Check
+The following is a very detailed explanation of the differences between a traditional ethernet frame and one with VLAN Tags:
  
-![Detailed Ethernet Frame](/assets/images/lab5a/detailed_ethernet_frame.jpg "Detailed Ethernet Frame")
+![Detailed Ethernet Frame with VLAN Tags](/assets/images/lab5a/detailed-frame-with-vlans.jpg "Detailed Ethernet Frame with VLAN Tags")
  
-802.1Q also defines that in a given domain you can have 4096 VLANs. As you can imagine, many large enterprises, like Google, Microsoft or Amazon, have the need for way more than 4096 VLANS, which is where 802.1AD comes in (this is covered more in depth in the Advanced Networking class, and will not be covered in this class). Suffice to say it allows for 4096 * 4096 VLANs in a given domain.
+The following is a simplified version of the previous diagram on ethernet frames:
+
+![Simplified Ethernet Frame with VLAN Tags](/assets/images/lab5a/simplified-frame-with-vlans.png "Simplified Ethernet Frame with VLAN Tags")
+ 
+Recall from Lab 4a, that ethernet frames range in size from 64 bytes to 1518 bytes. In the case of VLAN tagged frames, that is incorrect. As the tag is 4 bytes for 802.1Q and 8 bytes for 802.1AD, those ethernet frames are increased in size to 1522 bytes and 1526 bytes, respectively.
+
+*Note: with regards to when a switch receives a frame, it will also add the VLAN information to the CAM table for the device it originated from.*
 
 ## Types of VLANs
 
-There are generally 3 main types of VLANs
+There are generally 3 main types of VLANs:
 
 -	Static or Port-based: which are allocated based on the physical switch port the device is connected to
 -	Dynamic: which are allocated based on physical device characteristics and sometimes an associated user profile (such as 802.1x)
 -	Protocol: which are allocated based on what protocol is being used
 
-ADD MORE HERE
 ## How a VLAN works
 
 Say we have a given network, with a few devices connected to a Layer 2 switch. Where we have 2 devices in VLAN 10, 2 devices in VLAN 20 and 2 devices that are not in any VLAN. What happens when each of these devices sends out a broadcast message?
+
 For devices within the same VLAN, they are permitted to talk amongst each other freely without the switch needing Layer 3 (routing) capabilities or having to be connected to a router (you will see this first-hand in Lab 6.
+
 Therefore, if one of those devices in VLAN 10 wants to talk to one of the devices in VLAN 20, we will run into a problem in our current network configuration. Cross-VLAN talk requires a switch to be either: a) Layer 3 capable, or b) connected to a router (which is Layer 3 capable). 
 
-## D*efault* VLAN
+## Default VLAN
+
 Now, what about our 2 devices that are not in any VLAN, what happens when they try to talk to any other device (either in VLAN 10 or VLAN 20)? By default, every switch automatically tags every packet received on a switch port that is not defined by a VLAN with the tag of the designated default VLAN. The default VLAN on every switch, unless changed, is VLAN 1. 
+
 Now, why is this a security concern/network administration issue?
+
 Since the default VLAN is VLAN 1, unless changed. Any traffic that is untagged will be on that VLAN. Say you forgot this and set your management VLAN as VLAN 1, now any untagged packet will be able traverse your management VLAN.
-## *Native* VLAN
+
+## Native VLAN
 
 Now brief hardware thing related to switches and routers. In networking the link connecting a router to a switch is often referred to as either an uplink (going from the switch up to the router) or downlink (going from the router down to the switch). This is where native VLAN comes in. That link is known as a trunk link and as such it will have all VLANs traverse it. We’ll dive more into this feature when we get to Lab 6.
 
@@ -89,33 +84,27 @@ Now brief hardware thing related to switches and routers. In networking the link
 
 This is where all that subnetting practice ties it. As subnetting is what allows us to implement our VLANs. It doesn’t matter what VLAN you assign to a give network. But for ease of understanding try to keep it to somewhat reasonable and consistent. For example, say you have designated your IoT network to have VLAN 100. It would be fairly reasonable then to set that network with the 10.0.100.0/24 network.
 
-## VLAN Practice
+## VLANs and Firewalls
 
-Note: The following questions are all for a 10.0.0.0/16 network
+Sup
 
-*Firewall Rules + Zones (DMZ, etc)*
+## Write-up Questions?
 
-## Write-up Questions
 -	What networking problem are VLANs designed to solve?
 
 -	Give some example VLANs you would create (name and function)?
 
 -	Why is default VLAN 1 a security issue?
 
--	What 3 essential things comprise an ethernet frame?
-
 ## Resources
+
 -	https://www.techtarget.com/searchnetworking/definition/virtual-LAN
--	https://standards.ieee.org/ieee/802.1Q/6844/
+-	https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=video&cd=&cad=rja&uact=8&ved=2ahUKEwi76u6rt8_5AhWKLEQIHWpSAAgQtwJ6BAgSEAI&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DkPOvDbHyxn8&usg=AOvVaw3upDLCgljGBC3mC0eDNnMm
 -	https://www.youtube.com/watch?app=desktop&v=MmwF1oHOvmg
 
-## Vocab Glossary
--	Broadcast Domain: Is the portion of a network sharing the same layer 2 segment. Broadcast messages from hosts are sent to every port in their broadcast domain, thus hosts inside a broadcast domain can reach each other directly
--	Ethernet Frame: An Ethernet frame contains three parts: an Ethernet header (Preamble, SFD, Destination, Source, and Type), Encapsulated data (Data and Pad), and an Ethernet trailer (FCS)
--	802.1Q: IEEE Standard that defines VLAN tagging for ethernet frames
--	802.1AD: IEEE Amendment to 802.1Q that defines nested VLAN tagging for ethernet frames, thereby doubling the initial capacity. This is also known as VLAN stacking or QinQ (in reference to 802.1Q)
-
 ## Credit
-Image credit to NetMgmt.WordPress.com and someone else.
 
-Lab credits to Nathan Moser as the sole author and editor. Additional credit to Bryan Wood for the structure and concepts of the lab.
+Image credit to NetMgmt, WordPress.com and someone else.
+
+Lab credits to Nathan Moser as the sole author and editor, and to Bryan Wood for the structure and concepts of the labs.
+

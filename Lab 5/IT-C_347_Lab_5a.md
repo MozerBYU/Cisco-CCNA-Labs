@@ -44,9 +44,9 @@ The following is a very detailed explanation of the differences between a tradit
  
 ![Detailed Ethernet Frame with VLAN Tags](/assets/images/lab5a/detailed-frame-with-vlans.jpg "Detailed Ethernet Frame with VLAN Tags")
  
-The following is a simplified version of the previous diagram on ethernet frames:
+The following is an example of 802.1ad and how that frame looks:
 
-![Simplified Ethernet Frame with VLAN Tags](/assets/images/lab5a/simplified-frame-with-vlans.png "Simplified Ethernet Frame with VLAN Tags")
+![Ethernet Frame with 802.1AD VLAN Tags](/assets/images/lab5a/frame-with-802.1ad-vlans.png "Ethernet Frame with 802.1AD VLAN Tags")
  
 Recall from Lab 4a, that ethernet frames range in size from 64 bytes to 1518 bytes. In the case of VLAN tagged frames, that is incorrect. As the tag is 4 bytes for 802.1Q and 8 bytes for 802.1AD, those ethernet frames are increased in size to 1522 bytes and 1526 bytes, respectively.
 

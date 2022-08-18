@@ -22,7 +22,9 @@ However, from a networking perspective, VLANs allow for greater network manageme
 
 A good way to think about this, think of a home network of roughly 20 or so devices all connected to the same basic wifi/router combo device on a /24 network. All those devices can talk to each other directly. We’ll get more into this with later labs, but every time a device connects to a network or is trying to contact a different device, it sends broadcast message to find it. In our broadcast domain, every device is receiving these messages. In our home network scenario, this isn’t an issue, because we only have 20 or so devices.
 
-Let’s change our scenario to a large corporation with 10,000 devices. Devices are constantly connecting and are sending broadcast messages to find and talk to different devices. As you can imagine, even if only 2,000 of these devices are sending broadcast messages, the network will very quickly become oversaturated with traffic. Now expand this to like Google for instance, with over 100,000 devices. If you don’t restrict the broadcast domains, you will have a serious issue with all the traffic and it will grind your network to a halt from traffic congestion. 
+Let’s change our scenario to a large corporation with 10,000 devices. Devices are constantly connecting and are sending broadcast messages to find and talk to different devices. As you can imagine, even if only 2,000 of these devices are sending broadcast messages, the network will very quickly become oversaturated with traffic. Now expand this to like Google for instance, with over 100,000 devices. If you don’t restrict the broadcast domains, you will have a serious issue with all the traffic and it will grind your network to a halt from traffic congestion.
+
+![Network Broadcast with VLANs](/assets/images/lab5a/network-broadcast-in-vlan.jpg "Network Broadcast with VLANs")
 
 For a more visual representation of what I’m talking about, see the video below:
 

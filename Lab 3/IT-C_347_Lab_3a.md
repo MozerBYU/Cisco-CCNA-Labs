@@ -131,7 +131,9 @@ Now here is that tool I mentioned, it is extremely simple, but so powerful as yo
 
 ## Point-to-Point Links
 
-For most networks, at least two addresses are reserved: the gateway and the broadcast. Now there are cases where you can get away with only having two hosts, such as a /31. The main case for that is point-to-point links, such as is common for uplinks/downlinks between routers and switches. (Hint: you’ll want to remember that. It’ll come in handy in a few labs down the road).
+For most networks, at least two addresses are reserved: the gateway and the broadcast. Now there are cases where you can get away with only having two hosts, such as a /31. The main case for that is point-to-point links, such as is common for uplinks/downlinks between routers and switches. 
+
+*Hint: you’ll want to remember that. It’ll come in handy in a few labs down the road.*
 
 A /31 and /32 were added as part of RFC 3021. Specifically, to reduce the number of needed addresses for point-to-point links. Now, word of caution. If you are not setting up a point-to-point link, I would highly advise against using a /31. In cases where you are not doing so, I would recommend a /30 or a /29 depending on your use case.
 

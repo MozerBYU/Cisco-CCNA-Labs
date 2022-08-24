@@ -94,10 +94,6 @@ Now brief hardware thing related to switches and routers. In networking the link
 
 This is where all that subnetting practice ties it. As subnetting is what allows us to implement our VLANs. It doesn’t matter what VLAN you assign to a give network. But for ease of understanding try to keep it to somewhat reasonable and consistent. For example, say you have designated your IoT network to have VLAN 100. It would be fairly reasonable then to set that network with the 10.0.100.0/24 network.
 
-## VLANs and Firewalls
-
-Sup
-
 ## Write-up Questions?
 
 -	What networking problem are VLANs designed to solve?
@@ -117,4 +113,3 @@ Sup
 Image credit to NetMgmt, WordPress.com and someone else.
 
 Lab credits to Nathan Moser as the sole author and editor, and to Bryan Wood for the structure and concepts of the labs.
-

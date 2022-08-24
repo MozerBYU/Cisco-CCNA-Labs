@@ -77,6 +77,13 @@ After you have saved your EtherSwitch and your EtherSwitch router, we are ready 
 
 Like was mentioned earlier in a previous lab, you can set this lab up however you want. But there are some restrictions that I will detail in the pass-off section. Aside from these, you can do whatever you want. 
 
+Once you have all the switches placed in GNS3 and connected to each of the hosts there are few things you need to do:
+-	Set each port to either access or trunk mode
+-	Set each access port in its corresponding VLAN
+-	Create each of your VLAN interfaces
+
+Yes, you will need to google how to do this. Good luck!
+
 # Pass-off
 
 Now for pass-off I’m only looking for a few things:

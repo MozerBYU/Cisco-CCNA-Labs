@@ -72,5 +72,3 @@ In this lab, students will get hands-on practice with doing network troubleshoot
 ### Lab 9: Packet Tracer
 
 In this lab, students will get hands-on practice doing packet tracing using WireShark which is integrated with GNS3 on their completed lab from Lab 6. 
-
-### Lab 10: Packet Tracer pt 2 (debating)

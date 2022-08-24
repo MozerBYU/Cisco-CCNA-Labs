@@ -26,21 +26,21 @@ That screen will have an option to select the ‘New’ tab as show below:
  
 From here you want to select to run the IOS router within your GNS3 VM. You can run it on your local computer, but since we already have the GNS3 VM running everything else, it would be impractical to not use it.
  
-![IOS Router Import Settings](/assets/images/lab4c/ios-router-import-settings.png "IOS Router Import Settings") 
+![IOS Router Import Settings](/assets/images/lab4c/ios-router-import-settings.PNG "IOS Router Import Settings") 
 
 Next, we need to import that router image that we downloaded using the ‘Browse’ tab.
 
-![New IOS Router Image](/assets/images/lab4c/new-ios-image.png "New IOS Router Image")
+![New IOS Router Image](/assets/images/lab4c/new-ios-image.PNG "New IOS Router Image")
  
 This is where it gets a bit tricky. For the switch you can title it EtherSwitch, or whatever else you want. But you need to NOT select ‘This is an EtherSwitch Router’. However, for the routers, you NEED to select ‘This is an EtherSwitch Router’.
 
 **For the Switch**									             
 
-![EtherSwitch Setup](/assets/images/lab4c/etherswitch.png "EtherSwitch Setup")
+![EtherSwitch Setup](/assets/images/lab4c/etherswitch.PNG "EtherSwitch Setup")
 
 **For the Router**
 
-![EtherSwitch Router Setup](/assets/images/lab4c/etherswitch-router.png "EtherSwitch Router Setup")
+![EtherSwitch Router Setup](/assets/images/lab4c/etherswitch-router.PNG "EtherSwitch Router Setup")
        
 After that you’ll have a window to setup how much RAM each switch/router should have. The default is 128 MB which is plenty sufficient in my experience. Plus, you’ll want to keep that number decently low as in the end you’ll have 4 routers and 4 switches running for a total of 2GB, not including the hosts. As such, you don’t want to over-allocate RAM as it is unnecessary, unless of course you have a ton of RAM (16GB +) then, more power to ya.
 
@@ -56,7 +56,7 @@ Slot 0 is going to be used for communicating up to the Distribution routers (int
 
 Slot 1 is going to be used for communicating down to the hosts (interface(s) f1/#), there should be 16 of these (from f1/0 through f1/15).
  
-![EtherSwitch Modules Setup](/assets/images/lab4c/etherswitch-switch-modules.png "EtherSwitch Modules Setup")
+![EtherSwitch Modules Setup](/assets/images/lab4c/etherswitch-switch-modules.PNG "EtherSwitch Modules Setup")
 
 ## Setup Router Modules
 
@@ -69,7 +69,7 @@ Slot 0 is going to be used for communicating up to the Core routers (interface(s
 
 Slot 1 and Slot 2 are going to be used for communicating down to the Switches (interface f#/0), there are only two of these (f1/0 or f2/0).
  
-![EtherSwitch Router Modules](/assets/images/lab4c/etherswitch-router-modules.png "EtherSwitch Router Modules")
+![EtherSwitch Router Modules](/assets/images/lab4c/etherswitch-router-modules.PNG "EtherSwitch Router Modules")
 
 ## Setup Switches
 

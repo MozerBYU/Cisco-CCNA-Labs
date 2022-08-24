@@ -39,7 +39,7 @@ The completed lab, to this point, should look like the following:
 
 In this lab, students will learn more in-depth about the OSI Model, what VLANs are, why they are so useful, how they work, how ethernet frames are setup, and how VLANs relate with subnetting.
 
-In the practical lab, at this stage the students will then put those hosts and switch ports into their respective VLANs. Additional, they we setup 2 distribution routers and connect all switches to said routers. They will then setup the respective SVIs for each VLAN on said router. This is intended as a introduction to routers, and to split of setting up the distribution routers and core routers between two labs. All hosts should be able to talk within their respective subnets and within their respective VLAN (including across subnets). However, host do not need to be able to talk across distribution routers.
+In the practical lab, at this stage the students will then put those hosts and switch ports into their respective VLANs. Additional, they we setup 2 distribution routers and connect all switches to said routers. They will then setup the respective SVIs for each VLAN on said router. This is intended as a introduction to routers, and to split of setting up the distribution routers and core routers between two labs. All hosts should be able to talk within their respective subnets and within their respective VLAN (including across subnets). However, host do not need to be able to talk across distribution routers. Hosts in the unroutable VLAN should be able to talk to each other, but not be able to talk to or be talked to by other hosts in other VLANs.
 
 The completed lab, to this point, should look like the following:
 

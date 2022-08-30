@@ -112,6 +112,12 @@ But you know what was an infinitely better solution??? Just creating a dang swit
 
 If you want more rants, just wait for Lab 6 when we go over Network Topologies.
 
+## Additional Notes
+
+Below is a YouTube video that explains the difference between switches and router from a very basic standpoint:
+
+https://www.youtube.com/watch?v=1z0ULvg_pW8
+
 ## Write-up Questions
 
 -	What does MAC stand for? (hint: your first Google Search is probably wrong)

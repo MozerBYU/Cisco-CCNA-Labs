@@ -62,7 +62,7 @@ The following is a very detailed visual explanation of the differences between a
  
 ![Detailed Ethernet Frame with VLAN Tags](/assets/images/lab5a/detailed-frame-with-vlans.jpg "Detailed Ethernet Frame with VLAN Tags")
  
-The following is an example of 802.1ad and how that frame looks:
+The following is an example of 802.1AD and how that frame looks:
 
 ![Ethernet Frame with 802.1AD VLAN Tags](/assets/images/lab5a/frame-with-802.1ad-vlans.png "Ethernet Frame with 802.1AD VLAN Tags")
  

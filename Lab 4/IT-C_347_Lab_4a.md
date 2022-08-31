@@ -99,6 +99,8 @@ If the source MAC is not in there, it will make an entry noting the MAC address 
 -	Layer 3: it will look in the ‘Routing Table’ to see if there is any more information regarding where it might find that device (this will be covered more in the Lab 6)
 
 ![Switch Frame Forwarding](/assets/images/lab4a/frame-forwarding.png "Switch Frame Forwarding")
+
+*Note: the cool thing about the CAM tables is they are persistent, and will survive switch reboots*
  
 ## Why Hubs are Useless
 

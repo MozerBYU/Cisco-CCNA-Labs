@@ -53,7 +53,7 @@ VMWare Workstation is an extremely powerful software with great features. BYU ha
 [VMWare Workstation Website](https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html)
 
 Here is the license key that you will need:
-> 5423P-QG20L-J8TJ2-0R3U4-147QH
+> 450CL-NG19Q-28DJ2-0K3HP-8026H
 
 ## GNS3 VM Import
 

@@ -167,9 +167,7 @@ Note: The following questions are all for a 10.0.0.0/16 network
 
 -	To which Classes does CIDR apply?
 
--	What class level is your home network?
-
--	What class level is BYU’s network?
+-	What class level is BYU’s public network?
 
 -	How many hosts are in a /25 network?
 

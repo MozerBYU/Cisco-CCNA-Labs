@@ -51,18 +51,6 @@ For a lot of networks, a gateway is either a firewall or a router. Some of the g
 
 On the technical side, gateways are responsible for translating frames and protocols to other formats, so they can be routed/forwarded to the next host in a way it understands. We’ll go over gateways more when we get to routers.
 
-## Subnetting
-
-Finally, we have arrived at subnetting. First thing we need to understand is what is a subnet. A subnet is short for sub-network. Within a larger private network, you can have hundreds and thousands of little or large sub-networks, or subnets. But how do we define the size of an individual sub-network? And how do we differentiate between one sub-network and another? This is where subnet ids and Classless Inter-Domain Routing (CIDR) come in. Below is an illustration of how a subnet id is defined.
-
-![Subnet ID Illustration](/assets/images/lab3a/subnet_id.png "Subnet ID Illustration")
- 
-The network prefix is what defines the network address. The subnet id defines what subnet the given network resides in, and the host id defines which host it is. For example, take a 10.0.x.x network and say we want to have a subnet with the subnet id of 3, our network would be 10.0.3.x. If we put a host on the that subnet with a host id of 2 it would have the IP address of 10.0.3.2 on the 10.0.3.0 subnet. 
-
-Now you have a basic understanding of how to define a subnet and the IP addressing of an individual device within that subnet. You also have a basic understanding of how private IP networks are defined with regards to their subnet id. But before we dive into how we separate a larger private network, into smaller sub-networks using the CIDR, we need to brief touch on how public networks are defined with regards to their network id.
-
-![Network and Host ID](/assets/images/lab3a/network_and_host_id.gif "Network and Host ID Illustration")
-
 ## IP Classes
 
 IP addressing is divided into different classes: classful and classless. For public IP addressing, it resides within the classful addressing space. Consisting of 5 differnet classes: A, B, C, D, and E. Private IP addressing, on the otherhand, resides within the classless addressing space and uses subnetting and CIDR for designating the differnet IP ranges.
@@ -73,17 +61,29 @@ IP addressing is divided into different classes: classful and classless. For pub
 | :------: | :------: | :------: | :------: |
 | A |	0.0.0.0 – 127.255.255.255	| 128 | 16,777,214 |
 | B	| 128.0.0.0 – 191.255.255.255	| 16,382 | 65,534 |
-| C	| 192.0.0.0 – 223.255.255.255	| ~ 2,097,152 | 254 |
+| C	| 192.0.0.0 – 223.255.255.255	| 2,097,152 | 254 |
 | D	| 224.0.0.0 – 239.255.255.255	| - |
 | E	| 240.0.0.0 – 255.255.255.255	| - |
 
 *Note: Class D is reserved for Multicasting. And Class E is reserved for future use*
 
-Classfless IP addressing however, is a bit more complicated that Classful IP Addressing, but it is far more efficient in the usage of the whole IP range. It is very tightly connected to subnetting. Now figuring out a given subnet off of the top of your head is some work, as it requires binary math. I will show you a tool that will greatly simplify this process for you. Before I show you the tool, we're going to briefly go over Subnet Binary Math.
+Classfless IP addressing however, is a bit more complicated that Classful IP Addressing, but it is far more efficient in the usage of the whole IP range. It is very tightly connected to subnetting, so we'll just going to jump right in to subnetting.
+
+## Subnetting
+
+First thing we need to understand is what is a subnet. A subnet is short for sub-network. Within a larger private network, you can have hundreds and thousands of little or large sub-networks, or subnets. But how do we define the size of an individual sub-network? And how do we differentiate between one sub-network and another? This is where subnet ids and Classless Inter-Domain Routing (CIDR) come in. Below is an illustration of how a subnet id is defined.
+
+![Subnet ID Illustration](/assets/images/lab3a/subnet_id.png "Subnet ID Illustration")
+ 
+The network prefix is what defines the network address. The subnet id defines what subnet the given network resides in, and the host id defines which host it is. For example, take a 10.0.x.x network and say we want to have a subnet with the subnet id of 3, our network would be 10.0.3.x. If we put a host on the that subnet with a host id of 2 it would have the IP address of 10.0.3.2 on the 10.0.3.0 subnet. 
+
+Now you have a basic understanding of how to define a subnet and the IP addressing of an individual device within that subnet. You also have a basic understanding of how private IP networks are defined with regards to their subnet id. But before we dive into how we separate a larger private network, into smaller sub-networks using the CIDR, we need to brief touch on how public networks are defined with regards to their network id.
+
+![Network and Host ID](/assets/images/lab3a/network_and_host_id.gif "Network and Host ID Illustration")
 
 # Subnet Binary Math
 
-I was going to write out how to do all this, but NetworkLessons already has a very astheticly pleasing guide/tutorial demonstrating how to do this. So I've provided the following guide for your reading.
+I was going to write out how to do all this, but NetworkLessons already has a very astheticly pleasing guide/tutorial demonstrating how to do this. So I've provided the following guide for your reading. Don't worry if it seems super low-level and complicated, I have a nice tool for you I'll show in a second that is extremely helpful.
 
 https://networklessons.com/subnetting/subnetting-in-binary
 

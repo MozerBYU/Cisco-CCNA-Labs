@@ -16,28 +16,6 @@ But you can see a problem. How do you know how to get from Heritage Halls to Hel
 
 Building off the same analogy, routers can get us from one apartment building to another, but how do we get to an individual apartment within that apartment building? This is where Networking Address Translation (NAT) comes into effect. NAT is a process developed to translation Private IPs to Public IPs by modifying the IP address header of the packet while it is in transit. We’ll dive more into the specifics of this process in a later lab. 
 
-## IP Classes
-
-IP addressing is divided into different classes: classful and classless. For public IP addressing, it resides within the classful addressing space, whereas private IP addressing resides within the classless addressing space. 
-
-## Classful Addressing (Public Classes)
-
-| **Class IPv4** | **IP Address Range**	| **# of Hosts** |
-| :------: | :------: | :------: |
-| A |	0.0.0.0 – 127.255.255.255	| 17 Million |
-| B	| 128.0.0.0 – 191.255.255.255	| 65,536 |
-| C	| 192.0.0.0 – 223.255.255.255	| 254 |
-| D	| 224.0.0.0 – 239.255.255.255	| - |
-| E	| 240.0.0.0 – 255.255.255.255	| - |
-
-## Classless Addressing (Private Classes)
-
-| **Class	IPv4** | **IP Range**	| **# of Hosts** |
-| :------: | :------: | :------: |
-| A	| 10.0.0.0 – 10.255.255.255	| 17 Million |
-| B	| 172.16.0.0 – 172.31.255.255	| 65,536 |
-| C |	192.168.0.0 – 192.168.255.255	| 254 |
-
 ## Exercise
 
 If you recall from the Intro to Web Programming class, they had you run through an exercise where you identify a given device’s private IP and public IP (generally your computer). We’re going to have you do the same, to refresh your memory and solidify your skills. There are many ways to do this, I will show you the simplest method, aka the terminal shell. 
@@ -85,9 +63,35 @@ Now you have a basic understanding of how to define a subnet and the IP addressi
 
 ![Network and Host ID](/assets/images/lab3a/network_and_host_id.gif "Network and Host ID Illustration")
 
+## IP Classes
+
+IP addressing is divided into different classes: classful and classless. For public IP addressing, it resides within the classful addressing space. Consisting of 5 differnet classes: A, B, C, D, and E. Private IP addressing, on the otherhand, resides within the classless addressing space and uses subnetting and CIDR for designating the differnet IP ranges.
+
+## Classful Addressing (Public Classes)
+
+| **Class IPv4** | **IP Address Range**	| **# of Networks** | **# of Hosts per Network** |
+| :------: | :------: | :------: | :------: |
+| A |	0.0.0.0 – 127.255.255.255	| 128 | 16,777,214 |
+| B	| 128.0.0.0 – 191.255.255.255	| 16,382 | 65,534 |
+| C	| 192.0.0.0 – 223.255.255.255	| ~ 2,097,152 | 254 |
+| D	| 224.0.0.0 – 239.255.255.255	| - |
+| E	| 240.0.0.0 – 255.255.255.255	| - |
+
+*Note: Class D is reserved for Multicasting. And Class E is reserved for future use*
+
+Classfless IP addressing however, is a bit more complicated that Classful IP Addressing, but it is far more efficient in the usage of the whole IP range. It is very tightly connected to subnetting. Now figuring out a given subnet off of the top of your head is some work, as it requires binary math. I will show you a tool that will greatly simplify this process for you. Before I show you the tool, we're going to briefly go over Subnet Binary Math.
+
+# Subnet Binary Math
+
+I was going to write out how to do all this, but NetworkLessons already has a very astheticly pleasing guide/tutorial demonstrating how to do this. So I've provided the following guide for your reading.
+
+https://networklessons.com/subnetting/subnetting-in-binary
+
+*Note: I'm not going to require you to do subnet binary math in these labs. But you need to have a general conceptual understanding of how we derive a given IP address, Subnet or Subnet mask*
+
 ## CIDR Notation
 
-Now this is where subnetting starts to get complicated, lucky for you someone made a super helpful tool for figuring this out. You can do it via subnet math in binary, but that will not be covered here. Before I show you the tool, here is a table of all CIDR from a /0 subnet all the way to a /32 subnet. For each subnet, there is the associated subnet mask, how many addresses and what the wildcard is.
+Below is a table of all CIDR notation from a /0 subnet all the way to a /32 subnet. For each subnet, there is the associated subnet mask, how many addresses and what the wildcard is.
 
 | **CIDR Notation Prefix** | **Subnet Mask** | **# of Hosts** |	**Wildcard Address** |
 | :------: | :------: | :------: | :------: |
@@ -173,12 +177,12 @@ Note: The following questions are all for a 10.0.0.0/16 network
 
 -	Can you think of a good case for using a /31 network? 
 
-
 ## Resources
 
 -	https://www.lifewire.com/what-is-a-public-ip-address-2625974
 -	https://www.omnisecu.com/tcpip/what-are-private-ip-addresses.php
 -	https://en.wikipedia.org/wiki/Network_address_translation
+-	https://networklessons.com/subnetting/subnetting-in-binary
 -	https://www.davidc.net/sites/default/subnets/subnets.html
 -	https://www.calculator.net/ip-subnet-calculator.html
 -	https://youtu.be/_IOZ8_cPgu8

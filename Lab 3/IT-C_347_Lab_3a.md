@@ -67,7 +67,7 @@ IP addressing is divided into different classes: classful and classless. For pub
 
 *Note: Class D is reserved for Multicasting. And Class E is reserved for future use*
 
-Classfless IP addressing however, is a bit more complicated that Classful IP Addressing, but it is far more efficient in the usage of the whole IP range. It is very tightly connected to subnetting, so we'll just going to jump right in to subnetting.
+Classless IP addressing however, is a bit more complicated that Classful IP Addressing, but it is far more efficient in the usage of the whole IP range. It is very tightly connected to subnetting, so we'll just going to jump right in to subnetting.
 
 ## Subnetting
 

@@ -53,7 +53,7 @@ On the technical side, gateways are responsible for translating frames and proto
 
 ## IP Classes
 
-IP addressing is divided into different classes: classful and classless. For public IP addressing, it resides within the classful addressing space. Consisting of 5 differnet classes: A, B, C, D, and E. Private IP addressing, on the otherhand, resides within the classless addressing space and uses subnetting and CIDR for designating the differnet IP ranges.
+IP addressing is divided into different classes: classful and classless. For public IP addressing, it resides within the classful addressing space. Consisting of 5 different classes: A, B, C, D, and E. Private IP addressing, on the otherhand, resides within the classless addressing space and uses subnetting and CIDR for designating the different IP ranges.
 
 ## Classful Addressing (Public Classes)
 

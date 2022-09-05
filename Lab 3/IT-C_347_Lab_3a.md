@@ -67,7 +67,15 @@ IP addressing is divided into different classes: classful and classless. For pub
 
 *Note: Class D is reserved for Multicasting. And Class E is reserved for future use*
 
-Classless IP addressing however, is a bit more complicated that Classful IP Addressing, but it is far more efficient in the usage of the whole IP range. It is very tightly connected to subnetting, so we'll just going to jump right in to subnetting.
+## Classless Addressing (Private Classes)
+
+| **Class IPv4** | **IP Address Range** | **# of Hosts per Network** | **Largest CIDR** | **Subnet Mask** | **Host ID Size** | **Mask Bits** |
+| :------: | :------: | :------: | :------: | :------: | :------: | :------: |
+| A | 10.0.0.0 - 10.255.255.255 | 16,777,214 | /8 | 255.0.0.0 | 24 | 8 |
+| B | 172.16.0.0 - 172.31.255.255 | 1,048,576 | /12 | 255.240.0.0 | 20 | 12 |
+| C | 192.168.0.0 - 192.168.255.255 | 65,536 | /16 | 255.255.0.0 | 16 | 16 |
+
+Classless IP Addressing is specifically reserved for private networks (LANs) and is defined by RFC 1597 and 1918. As such, it is not publicly routable. Most edge routers and firewalls will block inbound connections originating from these IP ranges by default as a security measure.
 
 ## Subnetting
 
@@ -151,12 +159,7 @@ Last thing, IP address is very specific for localhost. It is also defined under 
 Note: The following questions are all for a 10.0.0.0/16 network
 -	Say you needed a /17 and 4x /20s. What does that look like (what are the different IP ranges for those subnets)?
 
-
-
 -	Now say you need to split that even further to 8x /20s. What does that look like?
-
-
-
 
 ## Write-up Questions
 -	What does RFC stand for?
@@ -166,6 +169,8 @@ Note: The following questions are all for a 10.0.0.0/16 network
 -	What does CIDR stand for?
 
 -	To which Classes does CIDR apply?
+
+- What class level is your home network?
 
 -	What class level is BYU’s public network?
 
@@ -179,6 +184,8 @@ Note: The following questions are all for a 10.0.0.0/16 network
 
 -	https://www.lifewire.com/what-is-a-public-ip-address-2625974
 -	https://www.omnisecu.com/tcpip/what-are-private-ip-addresses.php
+-	https://www.ionos.com/help/server-cloud-infrastructure/private-network/private-ip-address-ranges/
+-	https://en.wikipedia.org/wiki/Private_network
 -	https://en.wikipedia.org/wiki/Network_address_translation
 -	https://networklessons.com/subnetting/subnetting-in-binary
 -	https://www.davidc.net/sites/default/subnets/subnets.html

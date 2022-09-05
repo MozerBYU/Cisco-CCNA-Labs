@@ -102,6 +102,8 @@ One important thing to do on each device (host, switch, router) is set Idle-PC, 
 
 ![Idle PC Option Menu](/assets/images/lab4c/idle-pc-option.PNG "Idle PC Option Menu")
 
+It will take your machine a few seconds to calculate the Idle PC Values. You will then have a few options of values you can select. Ideally, you want to choose one with an * next to, as shown in the picture above. If there isn't don't worry about and select whichever one you wish.
+
 # Pass-off
 
 Now for pass-off I’m only looking for a few things:

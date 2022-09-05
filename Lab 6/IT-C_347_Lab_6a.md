@@ -21,33 +21,33 @@ First, let’s go over the different network topology types:
 -	Tree
 -	Hybrid
 
-## *Bus Topology*
+### *Bus Topology*
 
 The bus topology is perhaps the worst of all the topologies, in my opinion. In a bus topology all nodes are connected to each other in one continuous line. This was common in the archaic age as it used the least number of coaxial lines to connect all nodes. However, it is highly unsecure, as each node gets the traffic of all the other nodes. Additionally, there is no redundancy. If one node goes down, each subsequent node also goes down. Likewise, if one NIC on a node went down then that node and all subsequent nodes go down.
 
-## *Mesh Topology*
+### *Mesh Topology*
 
 A mesh topology is more common in large enterprise environments or among ISPs for high availability and redundancy. In this setup each node is connected to all other nodes. The real only limitation of this setup is it can get quite complex if you are not using SD-WAN (software defined networking). Additionally, as you can imagine it can rack up the costs a lot for each additional node that is introduced.
 
-## *Ring Topology*
+### *Ring Topology*
 
 A ring topology can be considered the upgraded version of a Bus Topology. In this setup, each node connects to each other, and wraps completely around. In this way, if a given node goes down, the subsequent nodes will change their routes of who they talk to, in order to compensate. It does have limitations though. If you have a middle node and either side of it goes down, then you have a problem. 
 
-## *Star Topology*
+### *Star Topology*
 
 The star topology is perhaps the most common, where you have one central node that everything is connected to and talks to. It is highly scalable in the sense that you can replace one of the star ends, with another central node and build off of that. It is widely used as it is more cost effective than the other topologies. 
 
 However, it has its limitations. There is not a lot of redundancy, if that central node goes down, then all those hosts or other nodes that are connected also go down. Additionally, you have to be aware of bandwidth requirements on that node and nodes connected to it (going down).
 
-## *Tree Topology*
+### *Tree Topology*
 
 A tree topology is more common in distribution and core router setups, where each node connects to other nodes which connect to one master node. However, there is no redundancy built-in. If a ‘branch’ node goes down, that has several ‘leaf’ nodes connected to it, then all those ‘leaf’ nodes go down with it. Likewise, if that master node goes down, then all nodes go down with it.
 
-## *Hybrid Topology*
+### *Hybrid Topology*
 
 A hybrid topology is exactly as it says, a hybrid of other topologies that are spawned because of a unique scenario use case. I can’t think of any of the top of my head, but one I’ve heard of Ring + Star.
 
-## *Redundancy*
+### *Redundancy*
 
 The most redundant of all the topologies would be either ring or mesh. Especially with regards to router, mesh is fairly common. As you can guess from the name, in mesh, every node is interconnected with each other.
 

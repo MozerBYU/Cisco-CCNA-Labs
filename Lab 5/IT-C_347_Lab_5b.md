@@ -14,7 +14,7 @@ For this lab, you need to setup 2 Distribution Routers, connect them to each of 
 
 We'll use the same EtherSwitch image that we setup for our switches in Lab 4c to setup our Distribution Routers.
 
-*Note: Make sure you use the EtherSwitch and not the EtherSwitchRouter or you'll have some issues.*
+*Note: Make sure you use the EtherSwitch and not the EtherSwitchRouter or you'll have some issues*
 
 Once you have them set in GNS3 and connected to each of the switches there are few things that you need to do:
 -	Set each port to either access or trunk mode
@@ -29,7 +29,7 @@ VLAN SVIs are used by the Cisco routers to designate a gateway for a given VLAN 
 
 Now, don’t get confused. You don’t need a gateway for a host to talk to another host on a given subnet, as long as they are connected via switches or hubs. But you do need a gateway or router to talk to other hosts on other subnets. We’ll dive more into why this is, in the next lab on routing. 
 
-*Note: Since SVIs make it so that a given subnet can talk to another, for your unroutable VLAN you DO NOT want an SVI. If you do make one it will then be considered routable, as it is able to talk to the other VLANs and they can talk to it.*
+*Note: Since SVIs make it so that a given subnet can talk to another, for your unroutable VLAN you DO NOT want an SVI. If you do make one it will then be considered routable, as it is able to talk to the other VLANs and they can talk to it*
 
 ## Pass-off
 

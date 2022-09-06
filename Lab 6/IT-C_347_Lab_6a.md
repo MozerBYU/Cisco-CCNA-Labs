@@ -51,7 +51,7 @@ A hybrid topology is exactly as it says, a hybrid of other topologies that are s
 
 The most redundant of all the topologies would be either ring or mesh. Especially with regards to router, mesh is fairly common. As you can guess from the name, in mesh, every node is interconnected with each other.
 
-![Network Topology Diagrams]\(/assets/images/lab6a/network-topologies.png "Network Topology Diagram")
+![Network Topology Diagrams](/assets/images/lab6a/network-topologies.png "Network Topology Diagram")
 
 For our Lab we’ve been working on, in Lab 6 we’ll be implementing a Hybrid approach of Tree for routers and switches, and Star for our hosts.
 

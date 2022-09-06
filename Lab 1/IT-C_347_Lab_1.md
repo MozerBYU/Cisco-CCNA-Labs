@@ -71,6 +71,32 @@ If everything is working correctly you should see a screen within VMWare Worksta
 
 ![VMWare Workstation GNS3 VM Screen](/assets/images/lab1/gns3-vm-working.png "VMWare Workstation GNS3 VM Screen")
 
+## Troubleshooting VM Errors
+
+If you happen to run into the following error: 
+
+> “Virtualized Intel VT-X/EPT is not supported on this platform”
+
+Don’t worry, you’re not doomed. Unless you’re running Docker Desktop. Then you’ll just have to pick and choose if you want to run GNS3 VM or Docker Desktop and switch between them. For more information visit the following link:
+
+> https://www.gns3.com/community/featured/install-gns3-vm-on-a-pc-with-hyp
+
+If you’re lucky and are one of the blessed souls with Linux Subsystem WSL2 enabled, you get to follow this link:
+
+> https://www.gns3.com/community/discussions/can-wsl2-and-vmware-workstation-
+
+Basically, you need to edit the GNS3.vmx file (while the GNS3 VM is off). That file is typically located at:
+
+> C:\Users\whatsyourface\Documents\Virtual Machines\GNS3 VM\
+
+You’ll open this with Notepad (or your preferred TextEditor) and find the line that says 
+
+> `vhv.enabled = “true”`
+ 
+You’ll want to change this to `false`.
+
+Now you should be good to power back on your GNS3 VM.
+
 ## Start-up GNS3
 
 Now open GNS3 for the first time, and we'll make sure that everything gets connected properly with the GNS3 VM we just setup.

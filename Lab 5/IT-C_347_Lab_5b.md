@@ -2,7 +2,7 @@
 ### *Practical Lab – VLANs*
 ## Introduction
 
-Now that you have learned way more than you’ll ever need to know about VLANs, we’re ready for the next step in our GNS3 lab, setting up VLANs with Distribution Routers.
+Now that you have learned about the conceptual and technical side of VLANs, we’re ready for the next step in our GNS3 lab, setting up VLANs with Distribution Routers.
 
 For this next section, we’re going to focus on setting up our lab so that it looks like the following:
 
@@ -12,20 +12,22 @@ For this lab, you need to setup 2 Distribution Routers, connect them to each of 
 
 ## Setup Distribution Routers
 
-If you recall from Lab 4c, we setup an EtherSwitch Router template image. We will be using that image for setting up both our Distribution Routers in this lab, and our Core Routers in the Lab 6b. If you use the other image that we used for the switches, you going to run into a lot of issues. 
+We'll use the same EtherSwitch image that we setup for our switches in Lab 4c to setup our Distribution Routers.
+
+*Note: Make sure you use the EtherSwitch and not the EtherSwitchRouter or you'll have some issues.*
 
 Once you have them set in GNS3 and connected to each of the switches there are few things that you need to do:
 -	Set each port to either access or trunk mode
 -	Set each access port in its corresponding VLAN
 -	Create each of your VLAN interfaces
 -	Setup SVIs for each routable VLAN 
--	Set IP addresses on all trunk/access ports and SVIs
+-	Set IP addresses on all trunk ports and SVIs
 
 ## Note about SVIs
 
 VLAN SVIs are used by the Cisco routers to designate a gateway for a given VLAN subnet. Put simply, a gateway is a central contact point for each host in a given subnet, that allows them to talk outside of their given subnet. In order for each of your hosts to talk outside of their VLAN, they need a gateway, to tell them how to talk to the other subnets. 
 
-Now, don’t get confused. You don’t need a gateway for a host to talk to another host on a given subnet. But you do need a gateway to talk to other hosts on other subnets. We’ll dive more into why this is, in the next lab on routing. 
+Now, don’t get confused. You don’t need a gateway for a host to talk to another host on a given subnet, as long as they are connected via switches or hubs. But you do need a gateway or router to talk to other hosts on other subnets. We’ll dive more into why this is, in the next lab on routing. 
 
 *Note: Since SVIs make it so that a given subnet can talk to another, for your unroutable VLAN you DO NOT want an SVI. If you do make one it will then be considered routable, as it is able to talk to the other VLANs and they can talk to it.*
 
@@ -41,3 +43,4 @@ Now for pass-off I’m only looking for a few things:
 
 All image credit goes to myself, compliments of the GNS3 Software.
 
+Lab credits to Nathan Moser as the sole author and editor, and to Bryan Wood for the structure and concepts of the labs.

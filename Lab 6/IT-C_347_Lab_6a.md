@@ -65,15 +65,61 @@ Like I mentioned earlier, all a router does is ‘route’ or forward packets fr
 
 A router is similar in some respects to a switch, in that when it receives a packet on a given port it will inspect the packet’s destination and source MAC addresses, however, unlike the switch, it will strip that Layer 2 information away (as at this point, it is no longer needed). After the packet has been prepared for being routed to the next router it will then add new Layer 2 information so that it will transfer properly.
 
+## OSI Model Review
+
+Recall the following information as a review of the OSI model. I want you to specifically note the which layer deals with MAC addresses and which layer deals with IP addresses.
+
+![OSI Model Review](/assets/images/lab6a/osi-model-part-2.png "OSI Model Review")
+ 
+## How a Router Works
+
+Now that we have covered the various network topologies, it’s time to get right into routers. 
+
+Like I mentioned earlier, all a router does is ‘route’ or forward packets from one interface to another, much like a switch. However, it is the more elite version of a switch, in that it operates on Layer 3 and not Layer 2. As such it has unique capabilities, like being able to route across networks (including VLANs). 
+
+A router is similar in some respects to a switch, in that when it receives a packet on a given port it will inspect the packet’s destination and source MAC addresses, however, unlike the switch, it will strip that Layer 2 information away (as at this point, it is no longer needed). After the packet has been prepared for being routed to the next router it will then add new Layer 2 information so that it will transfer properly.
+
+Below is an example diagram of what that looks like, from host to switch to router all the way to the destination host. Obviously, it is very simplified, but gives the basic conceptual idea of what is happening.
+
+![Packets to Frames from Host to Router](/assets/images/lab6a/packets-to-frames.jpg "Packets to Frames from Host to Router") 
+
 ## ARP Tables
 
-As part of that process a router create data entries in a table called the ARP Table. They are similar in some respects to the CAM Tables that switches use, but they have a lot more data and more functions.
+As part of that process a router create data entries in a table called the ARP Table. ARP stands for Address Resolution Protocol. It is used as a bridge of sorts between Layer 2 and Layer 3. ARP Tables are similar in some respects to the CAM Tables that switches use, but they have a lot more data in their entries and more functions. 
 
-*Note: ARP Tables are similar to CAM Tables, in that they are also persistent and will survive router reboots*
+The main purpose of an ARP table is association between a devices MAC address and its IP address. The router will occasionally receive requests from an individual host to talk to another host via its MAC address. Either the host or router will send out an ARP request asking for the MAC address of the device with a given IP address. The ARP table on the router is populated by the requests, or when it receives packets and inspects them.
+
+The following information is also in an ARP table entry:
+-	IP Address: the IP address of the device
+-	Link Layer Address: the MAC address of the device
+-	Expire: a timer counting down until the entry is not longer considered up-to-date and is then flushed from the ARP table
+-	Netif: the specific network interface the device is connected to
+
+*Note: ARP Tables are similar to CAM Tables, in that they are also persistent and will survive router reboots. This is because ARP entries are stored in on-board memory on the router*
 
 ## Basic Routing
 
+Below is a diagram of the basic decision process of a router, in what it does with a packet when that packet arrives on a given interface. 
+
+![Router Forwarding Decisions](/assets/images/lab6a/router-forwarding-decisions-edited.jpg "Router Forwarding Decisions")
+
+Basically, the router will receive the packet, and search its ARP table to see if there is a matching entry for where that packet should go. If it ultimately can’t find a destination then it will drop the packet.
+
+Note: this process is different than a switch. Recall a switch will forward the packet out on all interfaces if it can find the host in the CAM table. A router on the otherhand, will drop the packet rather than forward it out on all interfaces
+
 ## Static Routes
+
+In a nutshell, all a static route is, is a route that is set statically that tells one network how to get to another network, and who the next hop to get to the network is.
+
+Below is an example of a how static routes are setup in Cisco iOS:
+
+| Command	| Dest. Network	| Dest. Network Subnet Mask	| Next Hop IP Address |
+| :------: | :------: | :------: | :------: |
+| ip route	| 10.1.5.0	| 255.255.255.0	| 10.0.0.5 |
+ 
+In complete form that command looks like the following:
+
+> `ip route 10.1.5.0 255.255.255.0 10.0.0.5`
 
 ## Routing Precedence for Multiple Routes
 
@@ -85,15 +131,17 @@ As part of that process a router create data entries in a table called the ARP T
 
 -	Does any other router/gateway know your devices MAC address?
 
+-	What does ARP stand for? What is its purpose?
 
 ## Resources
 -	https://computer.howstuffworks.com/router.htm
 -	https://networkengineering.stackexchange.com/questions/56643/does-a-router-send-frames-or-packets
+-	https://www.auvik.com/franklyit/blog/what-is-an-arp-table/
+-	https://www.networkworld.com/article/2750342/checking-your-arp-entries.html
+-	
 
 ## Credit
 
 Image credit to some people. 
 
 Lab credits to Nathan Moser as the sole author and editor, and to Bryan Wood for the structure and concepts of the lab.
-
-

@@ -48,7 +48,7 @@ After that screen you should be done. It will take a while to complete the insta
 
 ## VMWare Workstation Pro Install
 
-VMWare Workstation is an extremely powerful software with great features. BYU has been gracious enough to give us a license as students so that we don’t have to purchase it (hint it’s expensive). This info is all found at [BYU Software Website](https://software.byu.edu/workstation). You can download VMWare Workstation from the following website:
+VMWare Workstation is an extremely powerful software with great features. BYU has been gracious enough to give us a license as students so that we don’t have to purchase it (hint it’s expensive). You can download VMWare Workstation from the following website:
 
 [VMWare Workstation Website](https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html)
 

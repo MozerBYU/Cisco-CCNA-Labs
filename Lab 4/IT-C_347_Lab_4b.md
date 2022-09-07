@@ -2,6 +2,8 @@
 ### *Practical Lab - Cisco Switch Password Reset and Firmware Upgrade*
 ## Introduction
 
+*Note: This is a **GROUP ASSIGNMENT**. Please work together on this*
+
 Something that you are most certainly going to come across in your days as an IT administrator, technician, network engineer, etc, is discovering that the previous employee in X position forgot to leave you with the password to a device. Hopefully, in the Operating Systems class that will cover how to change a server password that you don’t know, as we won’t cover that here. However, we will cover the basic general concept for switches/routers. Now, we are going to specifically focus on Cisco hardware, but the general concept applies to most switches/routers.
 
 ## Cisco Hardware

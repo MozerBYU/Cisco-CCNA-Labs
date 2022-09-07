@@ -71,32 +71,6 @@ If everything is working correctly you should see a screen within VMWare Worksta
 
 ![VMWare Workstation GNS3 VM Screen](/assets/images/lab1/gns3-vm-working.png "VMWare Workstation GNS3 VM Screen")
 
-## Troubleshooting VM Errors
-
-If you happen to run into the following error: 
-
-> “Virtualized Intel VT-X/EPT is not supported on this platform”
-
-Don’t worry, you’re not doomed. Unless you’re running Docker Desktop. Then you’ll just have to pick and choose if you want to run GNS3 VM or Docker Desktop and switch between them. For more information visit the following link:
-
-> https://www.gns3.com/community/featured/install-gns3-vm-on-a-pc-with-hyp
-
-If you’re lucky and are one of the blessed souls with Linux Subsystem WSL2 enabled, you get to follow this link:
-
-> https://www.gns3.com/community/discussions/can-wsl2-and-vmware-workstation-
-
-Basically, you need to edit the GNS3.vmx file (while the GNS3 VM is off). That file is typically located at:
-
-> C:\Users\whatsyourface\Documents\Virtual Machines\GNS3 VM\
-
-You’ll open this with Notepad (or your preferred TextEditor) and find the line that says 
-
-> `vhv.enabled = “true”`
- 
-You’ll want to change this to `false`.
-
-Now you should be good to power back on your GNS3 VM.
-
 ## Start-up GNS3
 
 Now open GNS3 for the first time, and we'll make sure that everything gets connected properly with the GNS3 VM we just setup.
@@ -136,11 +110,57 @@ Last thing, you’ll want to go in and change GNS3 to not auto-update. Because i
 
 ![No Auto-Update GNS3](/assets/images/lab1/gns3-no-update.png "No Auto-Update GNS3")
 
+## Troubleshooting VM Errors
+
+### *Virtualized Intel VT-X/EPT*
+
+If you happen to run into the following error: 
+
+> “Virtualized Intel VT-X/EPT is not supported on this platform”
+
+Don’t worry, you’re not doomed. Unless you’re running Docker Desktop. Then you’ll just have to pick and choose if you want to run GNS3 VM or Docker Desktop and switch between them. 
+
+For more information visit the following link:
+
+> https://www.gns3.com/community/featured/install-gns3-vm-on-a-pc-with-hyp
+
+If you’re lucky and are one of the blessed souls with Linux Subsystem WSL2 enabled, you get to follow this link:
+
+> https://www.gns3.com/community/discussions/can-wsl2-and-vmware-workstation-
+
+Basically, you need to edit the GNS3.vmx file (while the GNS3 VM is off). That file is typically located at:
+
+> C:\Users\whatsyourface\Documents\Virtual Machines\GNS3 VM\
+
+You’ll open this with Notepad (or your preferred TextEditor) and find the line that says 
+
+> `vhv.enabled = “true”`
+ 
+You’ll want to change this to `false`.
+
+Now you should be good to power back on your GNS3 VM.
+
+### *GNS3 can’t connect to the GNS3 VM*
+
+If you happen to run into the error where both GNS3 and the GNS3 VM are running, but aren’t able to connect each other, you’ll need to disable and re-enable the network adapter for the VMWare Network Interface(s). 
+
+You can do this by going to ‘Control Panel’ -> ‘Network and Internet’ -> ‘Network and Sharing Center’ -> ‘Change Adapter Settings’. 
+
+You should have a screen like the following:
+
+![Network Adapter Tab](/assets/images/lab1/network-adapters-tab.PNG "Network Adapter Tab")
+
+From here you can select your VMnet# adapters and disable and then re-enable both of them. It should only take a few seconds for the network to re-initialize.
+
+For more information visit the following link:
+
+https://www.gns3.com/community/featured/-cannot-connect-to-compute-gns3-
+
 ## Additional Software
 
 Like was mentioned earlier we’ll need to import our Cisco switch/router file and a docker container for Ubuntu 20.04/22.04.
 
-The file for the Cisco switch/router can be found on LearningSuite under ‘Content’, ‘Labs’, then under 'Lab Software', tiled "cisco_3275_router.bin".
+The file for the Cisco switch/router can be found on LearningSuite under ‘Content’, ‘Labs’ and then under 'Lab Software', tiled "cisco_3275_router.bin".
 
 You’ll have to manually get the Ubuntu docker container file (we’ll go over this in class if you get stuck).
 
@@ -155,5 +175,3 @@ You’ll have to manually get the Ubuntu docker container file (we’ll go over 
 Image credits to VMWare and GNS3.
 
 Lab credits to Nathan Moser as the sole author and editor. Additional credit to Bryan Wood for the structure and concepts of the lab.
-
-

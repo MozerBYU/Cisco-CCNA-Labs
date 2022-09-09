@@ -3,7 +3,7 @@
 ### *Windows 10 Setup*
 ## Introduction
 
-*Note: The instructions are specific to Windows 10 Users*
+*Note: These instructions are specific to Windows 10 Users*
 
 We are going to have a lot of fun throughout the semester! We’re going to use the semi-wonderful program called GNS3 (you'll understand later why I say that). It is a very powerful and capable network virtualization program. With it you will be building one master lab over the course of the whole semester, divided in 6 sections. In this lab you will be dealing with lots of networking areas: IP Addressing, Subnetting, VLANs, Switches, Routers, and Packet Capture.
 

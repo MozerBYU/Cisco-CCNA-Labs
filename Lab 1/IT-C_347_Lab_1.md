@@ -156,13 +156,13 @@ For more information visit the following link:
 
 https://www.gns3.com/community/featured/-cannot-connect-to-compute-gns3-
 
-## Additional Software
+## Pass-off
 
-Like was mentioned earlier we’ll need to import our Cisco switch/router file and a docker container for Ubuntu 20.04/22.04.
+For pass-off all we're looking for is a screenshot of your GNS3 client that shows two green lights: 1 for your GNS3 client, and 1 for the GNS3 VM. Just submit this to LearningSuite.
 
-The file for the Cisco switch/router can be found on LearningSuite under ‘Content’, ‘Labs’ and then under 'Lab Software', tiled "cisco_3275_router.bin".
+It should look like the following:
 
-You’ll have to manually get the Ubuntu docker container file (we’ll go over this in class if you get stuck).
+![GNS3 Client Green Lights](/assets/images/lab1/gns3-green-lights.PNG "GNS3 Client Green Lights)
 
 ## Resources
 

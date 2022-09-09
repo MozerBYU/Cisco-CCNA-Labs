@@ -12,7 +12,7 @@ However, like I mentioned in Lab 1, we will be doing this in chunks so that it i
 
 For now, we’re going to focus on setting up our lab so that it looks like the following:
 
-![Starter Lab 3](/assets/images/lab3b/Lab-3.png "Starter Lab 3")
+![Completed Lab 3](/assets/images/lab3b/Lab-3.png "Completed Lab 3")
  
 Now you are welcome to set your lab however you want. You can determine how many switches you want, but the minimum is 4. At the end there should be a minimum of two distribution routers and two core routers. 
 

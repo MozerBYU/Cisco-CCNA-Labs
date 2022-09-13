@@ -51,7 +51,7 @@ A hybrid topology is exactly as it says, a hybrid of other topologies that are s
 
 The most redundant of all the topologies would be either ring or mesh. Especially with regards to router, mesh is fairly common. As you can guess from the name, in mesh, every node is interconnected with each other.
 
-![Network Topology Diagrams](/assets/images/lab6a/network-topologies.png "Network Topology Diagram")
+![Network Topology Diagrams](/assets/images/lab6a/network-topologies.png)
 
 For our Lab we’ve been working on, in Lab 6 we’ll be implementing a Hybrid approach of Tree for routers and switches, and Star for our hosts.
 
@@ -69,7 +69,7 @@ A router is similar in some respects to a switch, in that when it receives a pac
 
 Recall the following information as a review of the OSI model. I want you to specifically note the which layer deals with MAC addresses and which layer deals with IP addresses.
 
-![OSI Model Review](/assets/images/lab6a/osi-model-part-2.png "OSI Model Review")
+![OSI Model Review](/assets/images/lab6a/osi-model-part-2.png)
  
 ## How a Router Works
 
@@ -81,7 +81,7 @@ A router is similar in some respects to a switch, in that when it receives a pac
 
 Below is an example diagram of what that looks like, from host to switch to router all the way to the destination host. Obviously, it is very simplified, but gives the basic conceptual idea of what is happening.
 
-![Packets to Frames from Host to Router](/assets/images/lab6a/packets-to-frames.jpg "Packets to Frames from Host to Router") 
+![Packets to Frames from Host to Router](/assets/images/lab6a/packets-to-frames.jpg) 
 
 ## ARP Tables
 
@@ -101,7 +101,7 @@ The following information is also in an ARP table entry:
 
 Below is a diagram of the basic decision process of a router, in what it does with a packet when that packet arrives on a given interface. 
 
-![Router Forwarding Decisions](/assets/images/lab6a/router-forwarding-decisions-edited.jpg "Router Forwarding Decisions")
+![Router Forwarding Decisions](/assets/images/lab6a/router-forwarding-decisions-edited.jpg)
 
 Basically, the router will receive the packet, and search its ARP table to see if there is a matching entry for where that packet should go. If it ultimately can’t find a destination then it will drop the packet.
 

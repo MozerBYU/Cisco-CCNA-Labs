@@ -8,6 +8,8 @@ Routers are honestly very complicated. In their purest sense, all they do is rou
 
 Despite the complexity of routers, we will dive into a fair amount of the technical details with how it handles packets with the ARP table, how basic routing works, how static routes work, what the precedence is with routing for different routes, and then we’ll go over some basic routing technologies that are good to be aware of.
 
+Below is a standard image the denotes a router (useful info for Lab 6b and general).
+
 ![Router Symbol](/assets/images/lab6a/router-symbol.png)
 
 ## Network Topologies
@@ -79,11 +81,11 @@ Below is an example diagram of what that looks like, from host to switch to rout
 
 ## How ARP Works
 
-ARP stands for Address Resolution Protocol, and is a process of mapping IPs of devices on a network with their MAC addresses. When a device connects to the network, it will send out a broadcast to the gateway address (either that it has been assigned statically or that has been assigned to it via DHCP), in most cases that gateway address is the address of a router.
+ARP stands for Address Resolution Protocol, and is defined in RFC 826. More or less, ARP is used as a process of mapping IPs of devices on a network with their MAC addresses. This mapping is done via ARP broadcast packets from one host to another. When a host is trying to find another host on said network, if the gateway doesn't already have an entry for said computer in its ARP Table (we'll get to that in a second), then it will send out an ARP broadcast, asking all devices who has the requested IP address and to provide the router with its MAC address. This information (the IP address and associated MAC address are cached in the ARP Table for ease of lookups in the future).
 
-When a host is trying to find another host on said network, if the gateway doesn't already have an entry for said computer in its ARP Table (we'll get to that in a second), then it will send out an ARP broadcast, asking all devices who has the requested IP address and to provide the router with its MAC address. This information (the IP address and associated MAC address are cached in the ARP Table for ease of lookups in the future).
+If you confused, that's ok. Here's a helpful YouTube video explanation.
 
-FIXME 
+[https://youtu.be/Cx7foWGm5fo?t=93](https://www.youtube.com/watch?v=tXzKjtMHgWI)
 
 ## ARP Tables
 
@@ -146,6 +148,6 @@ In complete form that command looks like the following:
 
 ## Credit
 
-Image credit to some people. 
+Image credit to some people, video credits to PowerCert Animation.
 
 Lab credits to Nathan Moser as the sole author and editor, and to Bryan Wood for the structure and concepts of the lab.

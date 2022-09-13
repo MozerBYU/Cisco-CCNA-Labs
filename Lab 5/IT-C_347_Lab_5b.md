@@ -6,7 +6,7 @@ Now that you have learned about the conceptual and technical side of VLANs, weâ€
 
 For this next section, weâ€™re going to focus on setting up our lab so that it looks like the following:
 
-![Completed Lab 5](/assets/images/gns3/Lab-5.png "Completed Lab 5")
+![Completed Lab 5](/assets/images/gns3/Lab-5.png)
 
 For this lab, you need to setup 2 Distribution Routers, connect them to each of your 4 switches, and then setup the VLAN SVIs on the routers.  
 

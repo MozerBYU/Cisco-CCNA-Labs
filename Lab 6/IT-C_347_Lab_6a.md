@@ -77,11 +77,21 @@ Below is an example diagram of what that looks like, from host to switch to rout
 
 ![Packets to Frames from Host to Router](/assets/images/lab6a/packets-to-frames.jpg) 
 
+## How ARP Works
+
+ARP stands for Address Resolution Protocol, and is a process of mapping IPs of devices on a network with their MAC addresses. When a device connects to the network, it will send out a broadcast to the gateway address (either that it has been assigned statically or that has been assigned to it via DHCP), in most cases that gateway address is the address of a router.
+
+When a host is trying to find another host on said network, if the gateway doesn't already have an entry for said computer in its ARP Table (we'll get to that in a second), then it will send out an ARP broadcast, asking all devices who has the requested IP address and to provide the router with its MAC address. This information (the IP address and associated MAC address are cached in the ARP Table for ease of lookups in the future).
+
+FIXME 
+
 ## ARP Tables
 
-As part of that process a router create data entries in a table called the ARP Table. ARP stands for Address Resolution Protocol. It is used as a bridge of sorts between Layer 2 and Layer 3. ARP Tables are similar in some respects to the CAM Tables that switches use, but they have a lot more data in their entries and more functions. 
+As part of that process a router create data entries in a table called the ARP Table. It is used as a bridge of sorts between Layer 2 and Layer 3. ARP Tables are similar in some respects to the CAM Tables that switches use, but they have a lot more data in their entries and more functions. The main purpose of an ARP table is association between a device's MAC address and its IP address.
 
-The main purpose of an ARP table is association between a devices MAC address and its IP address. The router will occasionally receive requests from an individual host to talk to another host via its MAC address. Either the host or router will send out an ARP request asking for the MAC address of the device with a given IP address. The ARP table on the router is populated by the requests, or when it receives packets and inspects them.
+ARP operates on both routers, and on hosts as well (they also have ARP tables). 
+
+FIXME
 
 The following information is also in an ARP table entry:
 -	IP Address: the IP address of the device
@@ -132,7 +142,7 @@ In complete form that command looks like the following:
 -	https://networkengineering.stackexchange.com/questions/56643/does-a-router-send-frames-or-packets
 -	https://www.auvik.com/franklyit/blog/what-is-an-arp-table/
 -	https://www.networkworld.com/article/2750342/checking-your-arp-entries.html
--	
+-	https://www.techtarget.com/searchnetworking/definition/Address-Resolution-Protocol-ARP
 
 ## Credit
 

@@ -35,7 +35,7 @@ Now you can download the GNS3 VM file now if you wish, or it will be downloaded 
 
 For ease of installation and simplicity, we are going to have GNS3 download the VM for us. We'll skip right to installing GNS3. During which you will be presented with a few options. Most of the windows it walks you through are nothing particularly special minus a few:
 
-![GNS3 Components Screen](/assets/images/lab1/gns3-components.png "GNS3 Components Screen")
+![GNS3 Components Screen](/assets/images/lab1/gns3-components.png)
 
 Make sure to select both ‘GNS3 Desktop’ and ‘GNS3 VM’. If you don’t, you’ll have some fun problems, and you will have to reinstall GNS3. You have been warned.
 
@@ -43,7 +43,7 @@ Next, you’ll want to make sure that the VM type is set to “VMWare Workstatio
 
 *Note: If for whatever reason, you choose to use VirtualBox, you have both my pity and my condolences. This is your last chance to redeem yourself. Any future problems you have from here on out are you own fault.*
 
-![GNS3 VM Type Screen](/assets/images/lab1/gns3-vm-type.png "GNS3 VM Type Screen")
+![GNS3 VM Type Screen](/assets/images/lab1/gns3-vm-type.png)
 
 After that screen you should be done. It will take a while to complete the install (roughly 15 - 30 mins, depending on your internet connection and computer).
 
@@ -62,7 +62,7 @@ Here is the license key that you will need:
 
 Once that is all installed, you'll be brought to the following screen:
 
-![VMWare Workstation Main Screen](/assets/images/lab1/vmware-main.png "VMWare Workstation Main Screen")
+![VMWare Workstation Main Screen](/assets/images/lab1/vmware-main.png)
 
 From which you'll select "Open a Virtual Machine", then browse until you find the file that was downloaded by GNS3 (GNS3.VM.VMware.Workstation.2.2.33.1.zip). You'll want to extract that zip, as within it is the GNS3.ova file. It will take a few minutes for VMWare to import the VM. 
 
@@ -72,7 +72,7 @@ From here you'll select "Open a Virtual Machine", then browse until you find the
 
 If everything is working correctly you should see a screen within VMWare Workstation that is similar to the following:
 
-![VMWare Workstation GNS3 VM Screen](/assets/images/lab1/gns3-vm-working.png "VMWare Workstation GNS3 VM Screen")
+![VMWare Workstation GNS3 VM Screen](/assets/images/lab1/gns3-vm-working.png)
 
 ## Start-up GNS3
 
@@ -80,13 +80,13 @@ Now open GNS3 for the first time, and we'll make sure that everything gets conne
 
 You’ll be welcomed with a window asking you to create your first project. If you wish you can make a new project for each lab (copying the previous lab), or you can build all off of the same lab. 
 
-![GNS3 New Project Screen](/assets/images/lab1/gns3-new-project.png "GNS3 New Project Screen")
+![GNS3 New Project Screen](/assets/images/lab1/gns3-new-project.png)
 
 Off to the right-pane is where you can see system stats on your GNS3 VM. If it is green, then you are good to go. If it is red, you’ll need to go into the ‘Preferences’ pane under ‘Edit’ to fix that.
 
 That will bring up a window like the following:
 
-![GNS3 Preferences Screen](/assets/images/lab1/gns3-preferences.png "GNS3 Preferences Screen")
+![GNS3 Preferences Screen](/assets/images/lab1/gns3-preferences.png)
 
 There are many options that you are welcome to adjust. We’re specifically here to adjust the following:
 -	Server: has the settings for connecting to a local or remote GNS3 VM instance
@@ -111,7 +111,7 @@ Note: The settings changed within GNS3 will automatically apply to the VM. You d
 
 Last thing, you’ll want to go in and change GNS3 to not auto-update. Because if it does, either you’ll have to reinstall GNS3 or reimport the latest version of the GNS3 VM, both of which will be total headaches.
 
-![No Auto-Update GNS3](/assets/images/lab1/gns3-no-update.png "No Auto-Update GNS3")
+![No Auto-Update GNS3](/assets/images/lab1/gns3-no-update.png)
 
 ## Troubleshooting VM Errors
 
@@ -151,7 +151,7 @@ You can do this by going to ‘Control Panel’ -> ‘Network and Internet’ ->
 
 You should have a screen like the following:
 
-![Network Adapter Tab](/assets/images/lab1/network-adapters-tab.PNG "Network Adapter Tab")
+![Network Adapter Tab](/assets/images/lab1/network-adapters-tab.PNG)
 
 From here you can select your VMnet# adapters and disable and then re-enable both of them. It should only take a few seconds for the network to re-initialize.
 
@@ -165,7 +165,7 @@ For pass-off all we're looking for is a screenshot of your GNS3 client that show
 
 It should look like the following:
 
-![GNS3 Client Green Lights](/assets/images/lab1/gns3-green-lights.PNG "GNS3 Client Green Lights)
+![GNS3 Client Green Lights](/assets/images/lab1/gns3-green-lights.PNG)
 
 ## Resources
 

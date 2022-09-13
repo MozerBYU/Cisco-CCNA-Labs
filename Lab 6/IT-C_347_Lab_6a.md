@@ -51,21 +51,13 @@ A hybrid topology is exactly as it says, a hybrid of other topologies that are s
 
 ### *Redundancy*
 
-The most redundant of all the topologies would be either ring or mesh. Especially with regards to router, mesh is fairly common. As you can guess from the name, in mesh, every node is interconnected with each other.
+The most redundant of all the topologies would be either ring or mesh. Especially with regards to routers, mesh is fairly common. As you can guess from the name, in mesh, every node is interconnected with each other.
 
 ![Network Topology Diagrams](/assets/images/lab6a/network-topologies.png)
 
 For our Lab we’ve been working on, in Lab 6 we’ll be implementing a Hybrid approach of Tree for routers and switches, and Star for our hosts.
 
 If you choose to do Lab 7, we’re going to switch things up a bit amongst the routers and implement a Hybrid model of Tree + Mesh. This way we still have the structure of a Tree topology between our Core and Distribution routers and the switches that we created in Lab 6, but we get the benefits of high availability and redundancy using OSPF (don’t worry about this for now).
-
-## How a Router Works
-
-Now that we have covered the various network topologies, it’s time to get right into routers. 
-
-Like I mentioned earlier, all a router does is ‘route’ or forward packets from one interface to another, much like a switch. However, it is the more elite version of a switch, in that it operates on Layer 3 and not Layer 2. As such it has unique capabilities, like being able to route across networks (including VLANs). 
-
-A router is similar in some respects to a switch, in that when it receives a packet on a given port it will inspect the packet’s destination and source MAC addresses, however, unlike the switch, it will strip that Layer 2 information away (as at this point, it is no longer needed). After the packet has been prepared for being routed to the next router it will then add new Layer 2 information so that it will transfer properly.
 
 ## OSI Model Review
 

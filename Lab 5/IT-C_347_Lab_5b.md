@@ -27,7 +27,7 @@ Once you have them set in GNS3 and connected to each of the switches there are f
 
 VLAN SVIs are used by the Cisco routers to designate a gateway for a given VLAN subnet. Put simply, a gateway is a central contact point for each host in a given subnet, that allows them to talk outside of their given subnet. In order for each of your hosts to talk outside of their VLAN, they need a gateway, to tell them how to talk to the other subnets. 
 
-Now, don’t get confused. You don’t need a gateway for a host to talk to another host on a given subnet, as long as they are connected via switches or hubs. But you do need a gateway or router to talk to other hosts on other subnets. We’ll dive more into why this is, in the next lab on routing. 
+Now, don’t get confused. You don’t need a gateway for a host to talk to another host on a given subnet, as long as they are connected via switches or hubs. But you do need a gateway or router to talk to other hosts on other subnets. We’ll dive more into why this is, in the next lab on routing. Prep yourself, it's gonna get intense.
 
 *Note: Since SVIs make it so that a given subnet can talk to another, for your unroutable VLAN you DO NOT want an SVI. If you do make one it will then be considered routable, as it is able to talk to the other VLANs and they can talk to it*
 

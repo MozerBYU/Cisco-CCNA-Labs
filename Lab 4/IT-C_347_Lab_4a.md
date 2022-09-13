@@ -8,7 +8,7 @@ Before we get into the different types of switches, we’re going to review over
 
 ## OSI Model
 
-![OSI Model](/assets/images/lab4a/osi-model.png "OSI Model")
+![OSI Model](/assets/images/lab4a/osi-model.png)
 
 They main layers to focus on for the next set of labs are Layers 2 and 3.
  
@@ -39,7 +39,7 @@ Layer 2 is the Data Link layer. Everything on this layer operates by its physica
 
 Remember this fun little picture:
 
-![Thomas the Train at Tidmouth Sheds](/assets/images/lab4a/tidmouth-sheds.webp "Thomas the Train at Tidmouth Sheds")
+![Thomas the Train at Tidmouth Sheds](/assets/images/lab4a/tidmouth-sheds.webp)
  
 Much like the bridge in the middle, a switch allows for trains, so to speak, to travel from one train shed to another or to other places in either the train yard or across the world. 
 
@@ -72,7 +72,7 @@ Those three parts are further detailed as follows:
 -	Up to 1500-bytes Data field: Payload information
 -	4 byte FCS field: Frame Check using CRC (though not shown in the picture below)
 
-![Ethernet Frame](/assets/images/lab4a/ethernet-frame.jpg "Ethernet Frame")
+![Ethernet Frame](/assets/images/lab4a/ethernet-frame.jpg)
  
 ## Media Access Control (MAC) Address
 
@@ -85,7 +85,7 @@ A MAC address is determined by 2 things:
 
 It is comprised of 6 octets of bits, represented in Hexadecimal. Below is a good visual example:
  
-![MAC Address Diagram](/assets/images/lab4a/mac-address.jpg "MAC Address Diagram")
+![MAC Address Diagram](/assets/images/lab4a/mac-address.jpg)
 
 ## How a Switch Works
 
@@ -98,7 +98,7 @@ If the source MAC is not in there, it will make an entry noting the MAC address 
 -	Layer 2: it will forward that frame to all ports in an attempt to find the desired destination device
 -	Layer 3: it will look in the ‘Routing Table’ to see if there is any more information regarding where it might find that device (this will be covered more in the Lab 6)
 
-![Switch Frame Forwarding](/assets/images/lab4a/frame-forwarding.png "Switch Frame Forwarding")
+![Switch Frame Forwarding](/assets/images/lab4a/frame-forwarding.png)
 
 *Note: the cool thing about the CAM tables is they are persistent, and will survive switch reboots*
  
@@ -153,4 +153,3 @@ https://www.youtube.com/watch?v=1z0ULvg_pW8
 Image credit to Windows Club, Thomas the Train, CompTia, and ComputerNetworkingNotes.
 
 Lab credits to Nathan Moser as the sole author and editor, and to Bryan Wood for the structure and concepts of the lab.
-

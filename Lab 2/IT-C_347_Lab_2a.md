@@ -10,7 +10,7 @@ Before we dive into the actual mechanics of creating it. Let’s familiarize our
 
 Ethernet cables, also common referred to as patch cables, are created with either 2 or 4 twisted-pair cables (4 or 8 wires in total). These either come in unshielded (UTP) or shielded (STP). For modern ethernet like Cat 6a or Cat 7, there is additional shielding or foil around either the wires, the sheath or both. All of those differences are shown visually below:
 
-![UTP vs STP Ethernet Cabeling](/assets/images/lab2a/utp-vs-stp.png "UTP vs STP Ethernet Cabeling") 
+![UTP vs STP Ethernet Cabeling](/assets/images/lab2a/utp-vs-stp.png) 
 
 Ethernet in general is defined within the IEEE 802.3 standard as follows:
 
@@ -25,7 +25,7 @@ Now something important to note about ethernet, is that each new generation is b
 
 Now as with most IEEE standards, eventually someone realized that there is a much easier naming convention then what currently exists (you think Ethernet is bad, just wait till we get to WiFi). That is where the UTP Ethernet Categories come into play. Which are as follows below for Cat 1 up to Cat 7.
 
-![UTP Ethernet Categories](/assets/images/lab2a/utp-categories.png "UTP Ethernet Categories")
+![UTP Ethernet Categories](/assets/images/lab2a/utp-categories.png)
 
 ## Duplexing
 
@@ -39,7 +39,7 @@ Even though I mentioned all the various ethernet categories. For this class we w
 
 Other thing to note: the connector for ethernet is commonly referred to as RJ45. In RJ45 for Cat 5e, there are two standards, namely T-568A and T-568B. You can use either when creating a Cat 5e ethernet patch cable, as long as you are consistent on both ends. They are as follows:
  
-![Patch Cabeling Standards](/assets/images/lab2a/patch-cable-standards.jpg "Patch Cable Standards")
+![Patch Cabeling Standards](/assets/images/lab2a/patch-cable-standards.jpg)
  
 As you notice, the only different between the two is where the Green and Orange wires are. However, like I mentioned earlier **be consistent on both ends**, otherwise you get to cut off one end and re-terminate the cable. 
 

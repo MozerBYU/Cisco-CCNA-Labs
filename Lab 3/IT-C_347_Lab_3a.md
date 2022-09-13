@@ -95,6 +95,10 @@ I was going to write out how to do all this, but NetworkLessons already has a ve
 
 https://networklessons.com/subnetting/subnetting-in-binary
 
+Below is a helpful video explaining subnet math:
+
+https://www.youtube.com/watch?v=s_Ntt6eTn94
+
 *Note: I'm not going to require you to do subnet binary math in these labs. But you need to have a general conceptual understanding of how we derive a given IP address, Subnet or Subnet mask*
 
 ## CIDR Notation
@@ -194,6 +198,6 @@ Note: The following questions are all for a 10.0.0.0/16 network
 -	https://packetlife.net/blog/2008/jun/18/using-31-bit-subnets-on-point-point-links/
 
 ## Credit
-Image credits to TechTarget.com and Tripod.com.
+Image credits to TechTarget.com and Tripod.com and video credits to PowerCert Animation
 
 Lab credits to Nathan Moser as the sole author and editor. Additional credit to Bryan Wood for the structure and concepts of the lab.

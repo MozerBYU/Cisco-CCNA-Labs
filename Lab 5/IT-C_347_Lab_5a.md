@@ -24,7 +24,7 @@ A good way to think about this, think of a home network of roughly 20 or so devi
 
 Let’s change our scenario to a large corporation with 10,000 devices. Devices are constantly connecting and are sending broadcast messages to find and talk to different devices. As you can imagine, even if only 2,000 of these devices are sending broadcast messages, the network will very quickly become oversaturated with traffic. Now expand this to like Google for instance, with over 100,000 devices. If you don’t restrict the broadcast domains, you will have a serious issue with all the traffic and it will grind your network to a halt from traffic congestion.
 
-![Network Broadcast with VLANs](/assets/images/lab5a/network-broadcast-in-vlan.jpg "Network Broadcast with VLANs")
+![Network Broadcast with VLANs](/assets/images/lab5a/network-broadcast-in-vlan.jpg)
 
 For a more visual representation of what I’m talking about, see the video below:
 
@@ -60,11 +60,11 @@ When a switch receives a frame from a device, in a port-based implementation, th
 
 The following is a very detailed visual explanation of the differences between a traditional ethernet frame and one with VLAN Tags:
  
-![Detailed Ethernet Frame with VLAN Tags](/assets/images/lab5a/detailed-frame-with-vlans.jpg "Detailed Ethernet Frame with VLAN Tags")
+![Detailed Ethernet Frame with VLAN Tags](/assets/images/lab5a/detailed-frame-with-vlans.jpg)
  
 The following is an example of 802.1AD and how that frame looks:
 
-![Ethernet Frame with 802.1AD VLAN Tags](/assets/images/lab5a/frame-with-802.1ad-vlans.png "Ethernet Frame with 802.1AD VLAN Tags")
+![Ethernet Frame with 802.1AD VLAN Tags](/assets/images/lab5a/frame-with-802.1ad-vlans.png)
  
 Recall from Lab 4a, that ethernet frames range in size from 64 bytes to 1518 bytes. In the case of VLAN tagged frames, that is incorrect. As the tag is 4 bytes for 802.1Q and 8 bytes for 802.1AD, those ethernet frames are increased in size to 1522 bytes and 1526 bytes, respectively.
 
@@ -111,5 +111,7 @@ This is where all that subnetting practice ties it. As subnetting is what allows
 ## Credit
 
 Image credit to NetMgmt, WordPress.com and someone else.
+
+Lab credit to Nathan Moser as the sole author and editor.
 
 Lab credits to Nathan Moser as the sole author and editor, and to Bryan Wood for the structure and concepts of the labs.

@@ -8,6 +8,8 @@ Routers are honestly very complicated. In their purest sense, all they do is rou
 
 Despite the complexity of routers, we will dive into a fair amount of the technical details with how it handles packets with the ARP table, how basic routing works, how static routes work, what the precedence is with routing for different routes, and then we’ll go over some basic routing technologies that are good to be aware of.
 
+![Router Symbol](/assets/images/lab6a/router-symbol.png)
+
 ## Network Topologies
 
 Before we dive in into the technical details of how routers work and how basic routing works, we need to briefly review your understanding of network topologies. 

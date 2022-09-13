@@ -16,25 +16,25 @@ It is best practice to have all ethernet runs terminate to a jack (on the client
 
 This is the first method, where all lines go straight to the switches.
 
-![An IT Nightmare](/assets/images/lab2b/it-living-nightmare.jpg "An IT Nightmare")
+![An IT Nightmare](/assets/images/lab2b/it-living-nightmare.jpg)
  
 Does not the above image fill you with fear and pure disgust? It should. Can you imagine trying to troubleshoot a run that has gone bad? Or even trying to find a switch that has died and needs replacing (have fun keeping track of each run and what port they were plugged into.
 
 Now behold why patch panels reign supreme.
 
-![Crisp Cable Management](/assets/images/lab2b/crisp-cable-management.jpeg "Crisp Cable Management")
+![Crisp Cable Management](/assets/images/lab2b/crisp-cable-management.jpeg)
 
 See why this is so much better, from both a fire-hazard free standpoint, and from an IT administration standpoint? It’s just so crisp and clean. This is the ideal you should strive for in your cable management in networking.
 
 Here’s another from a data center. Isn’t it just so aesthetically pleasing?
 
-![Gorgeous Data Center Cable Management](/assets/images/lab2b/its-gorgeous.jpg "Gorgeous Data Center Cable Management")
+![Gorgeous Data Center Cable Management](/assets/images/lab2b/its-gorgeous.jpg)
 
 In networking, zip ties and velcro are your friend. Use them to keep everything a nice, neat and clean. The patch panel serves as an easy termination point for the ethernet runs, so that you can connect, disconnect runs to your switches with ease. Plus, if anyone replaces you in your position, they won’t hate your guts and burn everything and start all over.
 
 Now you can still use patch panels and create an impending IT disaster. See the following:
 
-![An attempt, but still a failure](/assets/images/lab2b/an-attempt.webp "An attempt, but still a failure")
+![An attempt, but still a failure](/assets/images/lab2b/an-attempt.webp)
 
 Don’t do the first method. One, your career in networking will be very short. And two, no one will like you, nor promote you, and rightfully so, you psychopath.
 
@@ -47,7 +47,7 @@ Like with creating an ethernet patch cable, we need some things:
 
 Below is a picture of the back of a standard Cat 5e patch panel:
 
-![Patch Panel Backside](/assets/images/lab2b/patch-panel-backside.jpg "Patch Panel Backside")
+![Patch Panel Backside](/assets/images/lab2b/patch-panel-backside.jpg)
  
 More or less, find the color of the wire that matches the color on the little picture, then put the wire in the slot and use the punch down tool to secure the wire. Like with the prior lab, you’ll know you did wrong if you test it with speed test and you only get 100 Mbps, or not connection at all. Which means, yep, you get to redo it. 
 

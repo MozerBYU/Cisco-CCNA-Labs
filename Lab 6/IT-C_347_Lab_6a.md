@@ -89,13 +89,12 @@ If you confused, that's ok. Here's a helpful YouTube video explanation.
 
 ## ARP Tables
 
-As part of that process a router create data entries in a table called the ARP Table. It is used as a bridge of sorts between Layer 2 and Layer 3. ARP Tables are similar in some respects to the CAM Tables that switches use, but they have a lot more data in their entries and more functions. The main purpose of an ARP table is association between a device's MAC address and its IP address.
+As part of that process a router create data entries in a table called the ARP Table. ARP stands for Address Resolution Protocol. It is used as a bridge of sorts between Layer 2 and Layer 3. ARP Tables are similar in some respects to the CAM Tables that switches use, but they have a lot more data in their entries and more functions. 
 
-ARP operates on both routers, and on hosts as well (they also have ARP tables). 
-
-FIXME
+The main purpose of an ARP table is association between a devices MAC address and its IP address. The router will occasionally receive requests from an individual host to talk to another host via its MAC address. Either the host or router will send out an ARP request asking for the MAC address of the device with a given IP address. The ARP table on the router is populated by the requests, or when it receives packets and inspects them.
 
 The following information is also in an ARP table entry:
+
 -	IP Address: the IP address of the device
 -	Link Layer Address: the MAC address of the device
 -	Expire: a timer counting down until the entry is not longer considered up-to-date and is then flushed from the ARP table
@@ -107,11 +106,13 @@ The following information is also in an ARP table entry:
 
 Below is a diagram of the basic decision process of a router, in what it does with a packet when that packet arrives on a given interface. 
 
+More or less, it looks to see if the destination IP address in its ARP table, or at least if the associated subnet is in the ARP table. From there it will check if that network is directly connected to the router or if it on another router (next hop). In a last resort scenario, it will forward it onto the next hop, or it will just drop it as it has nowhere to go.
+
 ![Router Forwarding Decisions](/assets/images/lab6a/router-forwarding-decisions-edited.jpg)
 
 Basically, the router will receive the packet, and search its ARP table to see if there is a matching entry for where that packet should go. If it ultimately can’t find a destination then it will drop the packet.
 
-Note: this process is different than a switch. Recall a switch will forward the packet out on all interfaces if it can find the host in the CAM table. A router on the otherhand, will drop the packet rather than forward it out on all interfaces
+*Note: this process is different than a switch. Recall a switch will forward the packet out on all interfaces if it can find the host in the CAM table. A router on the otherhand, will drop the packet rather than forward it out on all interfaces*
 
 ## Static Routes
 
@@ -119,17 +120,76 @@ In a nutshell, all a static route is, is a route that is set statically that tel
 
 Below is an example of a how static routes are setup in Cisco iOS:
 
-| Command	| Dest. Network	| Dest. Network Subnet Mask	| Next Hop IP Address |
-| :------: | :------: | :------: | :------: |
+| Command	| Dest. Network	| Dest. Network | Subnet Mask	| Next Hop IP Address |
+| :------: | :------: | :------: | :------: | :------: |
 | ip route	| 10.1.5.0	| 255.255.255.0	| 10.0.0.5 |
- 
-In complete form that command looks like the following:
-
-> `ip route 10.1.5.0 255.255.255.0 10.0.0.5`
 
 ## Routing Precedence for Multiple Routes
 
-## Various Routing Technologies
+Now there is very important principle that you must understand, as you work with various routing technologies (some of which we’ll briefly mention here in a second), there will be times where a router has to decided where to send a packet and it has multiple routes that it could send that packet.
+
+Don’t get confused, it is a good thing to have multiple routes to a given target network. That increases the resiliency of our network, should a given router go down or get slowed down by other traffic. But there are some considerations when we do that, that we need to account for. 
+
+For example, say we have some static routes setup, and we also have OSPF setup that is also providing routes for a given network. If there are multiple routes, this then begs the question, how does the router know where to send the packet? How does it choose one route over another?
+
+This is where routing precedence comes in. From a very high-level perspective, when a router has to make a decision about which route to choose, it will choose the most specific route.
+
+To go more in-depth about how the router chooses the most specific route, there are three main principles that govern that process:
+
+1)	Route Specificity
+2)	Administrative Distance
+3)	Metric
+
+*Note: The following definitions are taken directly from Cisco.com*
+
+### *Route Specificity*
+
+This is also known as ‘longest prefix matching’. This is determined by comparing the destination IP address bit-by-bit with the prefixes that exist in the entries in the routing table. The route with the prefix that has the most matching bits is the one the router will chose.
+
+### *Administrative Distance*
+
+It is the measure of trustworthiness of the source of the route. If a router learns about a destination from more than one routing protocol, administrative distance is compared and the preference is given to the routes with lower administrative distance. 
+
+| Default Administrative Distances |
+| :------: | :------: | :------: | :------: |
+| Connected	| 0	| OSPF	| 110 |
+| Static	| 1	| IS-IS	| 115 |
+| EIGRP (summary route) |	5	| RIP	| 120 |
+| eBGP	| 20	| EIGRP (External)	| 170 |
+| EIGRP (Internal)	| 90	| iBGP	| 220 |
+| IGRP	| 100 | - | - | 		
+
+### *Metric*
+
+It is the measure used by a given routing protocol to calculate the best path to a given destination, if it learns multiple paths to the same destination. Each routing protocol uses a different metric.
+
+As the router receives updates to route information, it will choose the best path for a given routing protocol to a given destination, and then attempt to add that route into the routing table. The router will then decide whether or not to add that route to the routing table based on the administrative distance and metrics of the route in question.
+
+In the case where all three of these attributes are identical, the router will load balance across all available paths using ECMP (Equal Cost Multi-Path).
+
+If all of this is going over your head, that’s ok. I’m just giving you a high-level view of how routing precedence works. If you want to get a better explanation, I have included a video below that has a fairly good explanation:
+
+https://www.youtube.com/watch?v=PDcwijVC4XE
+
+## Routing Protocols
+
+-	RIP/RIPv2 (Routing Information Protocol)
+-	OSPF (Open Shortest Path First)
+-	BGP (Border Gateway Protocol)
+-	IGP (Interior Gateway Protocol)
+-	EIGRP (Enhanced Interior Gateway Routing Protocol)
+-	ISIS (Intermediate System-to-Intermediate System)
+-	VRF (Virtual Routing and Forwarding)
+-	VXLAN (Virtual Extensible LAN)
+-	SD-WAN (Software Defined WAN)
+-	MPLS-VPN (Multiprotocol Label Switching)
+-	IPSec Tunnels
+
+Below is a YouTube video that goes over some of these protocols and why they are used:
+
+https://www.youtube.com/watch?v=LYE8Y-zDQa8
+
+*Note: If you want to learn more about these protocols, be sure to take the Advanced Networking* 
 
 ## Write-up Questions
 
@@ -139,15 +199,24 @@ In complete form that command looks like the following:
 
 -	What does ARP stand for? What is its purpose?
 
+-	What decides routing precedence?
+
+-	What is the Administrative Distance for OSPF?
+
+
 ## Resources
+
 -	https://computer.howstuffworks.com/router.htm
 -	https://networkengineering.stackexchange.com/questions/56643/does-a-router-send-frames-or-packets
 -	https://www.auvik.com/franklyit/blog/what-is-an-arp-table/
 -	https://www.networkworld.com/article/2750342/checking-your-arp-entries.html
--	https://www.techtarget.com/searchnetworking/definition/Address-Resolution-Protocol-ARP
+-	https://www.practicalnetworking.net/stand-alone/route-precedence-how-does-a-router-choose-its-preferred-path/
+-	https://my.ine.com/Networking/courses/6758d610/ine-ccnp-rs-routing-technologies-for-pro
+-	https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/8651-21.html
+-	https://networklessons.com/cisco/ccna-200-301/longest-prefix-match-routing
 
 ## Credit
 
-Image credit to some people, video credits to PowerCert Animation.
+Image credit to EduCBA, NextGenT, Cisco Press and someone else.
 
 Lab credits to Nathan Moser as the sole author and editor, and to Bryan Wood for the structure and concepts of the lab.

@@ -160,7 +160,7 @@ Last thing, IP address is very specific for localhost. It is also defined under 
 
 ## Subnetting Practice
 
-Note: The following questions are all for a 10.0.0.0/16 network
+*Note: The following questions are all for a 10.0.0.0/16 network. I recommend using the Visual Subnet Tool for these*
 -	Say you needed a /17 and 4x /20s. What does that look like (what are the different IP ranges for those subnets)?
 
 -	Now say you need to split that even further to 8x /20s. What does that look like?

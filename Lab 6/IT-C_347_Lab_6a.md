@@ -174,7 +174,8 @@ https://www.youtube.com/watch?v=PDcwijVC4XE
 ## Routing Protocols
 
 -	RIP/RIPv2 (Routing Information Protocol)
--	OSPF (Open Shortest Path First)
+-	OSPF (Open Shortest Path First) - Covered in Lab 7
+-	STP (Spanning Tree Protocol) - Covered in Lab 7
 -	BGP (Border Gateway Protocol)
 -	IGP (Interior Gateway Protocol)
 -	EIGRP (Enhanced Interior Gateway Routing Protocol)
@@ -202,7 +203,6 @@ https://www.youtube.com/watch?v=LYE8Y-zDQa8
 -	What decides routing precedence?
 
 -	What is the Administrative Distance for OSPF?
-
 
 ## Resources
 

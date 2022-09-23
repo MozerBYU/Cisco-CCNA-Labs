@@ -87,7 +87,7 @@ The network prefix is what defines the network address. The subnet id defines wh
 
 Now you have a basic understanding of how to define a subnet and the IP addressing of an individual device within that subnet. You also have a basic understanding of how private IP networks are defined with regards to their subnet id. But before we dive into how we separate a larger private network, into smaller sub-networks using the CIDR, we need to brief touch on how public networks are defined with regards to their network id.
 
-![Network and Host ID](/assets/images/lab3a/network_and_host_id.gif)
+*Note: A subnet’s purpose is to simply define the size of a subnet. Anything outside of that range won’t be permitted to talk within that given subnet*
 
 # Subnet Binary Math
 
@@ -172,11 +172,11 @@ Note: The following questions are all for a 10.0.0.0/16 network
 
 -	What does CIDR stand for?
 
--	To which Classes does CIDR apply?
+-	Is CIDR for public or private classes?
 
-- What class level is your home network?
+- What class level is your home private network?
 
--	What class level is BYU’s public network?
+-	What class level is BYU’s private network?
 
 -	How many hosts are in a /25 network?
 

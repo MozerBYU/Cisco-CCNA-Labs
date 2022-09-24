@@ -40,24 +40,24 @@ For some historical context, back in the ancient days of the early 80s and 90s e
 When talking about how fast a given network or network connection is, the various terms are confusing, so I’m going to hopefully shed some light on how to differentiate between each of them. First, let’s go over all the terminology and their textbook definitions really quick:
 
 -	Bandwidth
-     -	Determines how fast data theoretically can be transferred across a network
+     -	Determines how fast data *theoretically* can be *transferred* across a network
      -	Measured in bytes per second (bps)
 -	Latency
-     -	Determines how much delay there is in data transit from source to destination
+     -	Determines how much *delay* there is in data transit from source to destination
      -	Measured in milliseconds (ms)
 -	Speed
-     -	Determines how fast data can be transmitted across a given network medium
+     -	Determines how fast data can be *transmitted* across a given network medium
      -	Measured in bytes per second 
 -	Throughput
-     -	Determines how fast data actually was transferred over time
+     -	Determines how fast data *actually* was *transferred* over time
      -	Measured in bytes per second 
 
 To put all these together in a more logical sense:
 
--	Speed is how much data the network can handle in a physical sense (factors include: networking medium/cabeling)
--	Bandwidth is how fast the network can handle the data in a theoretical sense (factors include: cabling, NICs, switches, routers) 
--	Throughput is how fast the network can handle the data in a practical sense (factors include the actual reality use of said cabling, NICs, switches and routers)
--	Latency is how fast the network and global internet handled the data in a practical tested sense (factors include the actual reality of your network and the global internet and how all the cabling, NICs, switches and routers, and end services dealt with said data)
+-	Speed is how much data the network can handle in a *hysical sense* (factors include: networking medium/cabeling)
+-	Bandwidth is how fast the network can handle the data in a *theoretical sense* (factors include: cabling, NICs, switches, routers) 
+-	Throughput is how fast the network can handle the data in a *practical sense* (factors include the actual reality use of said cabling, NICs, switches and routers)
+-	Latency is how fast the network and global internet handled the data in a *reality* (factors include the actual reality of your network and the global internet and how all the cabling, NICs, switches and routers, and end services dealt with said data)
 
 If your still lost, just know like 95% of this world (who ain’t in IT or remotely technically related) lumps like most of these into speed or latency. But here is a helpful article if you so desire:
 

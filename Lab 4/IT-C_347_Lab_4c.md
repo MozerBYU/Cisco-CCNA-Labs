@@ -98,7 +98,7 @@ Yes, you will need to google how to do this. Good luck!
 
 ## Final Note on All GNS3 Devices
 
-One important thing to do on each device (host, switch, router) is set Idle-PC, if you don't it will rack your CPU usage absolutely ridicously high. To do this, right-click on a given device and find the "Idle PC" option. That will bring up a window that looks like the following: 
+One important thing to do on each device (host, switch, router) is set Idle-PC, if you don't it will rack your CPU usage absolutely ridiculously high. To do this, right-click on a given device and find the "Idle PC" option. That will bring up a window that looks like the following: 
 
 ![Idle PC Option Menu](/assets/images/lab4c/idle-pc-option.PNG)
 

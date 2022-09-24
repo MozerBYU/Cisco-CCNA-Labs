@@ -22,6 +22,8 @@ Now you are welcome to set your lab however you want. You can determine how many
 
 First, you’ll want to setup all of your hosts. You can use what container for this you want, as long as it has the ability to ‘ping’. For my purposes, I’ll be using the default VPCs image that comes pre-installed with GNS3.
 
+![GNS3 Setup VPCs](/assets/images/lab3b/gns3-interface-vpcs.png)
+
 Next, you’ll want to setup each of those hosts on their subnets. My advice, figure out what your subnets will be first, before you do this. You can do that with an excel spreadsheet, or a text file. Whatever you choose, you will submit this file as part of your lab pass-off. But please make it look somewhat decent.
 
 This is good practice for creating documentation in the IT industry, which is an ABSOLUTE must, as life is pure pain when you get to a job that has either a) outdated documentation, b) fragmented documentation, or c) the worst of them all, no documentation at all.
@@ -33,12 +35,30 @@ Additionally, you can have the host IP addresses whatever the heck you want in t
 -	Host 1: 192.168.10.2
 -	Host 2: 192.168.10.3
 
+## Note on GNS3 Backups
+
+GNS3 is a great software. However, it is not without error. I can tell you from personal experience, that you’ll want backups of you labs. Both of the whole lab itself (once it is completed), and of the configuration files of the hosts (and later the switches, distribution routers and core routers).
+I will show you how to do both.
+
+### *Device Config Backups*
+
+These are done by right-clicking on a given device, going to the ‘Export Config’ option and then exporting them somewhere (I recommend in a folder called ‘config backups’ in your GNS3 project folder).
+ 
+![GNS3 Device Config Backups](/assets/images/lab3b/gns3-interface-device-backup.png)
+
+### *GNS3 Project Backups*
+
+These are done by going to the ‘File’ tab, then going to the ‘Export portable project’ option and saving them somewhere (I recommend NOT saving them in your GNS3 project folder. Preferably, OneDrive/DropBox/iCloud or the equivalent).
+
+![GNS3 Project Backups](/assets/images/lab3b/gns3-interface-project-backup.png)
+
 ## Pass-off
 
 Now for pass-off I’m only looking for a few things:
 
--	1) each hosts has been assigned an IP address consistent with the given subnet and CIDR that you have chosen
--	2) you have a file of some sort that has all the hosts, their IPs and the subnets you have chosen
+- 1) you have a minimum of 8 hosts
+-	2) each hosts has been assigned an IP address consistent with the given subnet and CIDR that you have chosen
+-	3) you have a file of some sort that has all the hosts, their IPs and the subnets you have chosen
 
 You'll submit that file as well of a screenshot of your lab at this point to LearningSuite.
 

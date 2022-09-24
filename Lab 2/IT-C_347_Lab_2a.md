@@ -59,7 +59,7 @@ To put all these together in a more logical sense:
 -	Throughput is how fast the network can handle the data in a practical sense (factors include the actual reality use of said cabling, NICs, switches and routers)
 -	Latency is how fast the network and global internet handled the data in a practical tested sense (factors include the actual reality of your network and the global internet and how all the cabling, NICs, switches and routers, and end services dealt with said data)
 
-If your still lost, just know like 95% of this world (who ain’t in IT or remotely technically related, lumps like most of these into speed or latency). But here is a helpful article if you so desire:
+If your still lost, just know like 95% of this world (who ain’t in IT or remotely technically related) lumps like most of these into speed or latency. But here is a helpful article if you so desire:
 
 https://www.cbtnuggets.com/blog/technology/programming/network-throughput-vs-bandwidth-the-difference
 

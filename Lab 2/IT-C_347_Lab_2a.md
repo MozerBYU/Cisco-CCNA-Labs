@@ -33,6 +33,36 @@ Another thing that is important to note, more for historical purposes, is that e
 
 For some historical context, back in the ancient days of the early 80s and 90s ethernet technology was still young and developing. A lot of devices were in still using half-duplex. In addition to this people were still using these archaic devices called hubs (think of a switch but super lame). Hubs were cheap for hardware, which is why they were used. How hubs work, is when the receive a packet, they forward that to all ports. And since they were mostly operating in half-duplex, packets would collide by being trying to send and receive down the same wire. As a result, things like CSMA/CD were developed (which I’m not covering). But then some smart people decided using full-duplex and switches were much better.
 
+## Network Speed Terminology
+
+*Note: The following applies to both ethernet, WiFi and fiber*
+
+When talking about how fast a given network or network connection is, the various terms are confusing, so I’m going to hopefully shed some light on how to differentiate between each of them. First, let’s go over all the terminology and their textbook definitions really quick:
+
+-	Bandwidth
+     -	Determines how fast data theoretically can be transferred across a network
+     -	Measured in bytes per second (bps)
+-	Latency
+     -	Determines how much delay there is in data transit from source to destination
+     -	Measured in milliseconds (ms)
+-	Speed
+     -	Determines how fast data can be transmitted across a given network medium
+     -	Measured in bytes per second 
+-	Throughput
+     -	Determines how fast data actually was transferred over time
+     -	Measured in bytes per second 
+
+To put all these together in a more logical sense:
+
+-	Speed is how much data the network can handle in a physical sense (factors include: networking medium/cabeling)
+-	Bandwidth is how fast the network can handle the data in a theoretical sense (factors include: cabling, NICs, switches, routers) 
+-	Throughput is how fast the network can handle the data in a practical sense (factors include the actual reality use of said cabling, NICs, switches and routers)
+-	Latency is how fast the network and global internet handled the data in a practical tested sense (factors include the actual reality of your network and the global internet and how all the cabling, NICs, switches and routers, and end services dealt with said data)
+
+If your still lost, just know like 95% of this world (who ain’t in IT or remotely technically related, lumps like most of these into speed or latency). But here is a helpful article if you so desire:
+
+https://www.cbtnuggets.com/blog/technology/programming/network-throughput-vs-bandwidth-the-difference
+
 ## Patch Cabling Standards
 
 Even though I mentioned all the various ethernet categories. For this class we we’ll be focusing on Cat5e (the most commonly used ethernet category today, though Cat 6 and Cat 6a are making some headway). 

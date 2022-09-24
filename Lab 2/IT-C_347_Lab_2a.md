@@ -35,7 +35,7 @@ For some historical context, back in the ancient days of the early 80s and 90s e
 
 ## Network Speed Terminology
 
-*Note: The following applies to both ethernet, WiFi and fiber*
+*Note: The following applies to both coaxial, ethernet, WiFi and fiber*
 
 When talking about how fast a given network or network connection is, the various terms are confusing, so I’m going to hopefully shed some light on how to differentiate between each of them. First, let’s go over all the terminology and their textbook definitions really quick:
 

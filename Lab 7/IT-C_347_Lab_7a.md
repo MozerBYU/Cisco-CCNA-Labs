@@ -61,6 +61,7 @@ Below is an example network using OSPF areas.
 The following videos are helpful in understanding OSPF and OSPF Areas.
 
 https://www.youtube.com/watch?v=PIMnj2oqYIo
+
 https://www.youtube.com/watch?v=CM9BlFHB3q4STP
 
 Below is a picture of what OSPF could look like in GNS3 (we are not doing this btw, this is just an example):

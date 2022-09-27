@@ -34,7 +34,7 @@ This is good practice for creating documentation in the IT industry, which is an
 
 On each VPC if you right-click and find the 'Edit Config' option, that will bring up a window where you can set the IP of the given host. It should look like the following:
 
-![GNS3 Set VPC IP](/assets/images/lab3b/gns3-set-vpc-ip.png)
+![GNS3 Set VPC IP](/assets/images/lab3b/gns3-set-vpc-ip.PNG)
 
 Now you can have the host IP addresses whatever the heck you want in the given network you choose. I recommend using /24 subnets as that will make you life easier for the subnet mask part, but you do you. You want to make you life extra difficult, I won't stop you. I also recommend using IP addresses that make sense. If you recall, DHCP assigns IP addresses with the next available address. Going back to our above example, you could have those two host IP addresses like the following:
 

@@ -24,7 +24,9 @@ First, you’ll want to setup all of your hosts. You can use what container for 
 
 ![GNS3 Setup VPCs](/assets/images/lab3b/gns3-interface-vpcs.png)
 
-Next, you’ll want to setup each of those hosts on their subnets. My advice, figure out what your subnets will be first, before you do this. You can do that with an excel spreadsheet, or a text file. Whatever you choose, you will submit this file as part of your lab pass-off. But please make it look somewhat decent.
+*Note: Now GNS3 will probably ask you if you want to put that VPC on your local machine or your GNS3 VM. Put it on the VM as that's why we set it up*
+
+Next, you’ll want to setup each of those hosts on their subnets. So for example, you can set a subnet as 10.0.10.0/24, or you could do 192.168.1.0/27. You can make them whatever you want. My advice, figure out what your subnets will be first, noting that will be connecting these with VLANs in Lab 5b. You can do that with an excel spreadsheet, or a text file. Whatever you choose, you will submit this file as part of your lab pass-off. But please make it look somewhat decent.
 
 This is good practice for creating documentation in the IT industry, which is an ABSOLUTE must, as life is pure pain when you get to a job that has either a) outdated documentation, b) fragmented documentation, or c) the worst of them all, no documentation at all.
 
@@ -57,6 +59,10 @@ These are done by right-clicking on a given device, going to the ‘Export Confi
 ### *GNS3 Project Backups*
 
 These are done by going to the ‘File’ tab, then going to the ‘Export portable project’ option and saving them somewhere (I recommend NOT saving them in your GNS3 project folder. Preferably, OneDrive/DropBox/iCloud or the equivalent).
+
+Select the following options:
+- Include Base Images
+- Reset MAC addresses
 
 ![GNS3 Project Backups](/assets/images/lab3b/gns3-interface-project-backup.png)
 

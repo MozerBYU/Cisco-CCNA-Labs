@@ -20,7 +20,7 @@ But knowing even the most basic commands like “enable” and “configure term
 
 ## Tools
 
-However, before we dive into the actual commands, we need to go over some standard tools that you’ll need to connect to these switches (as most networking gear for that matter). Most networking gear or even some old legacy servers and desktops come with serial ports or console ports, that are used for console access. 
+However, before we dive into the actual commands, we need to go over some standard tools that you’ll need to connect to these switches (and most networking gear for that matter). Most networking gear or even some old legacy servers and desktops come with serial ports or console ports, that are used for console access. 
 
 Those ports will look like the following:
 

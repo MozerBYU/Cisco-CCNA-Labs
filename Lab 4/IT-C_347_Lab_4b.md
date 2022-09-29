@@ -4,7 +4,7 @@
 
 *Note: This is a **GROUP ASSIGNMENT**. Please work together on this*
 
-Something that you are most certainly going to come across in your days as an IT administrator, technician, network engineer, etc, is discovering that the previous employee in X position forgot to leave you with the password to a device. Hopefully, in the Operating Systems class that will cover how to change a server password that you don’t know, as we won’t cover that here. However, we will cover the basic general concept for switches/routers. Now, we are going to specifically focus on Cisco hardware, but the general concept applies to most switches/routers.
+Something that you are most certainly going to come across in your days as an IT administrator, technician, network engineer, etc, is discovering that the previous employee in X position forgot to leave you with the password to a device. Hopefully, in the Operating Systems class they will cover how to change a server password that you don’t know, as we won’t cover that here. However, we will cover the basic general concept for switches/routers. Now, we are going to specifically focus on Cisco hardware, but the general concept applies to most switches/routers.
 
 ## Cisco Hardware
 
@@ -12,11 +12,13 @@ The switch we’ll be dealing with will be the Cisco Catalyst 3850 48 POE+.
 
 ![Cisco 3850 Switch](/assets/images/lab4b/cisco-3850-switch.png)
  
-Now, some things to be aware of. Cisco hardware runs on their own proprietary OS called iOS. Surprising they’re not in a legal battle with Apple over that, but that’s beside the point. Learning how to program and troubleshoot Cisco hardware from the terminal is a difficult learning curve. For this lab and the next (5b) I will be showing you the EXACT commands that you need to run. 
+Now, some things to be aware of. Cisco hardware runs on their own proprietary OS called iOS. Surprising they’re not in a legal battle with Apple over that, but that’s beside the point. Learning how to program and troubleshoot Cisco hardware from the terminal is a difficult learning curve. For this lab I will be showing you the EXACT commands that you need to run. 
 
-You’re probably wondering how effective that is in helping you learn. And you’re correct, I am guiding you through the steep learning curve that is learning Cisco iOS. And here’s why, come Lab 6b you are all on your own. In that lab you will have to google how to do everything. Much like the labs from IT-C 210, you will be more or less on your own. Rather than baptizing all of you in fire to start with, I decided to guide you part way across the bridge above the lava, and then push you in, in Lab 6b. You’re welcome!
+You’re probably wondering how effective that is in helping you learn. And you’re correct, I am guiding you through the steep learning curve that is learning Cisco iOS. And here’s why, come these next few labs you are all on your own, obviously I will still help. But in these next few labs you will have to google how to do everything. Much like the labs from IT-C 210, you will be more or less on your own. 
 
-But knowing even the most basic commands like “enable” and “configure terminal” (hence known as “conf t”) are super helpful. And will give you a stepping stone of sorts for Lab 6b. As without either of these commands you can do absolutely nothing on Cisco iOS. 
+At least for this lab, rather than baptizing all of you in fire to start with, I decided to guide you part way across the bridge above the lava, and then push you in. You’re welcome!
+
+But knowing even the most basic commands like “enable” and “configure terminal” (hence known as “conf t”) are super helpful. And will give you a stepping stone of sorts for next few labs. As without either of these commands you can do absolutely nothing on Cisco iOS. 
 
 ## Tools
 
@@ -53,7 +55,9 @@ It should look similar to the following:
 
 ![Putty Configuration Screen](/assets/images/lab4b/putty-configuration.png)
 
-Lastly, you’ll want to power cycle the switch after it boots. Once it powers back on, you’ll want to immediately press and hold the ‘mode’ button. Hold it down for approximately 12 or so seconds, until the SYST Status LED goes amber. On the console you should now be in the ‘boot loader’.
+Lastly, you’ll want to power cycle the switch after it boots. Once it powers back on, you’ll want to immediately press and hold the ‘mode’ button. Hold it down for approximately 12 or so seconds, until the SYST Status LED goes amber. On the console you should now be in the ‘boot loader’, denoted by a prompt similar to the following:
+
+> `Switch:`
 
 ![Cisco Mode Button](/assets/images/lab4b/cisco-mode-button.jpg)
  
@@ -66,7 +70,9 @@ You have essentially 3 modes that you will switch between on the command-line (y
 - Privileged
 - Configuration
 
-To get to the privileged mode, you need to use the “enable” command (think of it like using sudo). This allows you to view settings on the switch/router. Now in order to make changes you need to be in configuration mode, using the command “conf t” (short for ‘configure terminal’).
+To get to the privileged mode, you need to use the “enable” command. This allows you to view settings on the switch/router. Now in order to make changes you need to be in configuration mode, using the command “conf t” (short for ‘configure terminal’).
+
+Another important command is "do" (think of it like using 'sudo').
 
 ## Password Recovery Commands
 
@@ -89,7 +95,7 @@ Now for the tough part, lol. All you need to do is copy the following commands i
  
 *// Then hit ENTER to copy the running-config*
 
-*// Enter a configuration terminal*
+*// Enter a config terminal*
 <br> `Switch# conf t`
 
 *// From here you can set a password*
@@ -117,19 +123,19 @@ Before you begin this part, you will need to download the firmware upgrade .bin 
 <br> `Switch# show version`
 <br> `-	16.09.04`
 
-*//Copy the config file from Cisco’s website to flash memory*
+*// Copy the config file from Cisco’s website to flash memory*
 <br> `Switch# copy usbflash0:<file_name> flash:`
 
-*// Enter a configuration terminal*
+*// Enter a config terminal*
 <br> `Switch# conf t`
 
 *// Then apply the firmware update*
 <br> `Switch# (config) boot syst switch all flash:<firmware_update_file_name.bin>`
 
-*// Exit config terminal*
+*// Exit the config terminal*
 <br> `Switch# (config) exit`
 
-*// Then apply the config*
+*// Then apply the new configur*
 <br> `Switch# copy start run`
 
 *// Then hit ENTER to copy the running-config*

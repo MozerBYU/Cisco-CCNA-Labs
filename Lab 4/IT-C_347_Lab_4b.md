@@ -114,11 +114,11 @@ Before you begin this part, you will need to download the firmware upgrade .bin 
 <br> `Switch# show version`
 <br> `-	16.09.04`
 
-*// Enter config terminal to set DHCP and Network settings*
-<br> `Switch# conf t`
-
 *//Copy the config file from Cisco’s website to flash memory*
 <br> `Switch# copy usbflash0:<file_name> flash:`
+
+*// Enter config terminal*
+<br> `Switch# conf t`
 
 *// Then apply the firmware update*
 <br> `Switch# (config) boot syst switch all flash:<firmware_update_file_name.bin>`

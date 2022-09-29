@@ -89,14 +89,14 @@ Now for the tough part, lol. All you need to do is copy the following commands i
  
 *// Then hit ENTER to copy the running-config*
 
-*// Next, enter into a config shell*
+*// Enter a configuration terminal*
 <br> `Switch# conf t`
 
 *// From here you can set a password*
 <br> `Switch (config)# enable secret <password>`
 
-*// Tell the switch to re-apply the startup config*
-<br> `Switch (config)# no system ignore startupconfig switch all`
+*// Tell the switch to run the startup config*
+<br> `Switch# SWITCH_IGNORE_STARTUP_CFG=0`
 
 *// Finally, tell the switch to disable password recovery*
 <br> `Switch (config)# system disable password recovery switch all`
@@ -106,9 +106,12 @@ Now for the tough part, lol. All you need to do is copy the following commands i
  
 *// Then hit ENTER to copy the running-config*
 
+*// Then reboot the switch*
+<br> `Switch# boot`
+
 ## Firmware Upgrade Commands
 
-Before you begin this part, you will need to download the firmware upgrade .bin file from LearninSuite under 'Content', 'Labs' and then 'Lab Software', titled "cat3k_caa-universalk9.16.12.05b.SPA.bin".
+Before you begin this part, you will need to download the firmware upgrade .bin file from LearninSuite under 'Content', 'Labs' and then 'Lab Software', titled "cisco_3850_switch_9.16.12.bin".
 
 *// Find the switch firmware version number*
 <br> `Switch# show version`
@@ -117,19 +120,27 @@ Before you begin this part, you will need to download the firmware upgrade .bin 
 *//Copy the config file from Cisco’s website to flash memory*
 <br> `Switch# copy usbflash0:<file_name> flash:`
 
-*// Enter config terminal*
+*// Enter a configuration terminal*
 <br> `Switch# conf t`
 
 *// Then apply the firmware update*
 <br> `Switch# (config) boot syst switch all flash:<firmware_update_file_name.bin>`
 
+*// Exit config terminal*
+<br> `Switch# (config) exit`
+
 *// Then apply the config*
 <br> `Switch# copy start run`
+
+*// Then hit ENTER to copy the running-config*
+
+*// Tell the switch to run the startup config*
+<br> `Switch# SWITCH_IGNORE_STARTUP_CFG=0`
 
 *// Verify new boot variable is set to new config file*
 <br> `Switch# show boot`
 
-*// Then reboot*
+*// Then reboot the switch*
 <br> `Switch# boot`
 
 *// Finally check the version to make sure it updated correctly*

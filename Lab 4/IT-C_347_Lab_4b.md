@@ -175,6 +175,10 @@ For pass-off, we just need a screenshot of the PuTTY terminal that you have comp
 ## Resources
 -	https://www.netwrix.com/cisco_commands_cheat_sheet.html
 
+## Misc Resources for Troubleshooting the Cisco Switches
+- https://community.cisco.com/t5/switching/changeing-flash-from-read-only-to-read-write/td-p/3739978
+- https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst3850/software/release/3se/system_management/configuration_guide/b_sm_3se_3850_cg/b_sm_3se_3850_cg_chapter_01110.html#task_1021182
+
 ## Credit
 
 Image credits to PuTTY, CablesandKits.com, Amazon, Cisco, Wikipedia and Snabay Networking.

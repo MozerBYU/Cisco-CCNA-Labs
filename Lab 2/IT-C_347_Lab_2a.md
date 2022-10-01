@@ -41,16 +41,16 @@ When talking about how fast a given network or network connection is, the variou
 
 -	Bandwidth
      -	Determines how fast data *theoretically* can be *transferred* across a network
-     -	Measured in bytes per second (bps)
+     -	Measured in bits per second (bps)
 -	Latency
      -	Determines how much *delay* there is in data transit from source to destination
      -	Measured in milliseconds (ms)
 -	Speed
      -	Determines how fast data can be *transmitted* across a given network medium
-     -	Measured in bytes per second 
+     -	Measured in bits per second 
 -	Throughput
      -	Determines how fast data *actually* was *transferred* over time
-     -	Measured in bytes per second 
+     -	Measured in bits per second 
 
 To put all these together in a more logical sense:
 

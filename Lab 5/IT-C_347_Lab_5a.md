@@ -2,7 +2,7 @@
 ### *Conceptual Lab - VLANs*
 ## Introduction
 
-VLANs, super useful, but dang, can they be confusing at times. As we go through this lab you’ll learn why VLANs are essential for any network and why they will make your life in networking much easier in the long run (no promises in the short run). But first, we need to delve into what is a VLAN, why they were created in the first place and some technical details of VLANs. 
+VLANs, super useful, but dang, can they be confusing at times. As we go through this lab, you’ll learn why VLANs are essential for any network and why they will make your life in networking much easier in the long run (no promises in the short run). But first, we need to delve into what is a VLAN, why they were created in the first place and some technical details of VLANs. 
 
 ## What is a VLAN?
 
@@ -92,7 +92,7 @@ Now brief hardware thing related to switches and routers. In networking the link
 
 ## VLANs and Subnetting
 
-This is where all that subnetting practice ties it. As subnetting is what allows us to implement our VLANs. It doesn’t matter what VLAN you assign to a give network. But for ease of understanding try to keep it to somewhat reasonable and consistent. For example, say you have designated your IoT network to have VLAN 100. It would be fairly reasonable then to set that network with the 10.0.100.0/24 network.
+This is where all that subnetting practice ties it. As subnetting is what allows us to implement our VLANs. It doesn’t matter what VLAN you assign to a give network. But for ease of understanding try to keep it somewhat reasonable and consistent. For example, say you have designated your IoT network to have VLAN 100. It would be fairly reasonable then to set that network with the 10.0.100.0/24 network.
 
 But you're probably wondering, what the difference between VLANs and Subnets are, as they do a lot of the same things. Put simply:
 

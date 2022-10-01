@@ -6,7 +6,7 @@ VLANs, super useful, but dang, can they be confusing at times. As we go through 
 
 ## What is a VLAN?
 
-But just what is a VLAN? A VLAN stands for a Virtual Local Area Network. They reside as a network on-top of an existing LAN. Think of it as a subnetwork to a greater network. It operates on Layer 2 at a switch level, and Layer 3 at a router level. The entire purpose of a VLAN is separate/segregate a physical network into smaller, more manageable networks. 
+But just what is a VLAN? A VLAN stands for a Virtual Local Area Network. They are defined in RFC 3069, and reside as a network on-top of an existing LAN. Think of it as a subnetwork to a greater network. It operates on Layer 2 at a switch level, and Layer 3 at a router level. The entire purpose of a VLAN is separate/segregate a physical network into smaller, more manageable networks. 
 
 ## Reasons for a VLAN
 
@@ -105,11 +105,17 @@ https://www.youtube.com/watch?v=6_giEv20En0
 
 ## Write-up Questions?
 
+- How many VLANs can exist in a given broadcast domain?
+
+- How many VLANs can exist under 802.1AD?
+
 -	What networking problem are VLANs designed to solve?
 
 -	Give some example VLANs you would create (name and function)?
 
 -	Why is default VLAN 1 a security issue?
+
+-	How do subnets and VLANs correlate? How are the different?
 
 ## Resources
 

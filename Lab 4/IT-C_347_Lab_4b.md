@@ -87,6 +87,9 @@ Now for the tough part, lol. All you need to do is copy the following commands i
 *// Soft reboot the switch*
 <br> `Switch: boot`
 
+*// If this doesn't work, unplug the power to the switch*
+<br> *// You do not need to hold down the mode button again*
+
 *// Copy the running config into flash memory*
 <br> `Switch# copy start run`
  

@@ -55,7 +55,7 @@ It should look similar to the following:
 
 ![Putty Configuration Screen](/assets/images/lab4b/putty-configuration.png)
 
-Lastly, you’ll want to power cycle the switch after it boots. Once it powers back on, you’ll want to immediately press and hold the ‘mode’ button. Hold it down for approximately 12 or so seconds, until the SYST Status LED goes amber. On the console you should now be in the ‘boot loader’, denoted by a prompt similar to the following:
+Lastly, you’ll want to power on the switch, immediately pressing and holding the ‘mode’ button. Hold it down for approximately 12 or so seconds, until the SYST Status LED goes amber. On the console you should now be in the ‘boot loader’, denoted by a prompt similar to the following:
 
 > `Switch:`
 

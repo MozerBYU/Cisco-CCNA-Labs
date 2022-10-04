@@ -78,17 +78,14 @@ Another important command is "do" (think of it like using 'sudo').
 
 Now for the tough part, lol. All you need to do is copy the following commands in order:
 
-*// Enter into a privileged shell mode*
-<br> `Switch> enable`
-
 *// Tell the switch to ignore the startup config*
-<br> `Switch# SWITCH_IGNORE_STARTUP_CFG=1`
+<br> `Switch: SWITCH_IGNORE_STARTUP_CFG=1`
 
 *// Tell the switch to enable password recovery*
-<br> `Switch# SWITCH_DISABLE_PASSWORD_RECOVERY=0`
+<br> `Switch: SWITCH_DISABLE_PASSWORD_RECOVERY=0`
 
 *// Soft reboot the switch*
-<br> `Switch# boot`
+<br> `Switch: boot`
 
 *// Copy the running config into flash memory*
 <br> `Switch# copy start run`

@@ -117,7 +117,7 @@ Now for the tough part, lol. All you need to do is copy the following commands i
 
 ## Firmware Upgrade Commands
 
-Before you begin this part, you will need to download the firmware upgrade .bin file from LearninSuite under 'Content', 'Labs' and then 'Lab Software', titled "cisco_3850_switch_9.16.12.bin".
+Before you begin this part, you will need to download the firmware upgrade .bin file from LearninSuite under 'Content', 'Labs' and then 'Lab Software', titled "cisco_3850_new.bin".
 
 *// Find the switch firmware version number*
 <br> `Switch# show version`

@@ -114,6 +114,16 @@ Basically, the router will receive the packet, and search its ARP table to see i
 
 *Note: this process is different than a switch. Recall a switch will forward the packet out on all interfaces if it can find the host in the CAM table. A router on the otherhand, will drop the packet rather than forward it out on all interfaces*
 
+## APIPA
+
+Now, before we go over static routes, I’m quickly going to go over Automatic Private IP Addressing (APIPA). When a device is connected to a network, but unable to contact a DHCP server to get an address, it will self-assign an address in the 169.254.0.0/16 address space. 
+
+You’re probably wondering how this is useful as 169.254.0.0 is not in any of the RFC defines Private IP ranges (10.x.x.x, 172.16.x.x or 192.168.x.x). By self-assigning itself an address, that device will show up on the network (as switches and routers will cache in in their CAM/ARP tables). However, as the IP address is not in the defined network scope, it will be un-routable by default on virtually every network on this planet (and hopefully it is, we’ll talk about security of this in a second). But what this allows is for a Network Administrator to detect a rogue device on the network, and either block it (if malicious) or hunt it down and get its network connectivity restored properly (if it is not malicious). Additionally, this could be a clue that your DHCP server just freaking died (Scenario: no new DHCP leases are being handed out, and several devices start reporting in your admin console with the IP 169.254.x.x). 
+
+Now, why would you not just setup a static route, as we’re about to show you, to let these devices route properly? Well, for 1) you could have a DHCP issue or other network issues that this would hint your toward, 2) that’s insecure as heck, as any device could randomly connect (granted that’s what DHCP is for in the first place), but let’s say you hypothetically, had a pure static IP network, say your Management Network, now you have a rogue device on it that is routable, and 3) why? Just why?? Why not just go and fix the network connectivity on the device in question?
+
+*Note: It would be considered highly bad practice to route 169.254.x.x on any network, but definitely on a corporate one. Just don’t do it*
+
 ## Static Routes
 
 In a nutshell, all a static route is, is a route that is set statically that tells one network how to get to another network, and who the next hop to get to the network is.
@@ -210,6 +220,7 @@ https://www.youtube.com/watch?v=LYE8Y-zDQa8
 -	https://networkengineering.stackexchange.com/questions/56643/does-a-router-send-frames-or-packets
 -	https://www.auvik.com/franklyit/blog/what-is-an-arp-table/
 -	https://www.networkworld.com/article/2750342/checking-your-arp-entries.html
+-	https://www.techtarget.com/whatis/definition/Automatic-Private-IP-Addressing-APIPA
 -	https://www.practicalnetworking.net/stand-alone/route-precedence-how-does-a-router-choose-its-preferred-path/
 -	https://my.ine.com/Networking/courses/6758d610/ine-ccnp-rs-routing-technologies-for-pro
 -	https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/8651-21.html

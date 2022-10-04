@@ -36,7 +36,7 @@ In order to connect to these ports you’ll need one or the other of the followi
 
 Those will look like the following:
 
-![USB-to-Serial](/assets/images/lab4b/usb-to-serial.jpg
+![USB-to-Serial](/assets/images/lab4b/usb-to-serial.jpg)
 
 ![USB-to-RJ45](/assets/images/lab4b/usb-to-rj45.jpg)
                   

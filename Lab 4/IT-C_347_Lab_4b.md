@@ -54,12 +54,6 @@ Next, you’ll want to configure your PuTTY settings as follows:
 It should look similar to the following:
 
 ![Putty Configuration Screen](/assets/images/lab4b/putty-configuration.png)
-
-Lastly, you’ll want to power on the switch, immediately pressing and holding the ‘mode’ button. Hold it down for approximately 12 or so seconds, until the SYST Status LED goes amber. On the console you should now be in the ‘boot loader’, denoted by a prompt similar to the following:
-
-> `Switch:`
-
-![Cisco Mode Button](/assets/images/lab4b/cisco-mode-button.jpg)
  
 ## iOS Commands
 
@@ -76,7 +70,15 @@ Another important command is "do" (think of it like using 'sudo').
 
 ## Password Recovery Commands
 
-Now for the tough part, lol. All you need to do is copy the following commands in order:
+Now for the tough part, lol. First, uou’ll want to boot the switch and immediately press and hold the ‘mode’ button. 
+
+![Cisco Mode Button](/assets/images/lab4b/cisco-mode-button.jpg)
+
+Hold it down for approximately 12 or so seconds, until the SYST Status LED goes amber. On the console you should now be in the ‘boot loader’, denoted by a prompt similar to the following:
+
+> `Switch:`
+
+Next, all you need to do is copy the following commands in order:
 
 *// Tell the switch to ignore the startup config*
 <br> `Switch: SWITCH_IGNORE_STARTUP_CFG=1`
@@ -87,13 +89,11 @@ Now for the tough part, lol. All you need to do is copy the following commands i
 *// Soft reboot the switch*
 <br> `Switch: boot`
 
-*// If this doesn't work, unplug the power to the switch*
+*// If this doesn't work, unplug and plug back in the switch*
 <br> *// You do not need to hold down the mode button again*
 
-*// Copy the running config into flash memory*
-<br> `Switch# copy start run`
- 
-*// Then hit ENTER to copy the running-config*
+*// Enter a privileged shell*
+<br> `Switch> enable`
 
 *// Enter a config terminal*
 <br> `Switch# conf t`
@@ -101,7 +101,10 @@ Now for the tough part, lol. All you need to do is copy the following commands i
 *// From here you can set a password*
 <br> `Switch (config)# enable secret <password>`
 
-*// Tell the switch to run the startup config*
+*// Then, you'll want to go back to a privileged shell, you can do by exiting the config terminal*
+<br> `Switch (config)# exit`
+
+*// Next, tell the switch to run the startup config*
 <br> `Switch# SWITCH_IGNORE_STARTUP_CFG=0`
 
 *// Finally, tell the switch to disable password recovery*
@@ -135,7 +138,7 @@ Before you begin this part, you will need to download the firmware upgrade .bin 
 *// Exit the config terminal*
 <br> `Switch# (config) exit`
 
-*// Then apply the new configur*
+*// Then apply the new configuration*
 <br> `Switch# copy start run`
 
 *// Then hit ENTER to copy the running-config*

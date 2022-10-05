@@ -111,8 +111,8 @@ Next, all you need to do is copy the following commands in order:
 <br> `Switch (config)# system disable password recovery switch all`
 
 *// Copy the running config into flash memory*
-<br> `Switch# copy start run`
- 
+<br> `Switch# wr me`
+
 *// Then hit ENTER to copy the running-config*
 
 *// Then reboot the switch*
@@ -139,7 +139,7 @@ Before you begin this part, you will need to download the firmware upgrade .bin 
 <br> `Switch# (config) exit`
 
 *// Then apply the new configuration*
-<br> `Switch# copy start run`
+<br> `Switch# wr me`
 
 *// Then hit ENTER to copy the running-config*
 
@@ -163,9 +163,9 @@ As part of you write up include a screenshot of the terminal once you have reboo
 
 -	What does ‘configure terminal’ or ‘conf t’ do?
 
--	What does the command ‘copy start run’ tell the switch to do?
+-	What does the command ‘wr me’ tell the switch to do?
 
--	How is that command different from ‘write memory’?
+-	How is that command different from ‘copy start run’?
 
 -	Why does the bit/baud rate on the switch need to be 9600?
 

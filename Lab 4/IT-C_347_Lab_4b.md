@@ -101,16 +101,16 @@ Next, all you need to do is copy the following commands in order:
 *// From here you can set a password*
 <br> `Switch (config)# enable secret <password>`
 
-*// Then, you'll want to go back to a privileged shell, you can do by exiting the config terminal*
+*// Then, you'll want to go back to a privileged shell, you can do that by exiting the config terminal*
 <br> `Switch (config)# exit`
 
 *// Next, tell the switch to run the startup config*
 <br> `Switch# SWITCH_IGNORE_STARTUP_CFG=0`
 
-*// Finally, tell the switch to disable password recovery*
+*// Then, tell the switch to disable password recovery*
 <br> `Switch (config)# system disable password recovery switch all`
 
-*// Copy the running config into flash memory*
+*// Finally, copy the running config into flash memory*
 <br> `Switch# wr me`
 
 *// Then hit ENTER to copy the running-config*
@@ -121,6 +121,9 @@ Next, all you need to do is copy the following commands in order:
 ## Firmware Upgrade Commands
 
 Before you begin this part, you will need to download the firmware upgrade .bin file from LearninSuite under 'Content', 'Labs' and then 'Lab Software', titled "cisco_3850_new.bin".
+
+*// First, enter a privileged shell
+<br> `Switch# enable`
 
 *// Find the switch firmware version number*
 <br> `Switch# show version`
@@ -138,7 +141,7 @@ Before you begin this part, you will need to download the firmware upgrade .bin 
 *// Exit the config terminal*
 <br> `Switch# (config) exit`
 
-*// Then apply the new configuration*
+*// Then apply the new config*
 <br> `Switch# wr me`
 
 *// Then hit ENTER to copy the running-config*

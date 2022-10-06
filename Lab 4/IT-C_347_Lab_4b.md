@@ -70,7 +70,7 @@ Another important command is "do" (think of it like using 'sudo').
 
 ## Password Recovery Commands
 
-Now for the tough part, lol. First, uou’ll want to boot the switch and immediately press and hold the ‘mode’ button. 
+Now for the tough part, lol. First, you’ll want to boot the switch and immediately press and hold the ‘mode’ button. 
 
 ![Cisco Mode Button](/assets/images/lab4b/cisco-mode-button.jpg)
 

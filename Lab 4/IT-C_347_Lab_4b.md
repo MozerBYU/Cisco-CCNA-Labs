@@ -44,7 +44,7 @@ Those will look like the following:
 
 To begin, connect either the serial or RJ45 cable to the switch and the USB side to your laptop. Next, you’ll need a program called PuTTY, or the equivalent. Now the next part depends on what machine you are using. If it is a Windows you’ll need to identify what serial port your cable is connected to on your computer (this is easily found within Device Manager). 
 
-Some important things to know about serial connections (note: this will be covered more in the Digital Communications class). They are known as serial because the device ‘serializes’ the data, as in it sends all 8 bits of data in one byte chunks. For each serial connection there is a specified bit rate that each device must be set to, in order for the data to be sent and received correctly.
+Some important things to know about serial connections (note: this will be covered more in the Digital Communications class). They are known as serial because the device ‘serializes’ the data, as sends a byte of data one bit at a time. For each serial connection there is a specified bit rate that each device must be set to, in order for the data to be sent and received correctly.
 
 Next, you’ll want to configure your PuTTY settings as follows:
 -	Speed: 9600 (or whatever the device requires, in our case it is 9600)
@@ -115,8 +115,11 @@ Next, all you need to do is copy the following commands in order:
 
 *// Then hit ENTER to copy the running-config*
 
+*// Then, you'll want to go back to a basic shell*
+<br> `Switch# exit`
+
 *// Then reboot the switch*
-<br> `Switch# boot`
+<br> `Switch> boot`
 
 ## Firmware Upgrade Commands
 
@@ -152,8 +155,11 @@ Before you begin this part, you will need to download the firmware upgrade .bin 
 *// Verify new boot variable is set to new config file*
 <br> `Switch# show boot`
 
+*// Then, you'll want to go back to a basic shell*
+<br> `Switch# exit`
+
 *// Then reboot the switch*
-<br> `Switch# boot`
+<br> `Switch> boot`
 
 *// Finally check the version to make sure it updated correctly*
 <br> `Switch# show version`

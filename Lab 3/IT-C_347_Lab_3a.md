@@ -79,9 +79,9 @@ Classless IP Addressing is specifically reserved for private networks (LANs) and
 
 ## Subnetting
 
-First thing we need to understand is what is a subnet. A subnet is short for sub-network. Within a larger private network, you can have hundreds and thousands of little or large sub-networks, or subnets. But how do we define the size of an individual sub-network? And how do we differentiate between one sub-network and another? This is where subnet ids and Classless Inter-Domain Routing (CIDR) come in. Below is an illustration of how a subnet id is defined.
+First thing we need to understand is what is a subnet. A subnet is short for sub-network. Within a larger private network, you can have hundreds and thousands of little or large sub-networks, or subnets. But how do we define the size of an individual sub-network? And how do we differentiate between one sub-network and another? This is where subnet ids and Classless Inter-Domain Routing (CIDR) come in. Below is an illustration of how a network, subet and host id are defined.
 
-![Subnet ID Illustration](/assets/images/lab3a/subnet_id.png)
+![Subnet ID Illustration](/assets/images/lab3a/network_and_host_id.gif)
  
 The network prefix is what defines the network address. The subnet id defines what subnet the given network resides in, and the host id defines which host it is. For example, take a 10.0.x.x network and say we want to have a subnet with the subnet id of 3, our network would be 10.0.3.x. If we put a host on the that subnet with a host id of 2 it would have the IP address of 10.0.3.2 on the 10.0.3.0 subnet. 
 

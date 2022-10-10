@@ -92,12 +92,14 @@ Now brief hardware thing related to switches and routers. In networking the link
 
 ## VLANs and Subnetting
 
-This is where all that subnetting practice ties it. As subnetting is what allows us to implement our VLANs. It doesn’t matter what VLAN you assign to a give network. But for ease of understanding try to keep it somewhat reasonable and consistent. For example, say you have designated your IoT network to have VLAN 100. It would be fairly reasonable then to set that network with the 10.0.100.0/24 network.
-
-But you're probably wondering, what the difference between VLANs and Subnets are, as they do a lot of the same things. Put simply:
+As a quick review, VLANs and Subnetting are very similar. They both are used to limit/segregate broadcast domains. But you're probably wondering, if they both are used to for the same function, why have both? Put simply:
 
 - Subnets separate networks physically
-- VLANs separate networks virtually
+- VLANs separate networks virtually or logically
+
+Now in small business environments where you have very few VLANs, you can certainly connect the two so that a physical network is logical network. For example, say you had an IoT network on VLAN 100, you could set a subnet of 10.0.100.0/24. However, in large enterprise environments (such as BYU or AWS) that is highly impractical, as you can have thousands or millions of VLANs (as we just covered). In large enterprises IP address conservation is very important if they are a sole IPv4 network (as many still are). So association a given VLAN with a whole subnet, just isn't practical. 
+
+So in industry how you setup you're network will vary, and will be dependent on the network size, complexity, security controls and various other factors.
 
 Below is a video with an easy explanation of the difference between the two with visuals:
 

@@ -8,7 +8,7 @@ For this next section, we’re going to focus on setting up our lab so that it l
 
 ![Lab 4 Completed](/assets/images/gns3/Lab-4.png)
  
-*Note, we are not setting up VLANs yet. That is in the next lab. Rather, we are placing each of our switches. There should be 4 switches in total. How you choose to connect them doesn’t particularly matter. I put mine as above for ease of visualizing.*
+*Note: We are NOT setting up VLANs yet. That is in the next lab. Rather, we are placing each of our switches and connecting them to the hosts. There should be 4 switches in total. How you choose to connect them doesn’t particularly matter. I put mine as above for ease of visualizing.*
 
 ## Import GNS3 Switch Image
 

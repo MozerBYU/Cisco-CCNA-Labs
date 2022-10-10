@@ -89,6 +89,8 @@ After you have saved your EtherSwitch and your EtherSwitch router, we are ready 
 
 Like was mentioned earlier in a previous lab, you can set this lab up however you want. But there are some restrictions that I will detail in the pass-off section. Aside from these, you can do whatever you want. 
 
+Important note about connecting each host to each switch: When connecting the wiring from a host to the switch you'll want to make sure to use the NM-16ESW module (denoted by f1/#). Don't use the other module (denoted by f0/#) or you will run into some issues (those are used for connections between routers -> trunk links).
+
 Once you have all the switches placed in GNS3 and connected to each of the hosts there are few things you need to do:
 -	Set each port to either access or trunk mode
 -	Set each access port in its corresponding VLAN

@@ -105,9 +105,9 @@ https://www.youtube.com/watch?v=6_giEv20En0
 
 ## Write-up Questions?
 
-- How many VLANs can exist in a given broadcast domain?
+- How many VLANs can exist in a given local area network?
 
-- How many VLANs can exist under 802.1AD?
+- How many VLANs can exist in that same network under 802.1AD?
 
 -	What networking problem are VLANs designed to solve?
 

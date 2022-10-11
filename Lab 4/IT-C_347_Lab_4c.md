@@ -32,15 +32,15 @@ Next, we need to import that router image that we downloaded using the ‘Browse
 
 ![New IOS Router Image](/assets/images/lab4c/new-ios-image.PNG)
  
-This is where it gets a bit tricky. For the switch you can title it EtherSwitch, or whatever else you want. But you need to NOT select ‘This is an EtherSwitch Router’. However, for the routers, you NEED to select ‘This is an EtherSwitch Router’.
+This is where it gets a bit tricky. For the switch you NEED to select ‘This is an EtherSwitch Router’ as then name it similar to "EtherSwitch", delete the router part as that is confusing. For the routers, you DO NOT want to select 'This is an EtherSwitch Router' as it is not necessary. This will ensure you have the correct icons.
 
 **For the Switch**									             
 
-![EtherSwitch Setup](/assets/images/lab4c/etherswitch.PNG)
+![EtherSwitch Setup](/assets/images/lab4c/etherswitch-new.PNG)
 
 **For the Router**
 
-![EtherSwitch Router Setup](/assets/images/lab4c/etherswitch-router.PNG)
+![EtherSwitch Router Setup](/assets/images/lab4c/etherswitch-router-new.PNG)
        
 After that you’ll have a window to setup how much RAM each switch/router should have. The default is 128 MB which is plenty sufficient in my experience. Plus, you’ll want to keep that number decently low as in the end you’ll have 4 routers and 4 switches running for a total of 2GB, not including the hosts. As such, you don’t want to over-allocate RAM as it is unnecessary, unless of course you have a ton of RAM (16GB +) then, more power to ya.
 

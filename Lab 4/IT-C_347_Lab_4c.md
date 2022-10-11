@@ -44,18 +44,6 @@ This is where it gets a bit tricky. For the switch you NEED to select ‘This is
        
 After that you’ll have a window to setup how much RAM each switch/router should have. The default is 128 MB which is plenty sufficient in my experience. Plus, you’ll want to keep that number decently low as in the end you’ll have 4 routers and 4 switches running for a total of 2GB, not including the hosts. As such, you don’t want to over-allocate RAM as it is unnecessary, unless of course you have a ton of RAM (16GB +) then, more power to ya.
 
-## Modify Memory Settings
-
-Before we finishing setting up the switch and router templates, we need to modify the memory settings for each. Initially, the setting is 256 KiB of RAM, we’re going to increase that to 64000 KiB of RAM.
-
-You should see a menu similar to the following:
- 
-![Modify NVRAM Settings](/assets/images/lab4c/increase-nvram.PNG)
- 
-The option you want to change is the NVRAM to 64000 KiB.
-
-Once that is done, we also want to check the box to ‘Automatically delete NVRAM and disk files’. This helps things run smoother and not over-clutter your computer’s disk space.
-
 ## Setup Switch Modules
 
 Next, is setting up the switch modules. This is the part that you need to be very careful you follow directions exactly, or your labs won’t work as intended.
@@ -82,6 +70,18 @@ Slot 0 is going to be used for communicating up to the Core routers (interface(s
 Slot 1 and Slot 2 are going to be used for communicating down to the Switches (interface f#/0), there are only two of these (f1/0 or f2/0).
  
 ![EtherSwitch Router Modules](/assets/images/lab4c/etherswitch-router-modules.PNG)
+
+## Modify Memory Settings
+
+After you have setup the switch and router templates, we need to modify the memory settings for each. You can do this by finding the template, going to 'Edit' and then finding the 'Memory Settings' tab. Initially, the setting is 256 KiB of RAM, we’re going to increase that to 64000 KiB of RAM.
+
+You should see a menu similar to the following:
+ 
+![Modify NVRAM Settings](/assets/images/lab4c/increase-nvram.PNG)
+ 
+The option you want to change is the NVRAM to 64000 KiB.
+
+Once that is done, we also want to check the box to ‘Automatically delete NVRAM and disk files’. This helps things run smoother and not over-clutter your computer’s disk space.
 
 ## Setup Switches
 

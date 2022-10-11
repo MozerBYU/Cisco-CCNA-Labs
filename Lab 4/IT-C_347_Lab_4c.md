@@ -72,7 +72,7 @@ Slot 1 is going to be used for communicating down to the hosts (interface(s) f1/
 
 ## Setup Router Modules
 
-For switches your modules should be as follows:
+For the routers your modules should be as follows:
 -	Slot 0: GT96100-FE
 -	Slot 1: NM-1FE-TX
 -	Slot 2: NM-1FE-TX

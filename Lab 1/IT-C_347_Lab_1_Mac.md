@@ -15,19 +15,19 @@ Cisco Academy is a wonderful resource for anyone who wants to grow, deepen or sh
 
 To begin, go to the following and create your account:
 
-https://www.netacad.com/
+[Cisco Academy Website](https://www.netacad.com/)
 
 You are welcome to work on any of these labs to further your skills in addition to what we do in this class. Trust me, they will prove a very valuable resource throughout your career, regardless of the field.
 
 There is also a wonderful resource called GNS3 Vault that also has labs that you can work on if you wish.
 
-https://gns3vault.com/
+[GNS3 Vault](https://gns3vault.com/)
 
 ## GNS3 Install
 
 Now for the fun part, installing GNS3. This comes in 3 parts: installing GNS3, installing VMWare Fusion Pro (or Virtual Box if you really want to hate your life), and importing the GNS3 VM.  To get the GNS3 software head to the following website, make an account and then download the software:
 
-https://www.gns3.com/
+[GNS3 Website](https://www.gns3.com/)
 
 Now you need to download the GNS3 VM as well, make sure you get the one specific to VMWare Fusion Pro. 
 
@@ -45,7 +45,7 @@ But you should have a wonderful old window like the following when it is done:
 
 VMWare Fusion Pro is an extremely powerful software with great features. It’s not quite as great as VMWare Workstation Pro, but since you have a Mac it’s the best you got unless you want to pay for Parallels. BYU has been gracious enough to give us a license as students so that we don’t have to purchase it (hint it’s expensive). You can download VMWare Pro from the following website: 
 
-https://www.vmware.com/products/fusion/fusion-evaluation.html
+[VMWare Fusion Website](https://www.vmware.com/products/fusion/fusion-evaluation.html)
 
 Here is the license key that you will need:
 >	0H2CL-TF31P-K89J2-039KM-1T03H
@@ -125,7 +125,8 @@ From there you want to go to the ‘Server’ tab and find the host binding opti
  
 Now you should be good to power back on your GNS3 VM.
 
-*Note: See the following for more info - https://gns3.com/community/featured/gns3-vm-is-not-on-the-same-netwo*
+See the following for more info: 
+> https://gns3.com/community/featured/gns3-vm-is-not-on-the-same-netwo*
 
 ## Pass-off
 

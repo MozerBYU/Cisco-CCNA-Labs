@@ -31,8 +31,6 @@ Now for the fun part, installing GNS3. This comes in 3 parts: installing GNS3, i
 
 Now you can download the GNS3 VM file now if you wish, or it will be downloaded later during the GNS3 install. If you do, make sure you get the one specific to VMWare Workstation Pro. 
 
-*Note: You are welcome to use whatever hypervisor of VM software of your choosing. But for this class we are specifically supporting VMWare Workstation Pro as the VM software of choice.*
-
 For ease of installation and simplicity, we are going to have GNS3 download the VM for us. We'll skip right to installing GNS3. During which you will be presented with a few options. Most of the windows it walks you through are nothing particularly special minus a few:
 
 ![GNS3 Components Screen](/assets/images/lab1/gns3-components.png)
@@ -41,7 +39,7 @@ Make sure to select both ‘GNS3 Desktop’ and ‘GNS3 VM’. If you don’t, y
 
 Next, you’ll want to make sure that the VM type is set to “VMWare Workstation Pro” or to whatever you are using.
 
-*Note: If for whatever reason, you choose to use VirtualBox, you have both my pity and my condolences. This is your last chance to redeem yourself. Any future problems you have from here on out are you own fault.*
+*Note: You are welcome to use whatever hypervisor of VM software of your choosing. But for this class we are specifically supporting VMWare Workstation Pro as the VM software of choice. If, for whatever reason, you choose to use VirtualBox, you have both my pity and my condolences. This is your last chance to redeem yourself. Any future problems you have from here on out are you own fault.*
 
 ![GNS3 VM Type Screen](/assets/images/lab1/gns3-vm-type.png)
 
@@ -72,7 +70,7 @@ From here you'll select "Open a Virtual Machine", then browse until you find the
 
 If everything is working correctly you should see a screen within VMWare Workstation that is similar to the following:
 
-![VMWare Workstation GNS3 VM Screen](/assets/images/lab1/gns3-vm-working.png)
+![VMWare Workstation GNS3 VM Screen](/assets/images/lab1/gns3-vm-working-new.png)
 
 ## Start-up GNS3
 
@@ -93,7 +91,7 @@ There are many options that you are welcome to adjust. We’re specifically here
 -	GNS3 VM: this has all the settings for connection to your GNS3 VM itself
 -	Packet Capture: this has all the settings for connecting to WireShark
 -	Dynamips: this is where we will import our router template that we will use for our Cisco switches and routers
--	Docker containers: this is where we will import a Ubuntu 20.04/22.04 docker instance for our hosts
+-	Docker containers: this is where we can import a docker container, if you choose to go that route
 
 ## GNS3 VM Settings
 
@@ -161,7 +159,11 @@ https://www.gns3.com/community/featured/-cannot-connect-to-compute-gns3-
 
 ## Pass-off
 
-For pass-off all we're looking for is a screenshot of your GNS3 client that shows two green lights: 1 for your GNS3 client, and 1 for the GNS3 VM. Just submit this to LearningSuite.
+For pass-off all we're looking for is a screenshot of your GNS3 client that shows two green lights: 
+- 1 for your GNS3 client
+- 1 for the GNS3 VM
+
+Once you have that working just submit a screenshot to LearningSuite.
 
 It should look like the following:
 

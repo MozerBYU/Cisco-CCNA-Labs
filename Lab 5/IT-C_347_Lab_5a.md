@@ -117,7 +117,7 @@ https://www.youtube.com/watch?v=6_giEv20En0
 
 -	Why is default VLAN 1 a security issue?
 
--	How do subnets and VLANs correlate? How are the different?
+-	How do subnets and VLANs correlate? How are they different?
 
 ## Resources
 

@@ -1,5 +1,5 @@
 # IT-C 347 Lab 6
-### Conceptual Lab - Routers
+### *Conceptual Lab - Routers*
 ## Introduction
 
 Now that we have covered IP addressing, subnetting, VLANs, and switches, you are ready to learn about the wonderful world of routers and routing.

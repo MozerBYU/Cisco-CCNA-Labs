@@ -18,10 +18,9 @@ We'll use the same EtherSwitch image that we setup for our switches in Lab 4c to
 
 Once you have them set in GNS3 and connected to each of the switches there are few things that you need to do:
 -	Set each port to either access or trunk mode
--	Set each access port in its corresponding VLAN
--	Create each of your VLAN interfaces
--	Setup SVIs for each routable VLAN 
--	Set IP addresses on all trunk ports and SVIs
+-	Setup SVIs for each routable VLAN
+-	Set IP addresses on all SVIs
+-	Enable routing on each of the routers
 
 ## Note about SVIs
 

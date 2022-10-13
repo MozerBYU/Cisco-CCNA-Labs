@@ -126,7 +126,9 @@ Now, why would you not just setup a static route, as we’re about to show you, 
 
 ## Static Routes
 
-In a nutshell, all a static route is, is a route that is set statically that tells one network how to get to another network, and who the next hop to get to the network is.
+In a nutshell, all a static route is, is a route that is set statically that tells one network how to get to another network, and who the next hop is on its path to a given network. Now, how static routes work is each router in the path from one host network to another we’ll need to be configured with a static route and the appropriate next hop. This will need to be done for every static route.
+
+*Note: A static route is for a route from one network to another*
 
 Below is an example of a how static routes are setup in Cisco iOS:
 

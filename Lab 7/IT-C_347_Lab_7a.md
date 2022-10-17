@@ -2,22 +2,22 @@
 ### *Conceptual – OSPF/STP*
 ## Introduction
 
-Now I am briefly going to introduce two of these routing protocols, namely:
+Now I am briefly going to introduce two of the routing protocols I mentioned in Lab 6a, namely:
 
 -	OSPF (Open Shortest Path First)
 -	STP (Spanning Tree Protocol)
 
-These are useful in environments where you are running multiple routers (as we we’ll be doing in Lab 6b). There are several reasons for these protocols that we’ll dive into, one of the most important is that it allows routers to communicate with each other about routes automatically.
+These are useful in environments where you are running multiple routers (as we we've done in Lab 6b). There are several reasons for these protocols that we’ll dive into, one of the most important is that it allows routers to communicate with each other about updates to routes automatically.
 
 ## OSPF
 
-Now static routes are great and all, but think if you were in a large enterprise with 10 routers, would you want to have to set those up for each individual router? Not unless you were either a mad man or had zero idea what you were getting yourself into. Additionally, what do you do when a router link dies? Do you want to manually have to go in and modify static routes to compensate? If only there was some way to automate this whole process that was also fault tolerant.
+Now static routes are great and all, but think if you were in a large enterprise with 20 or so routers, would you want to have to set those up for each individual router? Not unless you were either a mad man or had zero idea what you were getting yourself into. Additionally, what do you do when a router dies or is getting overloaded? Do you want to manually have to go in and modify static routes to compensate? If only there was some way to automate this whole process so that it was also fault tolerant and ran in automation?
 
-Luckily, someone else had that very thought and worked with some other smart people to create OSPF. OSPF is defined in RFC 2328 and again in RFC 5340. OSPF stands for Open-Shortest-Path-First.
+Luckily, someone else had that very thought and worked with some other smart people to create OSPF. OSPF is defined in RFC 2328 and again in RFC 5340 and stands for Open-Shortest-Path-First.
 
 ## How OSPF Works?
 
-OSPF is a routing protocol that is part of the suite of IGP (interior gateway protocols). OSPF uses the LSR (link state routing) algorithm to construct a network topology based on the link-state information of connected routers. Based on the up or down status of those links, OSPF automatically reconfigures the network topology to best serve the network efficiently.
+OSPF is a routing protocol that is part of the suite of IGP (interior gateway protocol) protocols. OSPF uses the LSR (link state routing) algorithm to construct a network topology based on the link-state information of connected routers. Based on the up or down status of those links, OSPF automatically reconfigures the network topology to best serve the network efficiently and effectively. And it does this rather quickly too.
 
 OSPF operates pretty securely, as you can setup various authentication so that only routers you designate can join OSPF-enabled routers. This is very important as a rouge router, could send over false or malicious routing tables and cause havoc in the network.
 
@@ -25,34 +25,30 @@ OSPF operates pretty securely, as you can setup various authentication so that o
 
 ## OSPF Areas
 
-However, there is a problem that needs to be addressed. OSPF works by recognizing a link-state change, or a topology change, and then broadcasting that information to its neighbors (or next hops). But each time a router recognizes or it told a change, it likewise tells its neighbors (and in the case it was told, it retells that information to the original router that sent that information out.
+However, there is a problem that needs to be addressed. OSPF works by recognizing a link-state change, or a topology change, and then broadcasting that information to its neighbors (or next hops). But each time a router recognizes or it told a change, it likewise tells its neighbors (and in the case it was told, it retells that information to the original router that sent that information out). 
 
-You should hopefully see an impending problem, similar to broadcasts, where OSPF will be endlessly updating each other thus saturating the network. To solve this problem, OSPF Areas were developed to isolate the ‘broadcast domain’ of sorts, that routers talk in to tell each other about OSPF routing/topology updates.
+You should hopefully see an impending problem, similar to broadcasts, where OSPF routers will be endlessly updating each other thus saturating the network. To solve this problem, OSPF Areas were developed to isolate the ‘broadcast domain’ of sorts, that OSPF routers talk in to tell each other about OSPF routing/topology updates.
+
+Do note the difference, but it is helpful to analogize them to VLANs. In a similar way that VLANs separate a network virtually, OSPF areas separate the OSPF router network virtually.
 
 ## OSPF Area Types
+
+Now, we need to go over the different types of OSPF areas first, as each performs a different function. However, due to complexity of some of these ares, that I will briefly mention, we're only going to focus on a few that you will need for your understanding at this point in your classes and for doing Lab 7b.
 
 There are a few types of OSPF Areas:
 
 -	Backbone (Area 0)
 -	Regular (non-backbone)
--	Transit
--	And some others we’re not going to talk about (stub, totally stubby, not-so stubby, totally not-so stubby)
+-	Transit (non-destination, think of them like tunnels from one OSPF area to another)
+-	And some others we’re not going to talk about (Stub, Totally Stubby, Not-So Stubby, Totally Not-So Stubby)
 
-The following are notes on these areas that are useful at this point of your network understanding:
+The main important ones are the Backbone and Regular OSPF areas. These are the main ones that we will be dealing with. The following are notes on these areas that are useful at this point of your network understanding:
 
--	OSPF Area 0 is strictly reserved for backbone networks between routers (generally core routers and area border routers
+-	OSPF Area 0 is strictly reserved for backbone networks between routers (core routers and area border routers)
 -	The transit area is simply an area with two or more OSPF border routers attached and is used to pass traffic through it (aka it is not the destination for such traffic)
--	You can have a total of 4,294,967,295 OSPF Areas
+-	You can have a total of 4,294,967,295 OSPF areas
 
-If you’re planning to get your CCNA, you can learn more about stub, TSA, NSSA and TNSSA on your own time. Due to the complexity of trying to explain it here, I will not be covering it.
-
-## OSPF Router Types
-
-Last thing I will cover is the different router types within OSPF:
--	IR: Internal Router
--	BR: Border Router
--	ABR: Area Border Router
--	ASBR: Autonomous System Boundary Router
+If you’re planning to get your CCNA, you can learn more about Stub, TSA, NSSA and TNSSA on your own time. We are only exposing you to the basics of OSPF in this lab, and therefore due to the complexity of trying to explain them, they will not be covered.
 
 Below is an example network using OSPF areas.
 
@@ -67,6 +63,16 @@ https://www.youtube.com/watch?v=CM9BlFHB3q4STP
 Below is a picture of what OSPF could look like in GNS3 (we are not doing this btw, this is just an example):
 
 ![GNS3 Example OSPF Lab](/assets/images/lab7a/gns3-ospf-example-network.png)
+
+## OSPF Router Types
+
+Last thing I will cover in this section is the different router types within OSPF:
+-	IR: Internal Router
+-	BR: Border Router
+-	ABR: Area Border Router
+-	ASBR: Autonomous System Boundary Router
+
+If you work to get your CCNA you will get more familiar with these. I've opted to only focus on our Core Routers for this next lab as it doesn't require a whole ton of additional setup to your completed lab in Lab 6b.
  
 ## STP
 

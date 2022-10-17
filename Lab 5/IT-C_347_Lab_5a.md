@@ -129,6 +129,4 @@ https://www.youtube.com/watch?v=6_giEv20En0
 
 Image credit to NetMgmt, WordPress.com and someone else.
 
-Lab credit to Nathan Moser as the sole author and editor.
-
 Lab credits to Nathan Moser as the sole author and editor, and to Bryan Wood for the structure and concepts of the labs.

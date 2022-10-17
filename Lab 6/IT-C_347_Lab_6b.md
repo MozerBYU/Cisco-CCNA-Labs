@@ -27,7 +27,7 @@ Recall the following about static routes from Lab 6a:
 >
 > *Note: A static route is a route from **one** network to another*
 
-In this lab you will have to configure one static route, on each router in sequence, from each destination network.
+In this lab you will have to configure one static route, on each router in sequence, for each destination network. Now, a point of clarification. Since we have two core routers, and subnets on both sides under each core router, you will need static routes going from one side to the other in both directions.
 
 Below is an example of a how static routes are set up in Cisco iOS:
 

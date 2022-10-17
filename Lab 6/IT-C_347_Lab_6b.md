@@ -2,13 +2,13 @@
 ### *Practical Lab – Routers*
 ## Introduction
 
-Now that you have learned way a brief understanding of routers and how they work, you get to set them up.
+Now that you have learned a brief understanding of routers and how they work, it's time you get to set them up.
 
 For this next section, we’re going to focus on setting up our lab so that it looks like the following:
  
 ![Lab 6 Completed](/assets/images/gns3/Lab-6.png)
 
-For this lab, you need to set up 2 Core Routers, connect them to your 2 Distribution Routers, and then set up static routes across for each of the other respective subnets. Depending on how you set up your subnets and VLANs your static routes will vary.
+For this lab, you need to set up 2 Core Routers, connect them to your 2 Distribution Routers, and then set up static routes across for each of your routers. You will do this for each of the respective subnets, that require it (don't forget about your un-routable VLAN). Depending on how you set up your subnets and VLANs, your static routes will vary.
 
 ## Setup Core Routers
 
@@ -16,14 +16,14 @@ If you recall from Lab 4c, we setup an EtherSwitch Router template image. We wil
 
 Once you have them set in GNS3 and connected to each of the Distribution Routers, there are a few things that you need to do:
 -	Set an IP address on each interface that connects each router (distribution & core)
--	Enable routing on each of the routers
+-	Enable routing on each of the core routers
 -	Set up static routes on each router for each subnet that needs it (this will be specific to your individual setup)
 
 ## Note on Static Routes
 
-Recall the following about static routes from Lab 5a:
+Recall the following about static routes from Lab 6a:
 
-> In a nutshell, all a static route is, is a route that is set statically that tells one network how to get to another network, and who the next hop is on its path to a given network. Now, how static routes work is each router in the path from one host network to another we’ll need to be configured with a static route and the appropriate next hop. This will need to be done for every static route.
+> In a nutshell, all a static route is, is a route that is set statically that tells one network how to get to another network, and what hops it needs to travel through on its path to said network. Now, how static routes work is each router in the path from one host network to another we’ll need to be configured with a static route and the appropriate next hop. This will need to be done for every static route.
 >
 > *Note: A static route is a route from **one** network to another*
 

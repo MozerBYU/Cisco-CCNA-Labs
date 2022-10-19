@@ -61,6 +61,16 @@ For our Lab we’ve been working on, in Lab 6 we’ll be implementing a Hybrid a
 
 If you choose to do Lab 7, we’re going to switch things up a bit amongst the routers and implement a Hybrid model of Tree + Mesh. This way we still have the structure of a Tree topology between our Core and Distribution routers and the switches that we created in Lab 6, but we get the benefits of high availability and redundancy using OSPF (don’t worry about this for now).
 
+## Why Bus Topologies are Useless?
+
+*Note: This is not required reading. This is purely a rant about why everyone should hate the bus topology*
+
+Recall my hatred of hubs...we'll at least hubs were somewhat useful at one point, and as CSMA/CD is a thing to help stop collisions. The Bus topology on the otherhand...yeah that thing is absolutely useless. Like, who was the cheapskate you was like, "Yeah, I ain't spending money on more NICs or cabeling. I'll just connect them all together. Gee, I sure hope one of these doesn't go down. Eh, not my problem". 
+
+I get it, once upon a time in the archaic age, it was hecka expensive to have a 1 mb connection over freaking coaxial. And adding more cabling and NICs were equally as expensive. But like, this is no longer the stone age. Cat 5e 1000ft is like $50. A a 1 Gb NIC is like pennies. 
+
+Here's some advice, if you show up to a job and you see a bus topology **anywhere** in the network...just walk right back out and start interviewing for other jobs. 
+
 ## OSI Model Review
 
 Recall the following information as a review of the OSI model. I want you to specifically note the which layer deals with MAC addresses and which layer deals with IP addresses.
@@ -215,6 +225,8 @@ https://www.youtube.com/watch?v=LYE8Y-zDQa8
 -	What decides routing precedence?
 
 -	What is the Administrative Distance for OSPF?
+
+- Who created the bus topology? (extra points for @'ing them in the #it347 slack channel)
 
 ## Resources
 

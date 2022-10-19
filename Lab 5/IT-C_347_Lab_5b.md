@@ -69,8 +69,8 @@ Next, we need to specify what VLANs are allowed to traverse that trunk. Now ther
 In this lab, we’re not super concerned about security, as it is more about the networking concepts, so if you want to allow all VLANs that is sufficient. 
 
 Either way here are the respective commands:
--	Specifying a VLAN list: switchport mode trunk allowed vlan <vlan-id-1>,<vlan-id-2>,<vlan-id-3>
--	Specifying a VLAN range: switchport mode trunk allowed vlan <vlan-id-1> - <vlan-id-2>
+-	Specifying a VLAN list: switchport mode trunk allowed vlan add <vlan-id-1>,<vlan-id-2>,<vlan-id-3>
+-	Specifying a VLAN range: switchport mode trunk allowed vlan add <vlan-id-1> - <vlan-id-2>
 -	Allowing all VLANs: switchport mode trunk allowed vlan all
   
 ### *Saving Configs*

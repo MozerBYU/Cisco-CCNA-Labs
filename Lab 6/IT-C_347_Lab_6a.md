@@ -226,7 +226,7 @@ https://www.youtube.com/watch?v=LYE8Y-zDQa8
 
 -	What is the Administrative Distance for OSPF?
 
-- Who created the bus topology? (extra points for @'ing them in the #it347 slack channel)
+- (Bonus Question) Who created the bus topology? (extra points for @'ing them in the #it347 slack channel)
 
 ## Resources
 

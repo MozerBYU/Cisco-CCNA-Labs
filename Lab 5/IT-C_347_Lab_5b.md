@@ -96,9 +96,14 @@ General helpful commands for seeing your interfaces, their respective mode, and 
   
 ### *VLANs aren’t saving in VLAN DB*
   
- Some helpful commands with troubleshooting VLANs not being created in the VLAN database:
+Some helpful commands with troubleshooting VLANs not being created in the VLAN database:
 > `show vlan-switch`
 > <br> `show ip int brie`
+
+### *Cisco Extended Vlan not allowed in Current VTP mode*
+
+Basically, by default you are limited to the range of VLAN 1 - 1000. To change this to have the full 1 - 4096 range, run the following command:
+> `vtp mode transparent`
 
 ## Pass-off
   

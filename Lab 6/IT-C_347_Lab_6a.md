@@ -217,9 +217,9 @@ https://www.youtube.com/watch?v=LYE8Y-zDQa8
 
 ## Write-up Questions
 
--	Does your closet router/gateway know your devices MAC address?
+-	Does your devices closest router/gateway (aka the next hop) know your devices MAC address?
 
--	Does any other router/gateway know your devices MAC address?
+-	Do any other routers/gateways know your devices MAC address? Why?
 
 -	What does ARP stand for? What is its purpose?
 

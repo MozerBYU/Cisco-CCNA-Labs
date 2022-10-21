@@ -8,7 +8,7 @@ Routers are honestly very complicated. In their purest sense, all they do is rou
 
 Despite the complexity of routers, we will dive into a fair amount of the technical details with how it handles packets with the ARP table, how basic routing works, how static routes work, what the precedence is with routing for different routes, and then we’ll go over some basic routing technologies that are good to be aware of.
 
-Below is a standard image the denotes a router (useful info for Lab 6b and general).
+Below is a standard symbol that denotes a router (useful info for Lab 6b and general).
 
 ![Router Symbol](/assets/images/lab6a/router-symbol.png)
 
@@ -99,9 +99,9 @@ If you confused, that's ok. Here's a helpful YouTube video explanation.
 
 ## ARP Tables
 
-As part of that process a router create data entries in a table called the ARP Table. ARP stands for Address Resolution Protocol. It is used as a bridge of sorts between Layer 2 and Layer 3. ARP Tables are similar in some respects to the CAM Tables that switches use, but they have a lot more data in their entries and more functions. 
+As part of that process a router creates data entries in a table called the ARP table. ARP stands for Address Resolution Protocol. It is used as a bridge of sorts between Layer 2 and Layer 3. ARP tables are similar in some respects to the CAM Tables that switches use, but they have a lot more data in their entries and more functions. 
 
-The main purpose of an ARP table is association between a devices MAC address and its IP address. The router will occasionally receive requests from an individual host to talk to another host via its MAC address. Either the host or router will send out an ARP request asking for the MAC address of the device with a given IP address. The ARP table on the router is populated by the requests, or when it receives packets and inspects them.
+The main purpose of an ARP table is to associate a given device's MAC address with its IP address. The router will occasionally receive requests from an individual host to talk to another host via its MAC address. Either the host or router will send out an ARP request asking for the MAC address of the device with a given IP address. The ARP table on the router is populated by the requests, or when it receives packets and inspects them.
 
 The following information is also in an ARP table entry:
 

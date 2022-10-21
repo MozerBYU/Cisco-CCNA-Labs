@@ -172,14 +172,15 @@ This is also known as ‘longest prefix matching’. This is determined by compa
 
 It is the measure of trustworthiness of the source of the route. If a router learns about a destination from more than one routing protocol, administrative distance is compared and the preference is given to the routes with lower administrative distance. 
 
-| Default Administrative Distances |
+#### Default Administrative Distances
+| **Protocol** | **Distance #** | **Protocol** | **Distance #** |
 | :------: | :------: | :------: | :------: |
 | Connected	| 0	| OSPF	| 110 |
 | Static	| 1	| IS-IS	| 115 |
 | EIGRP (summary route) |	5	| RIP	| 120 |
 | eBGP	| 20	| EIGRP (External)	| 170 |
 | EIGRP (Internal)	| 90	| iBGP	| 220 |
-| IGRP	| 100 | - | - | 		
+| IGRP	| 100 | - | - | 			
 
 ### *Metric*
 

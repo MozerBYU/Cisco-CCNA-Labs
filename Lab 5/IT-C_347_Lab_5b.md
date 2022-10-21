@@ -45,7 +45,7 @@ Next, you need to add each VLAN to the VLAN Database on each switch. This can be
 >	`vlan <vlan-id>`
   
 ### *Distribution Routers*
-Now on these we need to set our VLAN SVIs, which simply put is creating a VLAN gateway. Each network needs a gateway in order to talk to other networks, this includes VLANs. Do create these we’ll following the instructions here:
+Now on these we need to set our VLAN SVIs, which simply put is creating a VLAN gateway. Each network needs a gateway in order to talk to other networks, this includes VLANs. To create these we’ll following the instructions here:
   
 https://www.grandmetric.com/knowledge-base/design_and_configure/how-to-create-svi-interface-cisco/
   

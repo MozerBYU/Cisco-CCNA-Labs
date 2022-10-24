@@ -9,7 +9,6 @@ For this next section, we’re going to focus on setting up our lab so that it l
 ![GNS3 Lab 5 Final](/assets/images/gns3/Lab-5.png)
 
 For this lab, you need to set up 2 Distribution Routers, connect them to each of your 4 switches, and then set up the VLAN SVIs on the routers.  
-
 ## Conceptual Methodology
 
 To help explain how to do this lab, I’m going to go over the lab from a high-level conceptual standpoint.
@@ -58,6 +57,9 @@ And then you need to create the actual VLAN SVI for each of your VLANs that are 
 > <br> `no shut`
   
 *Note: For your un-routable VLAN you will not create a VLAN SVI*
+
+Next, we need to ensure that routing is enable on our Distribution Routers, and only our Distribution Routers. These changes these from L2 switches to L3 switches:
+> `ip routing`
   
 ### *Trunk Links*
   

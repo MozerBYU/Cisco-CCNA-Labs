@@ -38,12 +38,16 @@ On each VPC if you right-click and find the 'Edit Config' option, that will brin
 
 ![GNS3 Set VPC IP](/assets/images/lab3b/gns3-set-vpc-ip.PNG)
 
-Now you can have the host IP addresses whatever the heck you want in the given network you choose. I recommend using /24 subnets as that will make you life easier for the subnet mask part, but you do you. You want to make you life extra difficult, I won't stop you. I also recommend using IP addresses that make sense. If you recall, DHCP assigns IP addresses with the next available address. Going back to our above example, you could have those two host IP addresses like the following:
+Now you can have the host IP addresses whatever the heck you want in the given network you choose. I recommend using /24 subnets as that will make you life easier for the subnet mask part, but you do you. You want to make your life extra difficult, I won't stop you. I also recommend using IP addresses that make sense. If you recall, DHCP assigns IP addresses with the next available address. Going back to our above example, you could have those two host IP addresses like the following:
 
 -	Host 1: 192.168.10.2
 -	Host 2: 192.168.10.3
 
-The setup of the IP address is as follows: `ip address <ip_address> <subnet_mask>`.
+Additionally, with the gateway IP address that IP address can be whatever you want, but it must reside within the subnet that you set and be consistent across all of your hosts in that subnet range. So for example if you are using a /24 subnet, general industry practice is to have your gateway a x.x.x.1 address. So going back to our two hosts above, the gateway IP address would be the following:
+
+- Gateway: 192.168.10.1
+
+The setup of the IP address is as follows: `ip address <ip_address> <subnet_mask> <gateway_ip_address`.
 
 ## Note on GNS3 Backups
 

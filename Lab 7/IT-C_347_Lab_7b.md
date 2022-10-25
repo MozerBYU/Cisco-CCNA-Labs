@@ -4,6 +4,16 @@
 
 Now that you’ve learned about OSPF from a conceptual standpoint (at least a brief overview of it), we’re going to copy our Lab 6b project into a new project to setup OSPF.
 
+## Conceptual Methodology
+
+Much like the previous labs, to help explain how to do this lab, I’m going to go over the lab from a high-level conceptual standpoint.
+
+Hopefully, you understand how static routes work for getting from one network to another, and how to configure them. And hopefully, either through Googling it, looking it up on YouTube or through your own experience, you understand that it would be so beyond painfully to manually configure these in a large organization, especially to re-configure them in the case of a dead link or a dead router.
+
+There is why OSPF is great. It automates all of this for you, it is redundant by nature, and it is self-healing if a link goes down or a whole router goes down. Granted, if you're backbone routers die, you're still doomed, but we'll ignore that in this hypothetical setup.
+
+For the lab, you're basically setting up OSPF in place of static routes. Each router needs to know what OSPF area it belongs to, and what networks are associated with what OSPF areas. For security, we're also show you how to lock down OSPF so that a rouge router doesn't take over and modify your OSPF routes.
+
 ## Prep Lab 7
 
 We need to do a few things first to prep the lab for OSPF. First, you need to go on each router and remove any statics routes you have created. Then for each Distribution Router, you will need to add a new wired connection to each of the other Core Routers (that you are not currently connected to).

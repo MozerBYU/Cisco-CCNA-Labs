@@ -76,7 +76,19 @@ If you work to get your CCNA you will get more familiar with these. I've opted t
  
 ## STP
 
-Next, we’ll talk about Spanning Tree Protocol. 
+Next, we’ll talk about Spanning Tree Protocol. Basic premise of STP is to mitigate the issues related to network loops, either accidental or intentional. If you aren’t familiar with network loops, they are your worst nightmare as if not properly mitigated, they can take down your entire network. Before we dive into how these are created, let's define a network loop and a broadcast storm.
+
+A network loop is when there are multiple active paths coming from the same source to the same destination. What happens is when a packet is sent out, it is duplicated and resent and resent and resent going down both active paths in a loop. It doesn't stop when it reaches its destination. As switches continually get faster and more efficient at moving packets this has become even more of a predicament for network administrators.
+
+Now a broadcast storm can have similar effects where it causes a serious outage. This one is very self-explanatory, basically there is so much broadcast traffic that it is hindering or completely halting a network. If a network is improperly configured (aka, they don’t use VLANs as they should), you can easily have broadcast storms from everyday network traffic. If you have a network loop that problem is amplified. 
+
+It is relatively easy to create a network loop. All you need is an ethernet cable that goes from one port on a switch to another port. If you try setting up redundant uplinks from a switch to a router and you don’t properly set up STP, you can create a network loop. This is very often caused unintentional by network or helpdesk technicians during normal business operations of helping employees get setup on the network, and they plug in an ethernet cable, believing it to go to the employee’s computer, when that ethernet cable in reality goes back to the switch. And boom, a network loop has been caused.
+
+This is where STP comes in. Essentially, it is smart enough to recognize where potential network loops can occur (i.e. switch/router uplinks), and it can mitigate the effects of an active network loop.
+
+Now it can get complicated as far as this is connected to routing, as there needs to be a ‘root’ STP router set, that is like the main source of information. If you don’t set this, you can have some unexpected problems arise. 
+
+Feel free to check resources for more information about STP. We won’t be setting that up in Lab 7b, but I want you to have some exposure to it.
 
 ## Resources
 -	https://en.wikipedia.org/wiki/Open_Shortest_Path_First
@@ -84,6 +96,7 @@ Next, we’ll talk about Spanning Tree Protocol.
 -	https://www.youtube.com/watch?v=kfvJ8QVJscc
 -	https://en.wikipedia.org/wiki/Spanning_Tree_Protocol
 -	https://www.techtarget.com/searchnetworking/definition/spanning-tree-protocol
+-	https://www.juniper.net/documentation/us/en/software/junos/stp-l2/topics/topic-map/spanning-tree-loop-protection.html
 
 Credits
 Image credits to GNS3, Bryan Wood, Firewall.cx, and Networkel.com.

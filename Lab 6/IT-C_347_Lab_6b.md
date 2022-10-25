@@ -43,7 +43,29 @@ Below is an example of a how static routes are set up in Cisco iOS:
 
 | Command	| Dest. Network	| Dest. Network Subnet Mask	| Next Hop IP Address |
 | :------: | :------: | :------: | :------: |
-| ip route	| 10.1.5.0	| 255.255.255.0	| 10.0.0.5 |
+| ip route	| 10.1.5.0	| 255.255.255.0	| 10.0.0.5 |\
+
+## Troubleshooting
+
+### *General*
+
+General helpful commands for seeing your interfaces, their respective mode, the VLAN database, and other helpful information:
+
+> `show int status`
+> <br> `show int summary`
+> <br> `show vlan-switch`
+> <br> `show ip int brie`
+
+### *Checking Routing*
+
+Some helpful commands with troubleshooting routing issues:
+
+> `show ip route`
+
+Helpful commands in general that are cross-platform in troubleshooting routing issues:
+
+> `ping` -> send an ICMP request packet to a device to see if you can talk to it
+> <br> `trace` -> to run a traceroute to see where a packet gets stuck
 
 ## Pass-off
 

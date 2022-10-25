@@ -90,7 +90,22 @@ Now it can get complicated as far as this is connected to routing, as there need
 
 Feel free to check resources for more information about STP. We won’t be setting that up in Lab 7b, but I want you to have some exposure to it.
 
+## Write-up Questions
+
+-	What does OSPF stand for?
+
+-	Why is OSPF better than static routes?
+
+-	What problem does OSPF Areas solve?
+
+-	What is OSPF Area 0 for?
+
+-	What does STP stand for?
+
+-	What problem does STP solve?
+
 ## Resources
+
 -	https://en.wikipedia.org/wiki/Open_Shortest_Path_First
 -	https://www.cisco.com/c/en/us/support/docs/ip/open-shortest-path-first-ospf/13703-8.html
 -	https://www.youtube.com/watch?v=kfvJ8QVJscc
@@ -98,7 +113,8 @@ Feel free to check resources for more information about STP. We won’t be setti
 -	https://www.techtarget.com/searchnetworking/definition/spanning-tree-protocol
 -	https://www.juniper.net/documentation/us/en/software/junos/stp-l2/topics/topic-map/spanning-tree-loop-protection.html
 
-Credits
+## Credits
+
 Image credits to GNS3, Bryan Wood, Firewall.cx, and Networkel.com.
 
 Lab credit to Nathan Moser as the sole author and editor, and to Bryan Wood for the structure and concepts of the lab.

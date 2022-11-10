@@ -18,12 +18,18 @@ For the lab, you're basically setting up OSPF in place of static routes. Each ro
 
 We need to do a few things first to prep the lab for OSPF. First, you need to go on each router and remove any statics routes you have created. Then for each Distribution Router, you will need to add a new wired connection to each of the other Core Routers (that you are not currently connected to).
 
-Next, you’ll want to plan our your OSPF Areas. Recall, Area 0 is reserved for the backbone link (aka the link between your Core Routers). I recommend not getting crazy complex (i.e. having Areas 0 – 4 suffices just fine).
+Next, you’ll want to plan our your OSPF Areas. Recall, Area 0 is reserved for the backbone link (aka the link between your Core Routers). I recommend not getting crazy complex (i.e. having Areas 0 – 4 suffices just fine). Aside from Area 0, you only need 2 more Areas, (you can add more if you want, but that could get rather complex).
+
+Below is an image example from Advanced Networking on what OSPF Areas could look like in a configuration similar to ours:
  
 ![GNS3 OSPF Example](/assets/images/lab7b/gns3-ospf-example.PNG)
 
-## Quick Note on OSPF Area Commands
-You will need to setup OSPF Areas on the Router interfaces (Core and Distribution router), and for any networks below (Distribution routers only).
+## OSPF Commands
+
+The following are the commands that you need to run on your Core and Distribution routers, adapting certain parts to each configuration.
+
+- Core and Distribution routers: you will need OSPF Areas setup on each interface
+- Distribution routers only: you will need OSPF Areas on each network below your router (i.e. 10.0.10.0/24)
 
 That should look like the following in your router config files:
 
@@ -34,33 +40,60 @@ That should look like the following in your router config files:
 ### *Distribution Routers* 
 
 ![Distribution Router OSPF Table Config](/assets/images/lab7b/distro-ospf-table.PNG)
- 
-## OSPF Commands
+
+### *Commands to Run*
 
 *// Enable OSPF on router*
 <br> `Router# router ospf 1`
 
-*Note: You’ll need to repeat the following command for each network and each OSPF area*
+*Note: You can use whatever number you want here, but that number specifies which OSPF Routing Table this is (aka. it should be consistent across all your routers)
 
 *// Setup the OSPF Network and Area* 
 <br> `Router# network <ip_address> <subnet_mask> area #`
 
-*// Check OSPF routing between routers*
-<br> `Router# show ip route`
-*Note: should show ‘c x.x.x.x is directly connected’*
-
-*Note: You’ll need to repeat the following command for each interface connected to OSPF*
+*Note: You’ll need to repeat the above command for each network interface and each network*
 
 *// Setup OSPF Authentication*
 <br> `Router# int #/#`
 <br> `Router# ip ospf authentication`
 <br> `Router# ip ospf authentication-key <password>`
 
+*Note: You’ll need to repeat the above commands for each interface connected to OSPF*
+
 *// Setup Route Summarization*
 <br> `Router# router ospf 1`
 <br> `area # range <ip_range> <subnet mask>`
 
-*Note: You only need 1 route summarization"
+*Note: You only need 1 route summarization.. Think of it like a default route"
+
+## Troubleshooting
+
+### *General*
+
+General helpful commands for seeing your interfaces, their respective mode, the VLAN database, and other helpful information:
+
+> `show int status`
+> <br> `show int summary`
+> <br> `show vlan-switch`
+> <br> `show ip int brie`
+
+### *Checking Routing Tables*
+
+Some helpful commands with troubleshooting routing issues:
+
+> `show ip route`
+> *Note: should show ‘c x.x.x.x is directly connected’*
+
+### *Checking OSPF Tables and Routing*
+
+Some helful commands with troubleshooting ospf issues:
+
+> `show ip ospf border-routers`
+
+Helpful commands in general that are cross-platform in troubleshooting routing issues:
+
+> `ping` -> send an ICMP request packet to a device to see if you can talk to it
+> <br> `trace` -> to run a traceroute to see where a packet gets stuck
 
 ## Pass-off
 

@@ -21,6 +21,19 @@ We need to do a few things first to prep the lab for OSPF. First, you need to go
 Next, you’ll want to plan our your OSPF Areas. Recall, Area 0 is reserved for the backbone link (aka the link between your Core Routers). I recommend not getting crazy complex (i.e. having Areas 0 – 4 suffices just fine).
  
 ![GNS3 OSPF Example](/assets/images/lab7b/gns3-ospf-example.PNG)
+
+## Quick Note on OSPF Area Commands
+You will need to setup OSPF Areas on the Router interfaces (Core and Distribution router), and for any networks below (Distribution routers only).
+
+That should look like the following in your router config files:
+
+### *Core Routers*
+
+![Core Router OSPF Table Config](/assets/images/lab7b/router-ospf-table.PNG)
+ 
+### *Distribution Routers* 
+
+![Distribution Router OSPF Table Config](/assets/images/lab7b/distro-ospf-table.PNG)
  
 ## OSPF Commands
 
@@ -47,6 +60,8 @@ Next, you’ll want to plan our your OSPF Areas. Recall, Area 0 is reserved for 
 <br> `Router# router ospf 1`
 <br> `area # range <ip_range> <subnet mask>`
 
+*Note: You only need 1 route summarization"
+
 ## Pass-off
 
 -	1) you have removed your old statics routes
@@ -58,3 +73,7 @@ Next, you’ll want to plan our your OSPF Areas. Recall, Area 0 is reserved for 
 
 -	https://networkel.com/advanced-ospf-configuration-example/
 -	https://networklessons.com/cisco/ccna-routing-switching-icnd2-200-105/ospf-multi-area-configuration/
+
+## Credit
+
+Lab credits to Nathan Moser as the sole author and editor, and to Bryan Wood for the structure and concepts of the labs.

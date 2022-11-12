@@ -131,7 +131,7 @@ If you’re lucky and are one of the blessed souls with Linux Subsystem WSL2 ena
 
 Basically, you need to edit the GNS3.vmx file (while the GNS3 VM is off). That file is typically located at:
 
-> C:\Users\whatsyourface\Documents\Virtual Machines\GNS3 VM\
+> C:\Users\whatsyourface\Documents\Virtual Machines\GNS3 VM\GNS3.vmx
 
 You’ll open this with Notepad (or your preferred TextEditor) and find the line that says 
 

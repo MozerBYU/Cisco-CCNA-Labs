@@ -53,18 +53,19 @@ That should look like the following in your router config files:
 
 *Note: You’ll need to repeat the above command for each network interface and each network*
 
+*// Setup Route Summarization*
+*// Note: Only run these on the distribution routers*
+<br> `Router# router ospf 1`
+<br> `area # range <ip_range> <subnet mask>`
+
+*Note: You'll need to create a route summarization for each of your subnets directly connected to that distribution router*
+
 *// Setup OSPF Authentication*
 <br> `Router# int #/#`
 <br> `Router# ip ospf authentication`
 <br> `Router# ip ospf authentication-key <password>`
 
 *Note: You’ll need to repeat the above commands for each interface connected to OSPF*
-
-*// Setup Route Summarization*
-<br> `Router# router ospf 1`
-<br> `area # range <ip_range> <subnet mask>`
-
-*Note: You only need 1 route summarization.. Think of it like a default route"
 
 ## Troubleshooting
 

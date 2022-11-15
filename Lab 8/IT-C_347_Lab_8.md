@@ -78,10 +78,15 @@ You will be given yet another pre-built lab, very similar to your completed Lab 
 
 I call it the Lab of Doom on purpose, as this is meant to challenge you. It is supposed to be difficult. It will require you to do some googling and to work with your team to figure it out. As such, don’t procrastinate and push it off, or you will fail. 
 
-<ins>**You are restricted from discussing and getting aid from other groups. You can ask TAs/Professors for general methodology questions related to how Layers 1 – 3 work.**</ins>
+However, even though I won't tell you what is broken, I will tell you how much is broken. In the comprehensive lab, there are exactly 15 problems (GNS3 aside):
+- 5x Layer 1 issues
+- 5x Layer 2 issues
+- 5x Layer 3 issues
 
 Good luck, and may the odds ever be in your favor!
- 
+
+<ins>**You are restricted from discussing and getting aid from other groups. You can ask TAs/Professors for general methodology questions related to how Layers 1 – 3 work.**</ins>
+
 
 ## Pass-off
 -	1) You have completed Lab_8_L1

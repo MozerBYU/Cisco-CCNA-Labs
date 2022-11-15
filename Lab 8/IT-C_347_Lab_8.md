@@ -20,13 +20,13 @@ The point break-down is as follows:
 
 The following is a thought process I have adopted when doing networking troubleshooting, you can change this if you wish, but it gives you a baseline to build off of. 
 
-When doing network troubleshooting you will go through various layers of the OSI model. But you want to be efficient and not waste time on things, when you can catch an easy problem and fix it without much trouble. 
+When doing network troubleshooting you will go through various layers of the OSI model. But you want to be efficient and not waste time on rabbit-holes when you can catch an easy problem and fix it without much trouble. 
 
-In general practice I would start at either Layer 3, or Layer 7, and or both. By Layer 3, I mean testing and verifying what the device can talk to. By Layer 7, I mean is there a stupid setting on the OS that you have disabled that is causing you grief. After you have gone to either Layer 3, I would then go to Layer 1 and work my way back up. I would also go from Layer 7 and work my way down. Granted I would give priority to checking Layers 1-3, 7. Reason being, troubleshooting Layers 4, 5 and 6 sucks. This is where TCP/UDP, Segments, TLS, Sessions and dealing with Application/OS Code resides, and boy is it a pain in the neck to deal with, not to mention time-consuming.
+In general practice I would start at either Layer 3, or Layer 7, and or both. By Layer 3, I mean testing and verifying what the device can talk to. By Layer 7, I mean is there a stupid setting on the OS that you have disabled that is causing you grief. After you have troubleshooted basic Layer 3 (IPs/Gateways), I would then go to Layer 1 and work my way back up. After that I would go from Layer 7 and work my way down. Granted I would give priority to checking Layers 1-3, 7. Reason being, troubleshooting Layers 4, 5 and 6 sucks. This is where TCP/UDP, Segments, TLS, Sessions and dealing with Application/OS Code resides, and boy is it a pain in the neck to deal with, not to mention time-consuming.
 
 ### *Quick Sum Up*
 
-Start your troubleshooting with Layer 3, then go to Layer 1 and make your way back up to Layer 3
+Start your troubleshooting the basics of Layer 3 (who can talk to who), then go to Layer 1 and make your way back up to Layer 3.
 
 ## Sub-Labs
 

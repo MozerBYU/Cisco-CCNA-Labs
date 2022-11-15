@@ -74,15 +74,21 @@ Layer 3 in GNS3 includes IPs, Gateways, VLAN SVIs, routing tables, static routes
 
 Now that you’ve had a fairly good walkthrough of what to look for on the various Layers between 1-3, and have gotten some practice with the pre-labs, it is time to challenge you and put your skills to the test.
 
-You will be given a pre-built lab, very similar to your completed Lab 6b. You and your team’s job are to troubleshoot the network and get it back in a working condition. You will need to verify this, so make sure everything is working as expected.
+You will be given a pre-built lab, very similar to your completed Lab 6b. You and your team’s job are to troubleshoot the network and get it back in working condition. You will need to verify this, so make sure everything is working as expected, and I mean everything, because I will check everything.
 
-I call it the Lab of Doom on purpose, as this is meant to challenge you. It is supposed to be difficult. As such, don’t procrastinate and push it off, or you will fail. 
+I call it the Lab of Doom on purpose, as this is meant to challenge you. It is supposed to be difficult. It will require you to do some googling and to work with your team to figure it out. As such, don’t procrastinate and push it off, or you will fail. 
+
+<ins>**You are restricted from discussing and getting aid from other groups. You can ask TAs/Professors for general methodology questions related to how Layers 1 – 3 work.**</ins>
+
+Good luck, and may the odds ever be in your favor!
+ 
 
 ## Pass-off
 -	1) You have completed Lab_8_L1
 -	2) You have completed Lab_8_L2
 -	3) You have completed Lab_8_L3
 -	4) You have fixed the broken Lab_8_Comprehensive
+-	5) You have a summary of what you had to fix for the Comprehensive Lab (this part is an individually submitted assignment)
 
 ## Lab Credits
 

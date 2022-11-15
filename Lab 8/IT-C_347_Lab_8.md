@@ -14,7 +14,7 @@ The point break-down is as follows
 | Lab_8_L2	| 2	| 20 |
 | Lab_8_L3	| 3	| 20 |
 | Lab_8_Full	| All (1 - 3)	| 40 |
-| Total Points | 	100 |
+| Total Points | - |	100 |
 
 ## Conceptual Methodology
 

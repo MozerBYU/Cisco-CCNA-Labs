@@ -38,7 +38,7 @@ Layer 1 is where the physical electricity and the 1s and 0s are transmitted and 
 
 Layer 1 in GNS3 includes ports and connections between ports. Some things to check when searching for/addressing Layer 1 issues:
 -	Is the device running?
--	Is the cable physically plugged in where should be?
+-	Is the cable physically plugged in and in the correct port?
 -	Is the port active? (aka not shutdown)
 -	Is the cable transmitting/receiving correctly? (including expected speeds)
 
@@ -46,9 +46,9 @@ Layer 1 in GNS3 includes ports and connections between ports. Some things to che
 
 *Note: Use the IT-C_347_Lab_8_L2 Lab file for this section*
 
-Layer 2 is where switches and MAC address operate. To some degree there is also where VLANs operate (within their own VLANs/Subnets). 
+Layer 2 is where switches and MAC address operate. To some degree this is also where VLANs operate (within their own subnets). 
 
-Layer 2 in GNS3 includes whether mode a port is in, what VLAN a specific port is assigned, VLAN trunk links, and VLAN databases on switches and distribution routers. Some things to check when searching for/addressing Layer 2 issues:
+Layer 2 in GNS3 includes what mode a port is in, what VLAN a specific port is assigned, VLAN trunk links, and VLAN databases on switches and distribution routers. Some things to check when searching for/addressing Layer 2 issues:
 -	Is the port in its correct access/trunk mode?
 -	Is the port in its correct VLAN?
 -	Are all necessary VLANs in the VLAN DB?
@@ -58,14 +58,14 @@ Layer 2 in GNS3 includes whether mode a port is in, what VLAN a specific port is
 
 *Note: Use the IT-C_347_Lab_8_L3 Lab file for this section*
 
-Layer 3 is where routers and IP addressing operates. It is also where the VLANs/Subnets fully operate.
+Layer 3 is where routers, routing and IP addresses operate. As such this is where VLANs fully operate via their gateways.
 
 Layer 3 in GNS3 includes IPs, Gateways, VLAN SVIs, routing tables, static routes, OSPF, need I continue? Therefore, some things to check when searching for/addressing Layer 3 issues:
--	Is the devices networking configured correctly? (IPs, subnet mask, gateway address)
+-	Is the device's networking configured correctly? (IPs, subnet mask, gateway address)
 -	Are the gateways (SVI or otherwise) configured correctly? And are they running and reachable?
 -	Are there any routing issues in the routing table?
-   -	Static routes misconfigured
-   -	OSPF misconfigured
+    -	Static routes misconfigured?
+    -	OSPF misconfigured?
 -	Are there any other extraneous issues with routing?
 
 ## The Comprehensive Lab of Doom (40 pts)
@@ -74,7 +74,7 @@ Layer 3 in GNS3 includes IPs, Gateways, VLAN SVIs, routing tables, static routes
 
 Now that you’ve had a fairly good walkthrough of what to look for on the various Layers between 1-3, and have gotten some practice with the pre-labs, it is time to challenge you and put your skills to the test.
 
-You will be given a pre-built lab, very similar to your completed Lab 6b. You and your team’s job are to troubleshoot the network and get it back in working condition. You will need to verify this, so make sure everything is working as expected, and I mean everything, because I will check everything.
+You will be given yet another pre-built lab, very similar to your completed Lab 6b. You and your team’s job are to troubleshoot the network and get it back in working condition. You will need to verify this, so make sure everything is working as expected, and I mean everything, because I will check everything.
 
 I call it the Lab of Doom on purpose, as this is meant to challenge you. It is supposed to be difficult. It will require you to do some googling and to work with your team to figure it out. As such, don’t procrastinate and push it off, or you will fail. 
 
@@ -92,4 +92,4 @@ Good luck, and may the odds ever be in your favor!
 
 ## Lab Credits
 
-All Lab credits to Nathan Moser (myself).
+All Lab credits to Nathan Moser (myself) as the sole author and editor.

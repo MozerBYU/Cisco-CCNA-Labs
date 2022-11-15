@@ -44,7 +44,7 @@ Layer 1 in GNS3 includes ports and connections between ports. Some things to che
 
 ### *Part 2 – Layer 2 Troubleshooting (20 pts)*
 
-*Note: Use the IT-C_347_Lab_8_L2 Lab file for this section*
+*Note: Use the Lab_8_L2 Lab file for this section*
 
 Layer 2 is where switches and MAC address operate. To some degree this is also where VLANs operate (within their own subnets). 
 
@@ -56,7 +56,7 @@ Layer 2 in GNS3 includes what mode a port is in, what VLAN a specific port is as
 
 ### *Part 3 – Layer 3 Troubleshooting (20 pts)*
 
-*Note: Use the IT-C_347_Lab_8_L3 Lab file for this section*
+*Note: Use the Lab_8_L3 Lab file for this section*
 
 Layer 3 is where routers, routing and IP addresses operate. As such this is where VLANs fully operate via their gateways.
 

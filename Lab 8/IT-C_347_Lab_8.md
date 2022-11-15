@@ -4,9 +4,9 @@
 
 At the completion of Lab 6, you are now ready to put your networking skills to the test and to learn how to do network troubleshooting. This lab is to be done in groups of 3, emulating working with a Networking Team to troubleshoot and remediate a mock networking environment that mirrors 
 
-Your team’s task is to learn the Network Troubleshooting process, via 3 walkthrough-like sub-labs. Then to utilize those skills and demonstrate that you can troubleshoot a network.
+Your team’s task is to learn the Network Troubleshooting process, via 3 walkthrough-like sub-labs. Then to utilize those skills and demonstrate that you can troubleshoot a network in the final comprehensive lab.
 
-The point break-down is as follows
+The point break-down is as follows:
 
 | Lab	| Layer(s)	| Points |
 | :------: | :------: | :------: |

@@ -12,7 +12,7 @@ Private IPs are locally accessible and are defined by RFC 1918. Since they are l
 
 ## IP Routing
 
-But you can see a problem. How do you know how to get from Heritage Halls to Helaman Halls? In real life we can use Google Maps, which will direct us what turns we need to take to get to our given destination. But how does that work in the world of the networking? This is where routing comes into play. We’ll dive more into routers in later labs, but for now note that routers are responsible for routing internet traffic across the globe. In our scenario, they are that Google Maps that tells the packets what turns they need to take, so to speak, to eventually arrive at their desired destination.
+But you can see a problem. How do you know how to get from Heritage Halls to Helaman Halls? In real life we can use Google Maps, which will direct us what turns we need to take to get to our given destination. But how does that work in the world of the networking? This is where routing comes into play. We’ll dive more into routers in later labs, but for now note that routers are responsible for routing internet traffic across the globe. In our scenario, there are Google Maps that tells the packets what turns they need to take, so to speak, to eventually arrive at their desired destination.
 
 Building off the same analogy, routers can get us from one apartment building to another, but how do we get to an individual apartment within that apartment building? This is where Networking Address Translation (NAT) comes into effect. NAT is a process developed to translation Private IPs to Public IPs by modifying the IP address header of the packet while it is in transit. We’ll dive more into the specifics of this process in a later lab. 
 
@@ -42,18 +42,18 @@ Open Terminal and run “ifconfig”. You will see similar to the following:
  
 ## Gateways and Broadcast
 
-Gateways are generally the 1st address in an IP range (i.e. 10.0.0.1 or 192.168.1.1). However, they can be any host within the specified IP range (i.e. 10.0.0.128). The purpose of a gateway is to act as centralized location through which network traffic is translated between one network and another. It most cases one network is a LAN and the other is a WAN.
+Gateways are generally the 1st address in an IP range (i.e. 10.0.0.1 or 192.168.1.1). However, they can be any host within the specified IP range (i.e. 10.0.0.128). The purpose of a gateway is to act as a centralized location through which network traffic is translated between one network and another. It most cases one network is a LAN and the other is a WAN.
 
 For a lot of networks, a gateway is either a firewall or a router. Some of the gateway’s duties include: 
 -	Establishing and monitoring network traffic states
--	Resetting states as need in the case of state failures (lost connections, missing or late responses, fragmented responses, etc).
+-	Resetting states as needed in the case of state failures (lost connections, missing or late responses, fragmented responses, etc).
 -	Carrying out any NAT’ing for the internal network devices
 
 On the technical side, gateways are responsible for translating frames and protocols to other formats, so they can be routed/forwarded to the next host in a way it understands. We’ll go over gateways more when we get to routers.
 
 ## IP Classes
 
-IP addressing is divided into different classes: classful and classless. For public IP addressing, it resides within the classful addressing space. Consisting of 5 different classes: A, B, C, D, and E. Private IP addressing, on the otherhand, resides within the classless addressing space and uses subnetting and CIDR for designating the different IP ranges.
+IP addressing is divided into different classes: classful and classless. For public IP addressing, it resides within the classful addressing space. Consisting of 5 different classes: A, B, C, D, and E. Private IP addressing, on the other hand, resides within the classless addressing space and uses subnetting and CIDR for designating the different IP ranges.
 
 ## Classful Addressing (Public Classes)
 
@@ -91,7 +91,11 @@ Now you have a basic understanding of how to define a subnet and the IP addressi
 
 # Subnet Binary Math
 
-I was going to write out how to do all this, but NetworkLessons already has a very astheticly pleasing guide/tutorial demonstrating how to do this. So I've provided the following guide for your reading. Don't worry if it seems super low-level and complicated, I have a nice tool for you I'll show in a second that is extremely helpful.
+So just what determines a network id? If we take a subnet mask (which is determined by the number of 1s), and AND it with our IP address, we will get our network id.
+
+Now you have a basic understanding of how to define a subnet and the IP addressing of an individual device within that subnet. You also have a basic understanding of how private IP networks are defined with regards to their subnet id. But before we dive into how we separate a larger private network, into smaller sub-networks using the CIDR, we need to brief touch on how public networks is defined with regards to their network id.
+
+I was going to write out how to do all this, but NetworkLessons already has a very aesthetically pleasing guide/tutorial demonstrating how to do this. So I've provided the following guide for your reading. Don't worry if it seems super low-level and complicated, I have a nice tool for you I'll show in a second that is extremely helpful.
 
 https://networklessons.com/subnetting/subnetting-in-binary
 

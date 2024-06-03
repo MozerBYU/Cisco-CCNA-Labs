@@ -1,7 +1,8 @@
-# IT-C 347 Labs
-## Brigham Young University - IT & Cybersecurity Program
+# Cisco CCNA Labs
 
-These labs are for the IT-C 347 - Networking class, taught in the Fall 2022 Semester.
+These labs were developed for Intro to Networking and Advanced Networking Classes for the Brigham Young University - IT & Cybersecurity Program.
+
+All labs were developed by Nathan Moser, with aid and instruction from Bryan Wood (Network Engineer at BYU OIT).
 
 ## Lab Structure
 

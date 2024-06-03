@@ -99,6 +99,7 @@ General helpful commands for seeing your interfaces, their respective mode, and 
 Below are helpful commands if you messed up and need to erase the running-config/stored-config:
 > `write erase`
 > <br> `reload`
+
 Note it will take some time for the switch to reboot and reload everything.
   
 ### *VLANs aren’t saving in VLAN DB*

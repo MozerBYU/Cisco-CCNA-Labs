@@ -49,12 +49,15 @@ After that screen you should be done. It will take a while to complete the insta
 
 ## VMWare Workstation Pro Install
 
-VMWare Workstation is an extremely powerful software with great features. BYU has been gracious enough to give us a license as students so that we don’t have to purchase it (hint it’s expensive). You can download VMWare Workstation from the following website:
+VMWare Workstation is an extremely powerful software with great features. Broadcom, even though they have destroyed the enterprise version of VMWare, has been kind enough to grant eveyrone free-to-use personal licenses
 
-[VMWare Workstation Website](https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html)
+[VMWare Workstation Website](https://blogs.vmware.com/workstation/2024/05/vmware-workstation-pro-now-available-free-for-personal-use.html)
 
-Here is the license key that you will need:
-> 450CL-NG19Q-28DJ2-0K3HP-8026H
+Now for the actual link you want so you can actually download it, cuz Broadcom buried it (courtesy of our good friend on Reddit)
+
+[VMWare Workstation Download Link](https://softwareupdate.vmware.com/cds/vmw-desktop/ws/17.5.2/23775571/windows/core/)
+
+Make sure to download the following file: VMware-workstation-17.5.2-23775571.exe.tar
 
 ## GNS3 VM Import
 
